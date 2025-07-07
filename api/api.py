@@ -12,7 +12,6 @@ def get_channel():
     channel_name = data.get('channel_name')
     
     if channel_type in ALL_CHANNELS and channel_name in ALL_CHANNELS[channel_type]:
-        found_channel = ALL_CHANNELS[channel_type][channel_name]
         url = extract_video_url(ALL_CHANNELS[channel_type][channel_name]["url"])
         # url_hd = extract_video_url(ALL_CHANNELS[channel_type][channel_name]["url_hd"])
 
@@ -35,4 +34,4 @@ def get_all_channels():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

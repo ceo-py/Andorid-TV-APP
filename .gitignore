@@ -9,3 +9,7 @@ venv
 # test files
 
 test
+
+# JS
+
+node_modules
