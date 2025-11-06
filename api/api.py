@@ -12,7 +12,14 @@ def get_channel():
     channel_name = data.get('channel_name')
     
     if channel_type in ALL_CHANNELS and channel_name in ALL_CHANNELS[channel_type]:
-        url = extract_video_url(ALL_CHANNELS[channel_type][channel_name]["url"])
+        # link = ALL_CHANNELS[channel_type][channel_name]["url_hd"]
+        # print(f"Hd Link {link}")
+        # if not link:
+        #     link = ALL_CHANNELS[channel_type][channel_name]["url"]
+        #     print(f"Normal Link {link}")
+        link = ALL_CHANNELS[channel_type][channel_name]["url"]
+        url = extract_video_url(link)
+        # url = extract_video_url(ALL_CHANNELS[channel_type][channel_name]["url"])
         # url_hd = extract_video_url(ALL_CHANNELS[channel_type][channel_name]["url_hd"])
 
         return jsonify({
