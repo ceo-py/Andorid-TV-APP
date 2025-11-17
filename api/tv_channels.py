@@ -856,13 +856,10 @@ ALL_CHANNELS_NOT_SORTED = {
 
 def sort_channels_and_lowercase_keys(channels_dict):
     sorted_channels = {}
-    
-    # Sort main keys
     for main_key, inner_dict in sorted(channels_dict.items()):
-        
         sorted_inner_items = sorted(inner_dict.items(), key=lambda item: item[0].upper())
-        
         lower_cased_inner_dict = {}
+        
         for channel_name, details in sorted_inner_items:
             lower_cased_inner_dict[channel_name.upper()] = details
             
