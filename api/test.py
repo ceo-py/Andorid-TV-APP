@@ -31,7 +31,9 @@ def handle_response(response):
 
 def run(p):
     # target_url = "https://www.seirsanduk.com/bnt-1-online.xhtml" # <-- REPLACE THIS
-    target_url = "https://www.gledaitv.fan/diema-sport-hd-live-tv.html"  # <-- REPLACE THIS
+    target_url = (
+        "https://www.gledaitv.fan/diema-sport-hd-live-tv.html"  # <-- REPLACE THIS
+    )
 
     browser = p.chromium.launch(headless=False)
     page = browser.new_page()
@@ -43,8 +45,8 @@ def run(p):
         page.wait_for_selector('p:has-text("Не давам съгласие")')
         page.click('p:has-text("Не давам съгласие")')
 
-        page.wait_for_selector('a:has-text("Player 1")') 
-        page.click('a:has-text("Player 1")') 
+        page.wait_for_selector('a:has-text("Player 1")')
+        page.click('a:has-text("Player 1")')
 
         if not captured_urls:
             page.wait_for_timeout(5000)

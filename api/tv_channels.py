@@ -152,6 +152,111 @@ ALL_CHANNELS_NOT_SORTED = {
             "url_hd": "",
             "image": "https://upload.wikimedia.org/wikipedia/commons/thu…in_Sports_Logo.svg/500px-Bein_Sports_Logo.svg.png",
         },
+        "ACC Digital Network": {
+            "url": ["https://www.parsatv.com/name=ACC-Digital-Network#sport"],
+            "url_hd": "",
+            "image": "https://images-cdn3.welcomesoftware.com/assets/ACCDN-hero.jpg/Zz0yMTgwZDE3MGExNDgxMWVmYmUzYjUyYzdiZmFkMzZmZQ==?width=80&height=60",
+        },
+        "Fifa +": {
+            "url": ["https://www.parsatv.com/name=FIFA-Plus#sport"],
+            "url_hd": "",
+            "image": "https://www.cabletv.com/app/uploads/2022/08/fifa-plus-logo-small.png",
+        },
+        "NHL TV": {
+            "url": ["https://www.parsatv.com/name=NHL-TV"],
+            "url_hd": "",
+            "image": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png?w=100&h=100&transparent=true",
+        },
+        "Motor Vision": {
+            "url": ["https://www.parsatv.com/name=Motorvision-TV#sport"],
+            "url_hd": "",
+            "image": "https://freecast.com/_next/image?url=https%3A%2F%2…c7914d2a-1749657702.103058.256x256.png&w=384&q=75",
+        },
+        "Canal Motor": {
+            "url": ["https://www.parsatv.com/name=Canal-Motor#sport"],
+            "url_hd": "",
+            "image": "https://freecast.com/_next/image?url=https%3A%2F%2…c7914d2a-1749657702.103058.256x256.png&w=384&q=75",
+        },
+        "beIN Sports Xtra Espanol": {
+            "url": ["https://www.parsatv.com/name=beIN-Sports-Xtra-Espanol#spanish"],
+            "url_hd": "",
+            "image": "https://www.gledaitv.fan/upload/tv/o_bein-sports-logo_20240623012954.jpg",
+        },
+        "Sports TV": {
+            "url": ["https://www.parsatv.com/name=Sports-TV#turkish"],
+            "url_hd": "",
+            "image": "",
+        },
+        "RTA Sport": {
+            "url": ["https://www.parsatv.com/name=RTA-Sport#afghan"],
+            "url_hd": "",
+            "image": "",
+        },
+        "KTV Sport 2": {
+            "url": ["https://www.parsatv.com/name=KTV-Sport-2#google_vignette"],
+            "url_hd": "",
+            "image": "",
+        },
+        "KTV Sport 2": {
+            "url": ["https://www.parsatv.com/name=KTV-Sport-2#google_vignette"],
+            "url_hd": "",
+            "image": "",
+        },
+        "KTV Sport": {
+            "url": ["https://www.parsatv.com/name=KTV-Sport#google_vignette"],
+            "url_hd": "",
+            "image": "",
+        },
+        "KTV Sport": {
+            "url": ["https://www.parsatv.com/name=KTV-Sport#google_vignette"],
+            "url_hd": "",
+            "image": "",
+        },
+        "Dubai Sports 3 TV": {
+            "url": ["https://www.parsatv.com/name=Dubai-Sports-3-TV#arabic"],
+            "url_hd": "",
+            "image": "",
+        },
+        "Dubai Sports 2 TV": {
+            "url": ["https://www.parsatv.com/name=Dubai-Sports-2"],
+            "url_hd": "",
+            "image": "",
+        },
+        "Dubai Sports 1 TV": {
+            "url": ["https://www.parsatv.com/name=Dubai-Sports-1"],
+            "url_hd": "",
+            "image": "",
+        },
+        "GEM Sport": {
+            "url": ["https://www.parsatv.com/name=GEM-Sport#persian"],
+            "url_hd": "",
+            "image": "",
+        },
+        "Telewebion Sport 3": {
+            "url": ["https://www.parsatv.com/name=Telewebion-Sport-3#persian"],
+            "url_hd": "",
+            "image": "",
+        },
+        "Telewebion Sport 2": {
+            "url": ["https://www.parsatv.com/name=Telewebion-Sport-2#persian"],
+            "url_hd": "",
+            "image": "",
+        },
+        "Telewebion Sport 1": {
+            "url": ["https://www.parsatv.com/name=Telewebion-Sport-1#persian"],
+            "url_hd": "",
+            "image": "",
+        },
+        "Abu Dhabi Sports 2": {
+            "url": ["https://www.parsatv.com/name=Abu-Dhabi-Sports-2#arabic"],
+            "url_hd": "",
+            "image": "",
+        },
+        "Abu Dhabi Sports 1": {
+            "url": ["https://www.parsatv.com/name=Abu-Dhabi-Sports-1#arabic"],
+            "url_hd": "",
+            "image": "",
+        },
     },
     "filmi-channels": {
         "AMC": {
@@ -819,6 +924,16 @@ ALL_CHANNELS_NOT_SORTED = {
             "url_hd": "",
             "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Logo_Deejay.svg/520px-Logo_Deejay.svg.png",
         },
+        "NRG 91": {
+            "url": ["https://www.parsatv.com/name=NRG-91-Music"],
+            "url_hd": "",
+            "image": "",
+        },
+        "1HD Music": {
+            "url": ["https://www.parsatv.com/name=1HD-Music#music"],
+            "url_hd": "",
+            "image": "",
+        },
     },
     "politicheski-channels": {
         "7/8 TV": {
@@ -854,21 +969,32 @@ ALL_CHANNELS_NOT_SORTED = {
     },
 }
 
+
+def remove_proxy_from_link(url: list) -> list:
+    clean_url = url[0]
+    if "/?url=" in clean_url:
+        clean_url = clean_url.split("/?url=")[-1]
+
+    return clean_url
+
+
 def sort_channels_and_lowercase_keys(channels_dict):
     sorted_channels = {}
     for main_key, inner_dict in sorted(channels_dict.items()):
-        sorted_inner_items = sorted(inner_dict.items(), key=lambda item: item[0].upper())
+        sorted_inner_items = sorted(
+            inner_dict.items(), key=lambda item: item[0].upper()
+        )
         lower_cased_inner_dict = {}
-        
+
         for channel_name, details in sorted_inner_items:
             lower_cased_inner_dict[channel_name.upper()] = details
-            
+
         sorted_channels[main_key] = lower_cased_inner_dict
-        
+
     return sorted_channels
 
-ALL_CHANNELS = sort_channels_and_lowercase_keys(ALL_CHANNELS_NOT_SORTED)
 
+ALL_CHANNELS = sort_channels_and_lowercase_keys(ALL_CHANNELS_NOT_SORTED)
 
 
 def extract_m3u8_from_text(html_content):
@@ -918,8 +1044,8 @@ def extract_video_url(url):
             page.wait_for_selector('p:has-text("Не давам съгласие")', timeout=1000)
             page.click('p:has-text("Не давам съгласие")')
 
-            page.wait_for_selector('a:has-text("Player 1")', timeout=1000) 
-            page.click('a:has-text("Player 1")') 
+            page.wait_for_selector('a:has-text("Player 1")', timeout=1000)
+            page.click('a:has-text("Player 1")')
 
             if not captured_urls:
                 page.wait_for_timeout(5000)

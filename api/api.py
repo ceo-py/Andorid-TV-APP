@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from tv_channels import ALL_CHANNELS, extract_video_url
+from tv_channels import ALL_CHANNELS, extract_video_url, remove_proxy_from_link
 
 app = Flask(__name__)
 
@@ -14,17 +14,22 @@ def get_channel():
     if channel_type in ALL_CHANNELS and channel_name in ALL_CHANNELS[channel_type]:
         links = [
             *ALL_CHANNELS[channel_type][channel_name]["url"],
-            ALL_CHANNELS[channel_type][channel_name]["url_hd"]
-              ]
+            ALL_CHANNELS[channel_type][channel_name]["url_hd"],
+        ]
         url = None
 
         while links:
             link = links.pop()
+
+            if not link:
+                continue
+
             url = extract_video_url(link)
 
             if len(url) > 0:
-                return jsonify({"success": True, "url": url})
-            
+                clean_url = remove_proxy_from_link(url)
+                return jsonify({"success": True, "url": [clean_url]})
+
     return jsonify({"success": False, "error": "Channel not found"})
 
 
