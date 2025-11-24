@@ -1,4 +1,3 @@
-# Use this code again and replace the 'target_url' with your actual page URL
 from playwright.sync_api import sync_playwright
 import threading
 import re
@@ -32,18 +31,23 @@ def handle_response(response):
 
 def run(p):
     # target_url = "https://www.seirsanduk.com/bnt-1-online.xhtml" # <-- REPLACE THIS
-    target_url = "https://www.parsatv.com/name=DAZN-Combat#sport"  # <-- REPLACE THIS
+    target_url = "https://www.gledaitv.fan/diema-sport-hd-live-tv.html"  # <-- REPLACE THIS
 
-    browser = p.chromium.launch(headless=True)
+    browser = p.chromium.launch(headless=False)
     page = browser.new_page()
     page.on("response", handle_response)
 
     try:
         page.goto(target_url, wait_until="networkidle")
 
-        # Give it a moment to ensure all background requests finish
+        page.wait_for_selector('p:has-text("Не давам съгласие")')
+        page.click('p:has-text("Не давам съгласие")')
+
+        page.wait_for_selector('a:has-text("Player 1")') 
+        page.click('a:has-text("Player 1")') 
+
         if not captured_urls:
-            page.wait_for_timeout(3000)
+            page.wait_for_timeout(5000)
 
     except Exception as e:
         print(f"Error during navigation: {e}")

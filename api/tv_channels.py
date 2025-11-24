@@ -915,6 +915,15 @@ def extract_video_url(url):
 
         try:
             page.goto(url, wait_until="networkidle")
+            page.wait_for_selector('p:has-text("Не давам съгласие")', timeout=1000)
+            page.click('p:has-text("Не давам съгласие")')
+
+            page.wait_for_selector('a:has-text("Player 1")', timeout=1000) 
+            page.click('a:has-text("Player 1")') 
+
+            if not captured_urls:
+                page.wait_for_timeout(5000)
+
         except Exception as e:
             print(f"Error during extraction: {e}")
         finally:

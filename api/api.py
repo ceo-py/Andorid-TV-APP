@@ -12,19 +12,20 @@ def get_channel():
     channel_name = data.get("channel_name")
 
     if channel_type in ALL_CHANNELS and channel_name in ALL_CHANNELS[channel_type]:
-        # link = ALL_CHANNELS[channel_type][channel_name]["url_hd"]
-        # print(f"Hd Link {link}")
-        # if not link:
-        #     link = ALL_CHANNELS[channel_type][channel_name]["url"]
-        #     print(f"Normal Link {link}")
-        link = ALL_CHANNELS[channel_type][channel_name]["url"]
-        url = extract_video_url(link)
-        # url = extract_video_url(ALL_CHANNELS[channel_type][channel_name]["url"])
-        # url_hd = extract_video_url(ALL_CHANNELS[channel_type][channel_name]["url_hd"])
+        links = [
+            *ALL_CHANNELS[channel_type][channel_name]["url"],
+            ALL_CHANNELS[channel_type][channel_name]["url_hd"]
+              ]
+        url = None
 
-        return jsonify({"success": True, "url": url})
-    else:
-        return jsonify({"success": False, "error": "Channel not found"})
+        while links:
+            link = links.pop()
+            url = extract_video_url(link)
+
+            if len(url) > 0:
+                return jsonify({"success": True, "url": url})
+            
+    return jsonify({"success": False, "error": "Channel not found"})
 
 
 @app.route("/get-all-channels", methods=["GET"])
