@@ -1034,7 +1034,10 @@ def extract_video_url(url):
             print(f"Error processing response: {e}")
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+        # chrome_path = r"/usr/bin/google-chrome" Unix
+
+        browser = p.chromium.launch(headless=True, executable_path=chrome_path)
         page = browser.new_page()
 
         page.on("response", handle_response)
