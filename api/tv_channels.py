@@ -4,6 +4,21 @@ import re
 
 ALL_CHANNELS_NOT_SORTED = {
     "sportni-channels": {
+        "MATCH! Futbol 3": {
+            "url": ["https://www.gledaitv.fan/match-futbol-3-live-tv.html"],
+            "url_hd": "",
+            "image": "https://www.gledaitv.fan/upload/tv/k_match-futbol-3-logo_20251128174147.png",
+        },
+        "MATCH! Futbol 2": {
+            "url": ["https://www.gledaitv.fan/match-futbol-2-live-tv.html"],
+            "url_hd": "",
+            "image": "https://www.gledaitv.fan/upload/tv/k_match-futbol-2-logo_20251128173920.png",
+        },
+        "MATCH! Futbol 1": {
+            "url": ["https://www.gledaitv.fan/match-futbol-1-live-tv.html"],
+            "url_hd": "",
+            "image": "https://www.gledaitv.fan/upload/tv/k_match-futbol-1-logo_20251128173259.png",
+        },
         "Bein Sports": {
             "url": ["https://www.gledaitv.fan/bein-sports-live-tv.html"],
             "url_hd": "",
