@@ -3,31 +3,31 @@ import re
 
 
 ALL_CHANNELS_NOT_SORTED = {
-    "sportni-channels": {
+    "Sport": {
         "MATCH! Futbol 3": {
             "url": ["https://www.gledaitv.fan/match-futbol-3-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/k_match-futbol-3-logo_20251128174147.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/b/bf/NTV-Plus_Futbol_3_%282014%2C_prototype%29.svg/revision/latest/scale-to-width-down/250?cb=20201017144338",
         },
         "MATCH! Futbol 2": {
             "url": ["https://www.gledaitv.fan/match-futbol-2-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/k_match-futbol-2-logo_20251128173920.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/1/15/NTV-Plus_Futbol_2_%282014%2C_prototype%29.svg/revision/latest/scale-to-width-down/250?cb=20201017143828",
         },
         "MATCH! Futbol 1": {
             "url": ["https://www.gledaitv.fan/match-futbol-1-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/k_match-futbol-1-logo_20251128173259.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/9/98/NTV-Plus_Futbol_1_%282014%2C_prototype%29.svg/revision/latest/scale-to-width-down/250?cb=20201017143436",
         },
         "Bein Sports": {
             "url": ["https://www.gledaitv.fan/bein-sports-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_bein-sports-logo_20240623012954.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/4/45/BeIN_Sports_2017_flat.svg/revision/latest/scale-to-width-down/300?cb=20230910182143",
         },
         "bTV Action": {
             "url": ["https://www.seirsanduk.com/btv-action-online.xhtml"],
             "url_hd": "",
-            "image": "https://www.seirsanduk.com/wp-content/uploads/btv-action-logo.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/5/58/BTV_Action_HD.jpg/revision/latest/scale-to-width-down/149?cb=20240319191657",
         },
         "Diema Sport": {
             "url": [
@@ -35,7 +35,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/diema-sport-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/diema-sport-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_diema-sport-logo_20240819161622.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/4/45/Diema_Sport_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505001930",
         },
         "Diema Sport 2": {
             "url": [
@@ -43,7 +43,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/diema-sport-2-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/diema-sport-2-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_diema-sport-2-logo_20240819161729.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/3/36/Diema_Sport_2_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505001624",
         },
         "Diema Sport 3": {
             "url": [
@@ -51,7 +51,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/diema-sport-3-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/diema-sport-3-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_diema-sport-3-logo_20240819161836.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/1/17/Diema_Sport_3_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505000657",
         },
         "Eurosport 1 BG": {
             "url": [
@@ -59,7 +59,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/eurosport-1-bg-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/eurosport-1-bg-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_eurosport-1-logo_20240820133202.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/e/e7/Eurosport_1_2022.svg/revision/latest/scale-to-width-down/300?cb=20220806090310",
         },
         "Eurosport 2 BG": {
             "url": [
@@ -67,7 +67,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/eurosport-2-bg-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/eurosport-2-bg-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_eurosport-2-logo_20240820133425.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/1/16/Eurosport_2_2022.svg/revision/latest/scale-to-width-down/300?cb=20220417183127",
         },
         "Max Sport 1": {
             "url": [
@@ -75,7 +75,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/max-sport-1-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/max-sport-1-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_max-sport-1-logo_20240820143530.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/5/5e/Max_Sport_1_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505002452",
         },
         "Max Sport 2": {
             "url": [
@@ -83,7 +83,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/max-sport-2-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/max-sport-2-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_max-sport-2-logo_20240820143632.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/a/ac/Max_Sport_2_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505002701",
         },
         "Max Sport 3": {
             "url": [
@@ -91,7 +91,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/max-sport-3-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/max-sport-3-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_max-sport-3-logo_20240820143807.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/6/61/Max_Sport_3_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505002837",
         },
         "Max Sport 4": {
             "url": [
@@ -99,7 +99,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/max-sport-4-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/max-sport-4-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_max-sport-4-logo_20240820143917.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/6/62/Max_Sport_4_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505003011",
         },
         "Nova Sport": {
             "url": [
@@ -107,7 +107,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/nova-sport-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/nova-sport-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_nova-sport-logo_20240820145156.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/9/9e/Nova_Sport_2010_flat.svg/revision/latest/scale-to-width-down/150?cb=20240731175840",
         },
         "Ring BG": {
             "url": [
@@ -115,169 +115,159 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/ring-bg-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/ring-bg-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_ring-bg-logo_20240820145459.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/0/03/Ring.svg/revision/latest/scale-to-width-down/200?cb=20210516104914",
         },
         "Sports Tv": {
             "url": ["https://www.gledaitv.fan/sports-tv-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_sports-tv-logo_20240623013238.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/a/a1/Sport_TV_2023.svg/revision/latest/scale-to-width-down/300?cb=20231020131831",
         },
         "TJK Tv": {
             "url": ["https://www.gledaitv.fan/tjk-tv-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/tjk-tv-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_tjk-tv-logo_20240623013628.jpg",
+            "image": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20250310164316",
         },
         "Trt Spor": {
             "url": ["https://www.gledaitv.fan/trt-spor-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/trt-spor-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_trt-spor-logo_20240623010112.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/9/92/TRT_Spor_logo_%282022%29.svg/revision/latest/scale-to-width-down/300?cb=20220107231944",
         },
         "DAZN Combat": {
             "url": ["https://www.parsatv.com/name=DAZN-Combat#sport"],
             "url_hd": "",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thu…ZN_Logo_Master.svg/340px-DAZN_Logo_Master.svg.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/8/83/DAZN_2019_logo.svg/revision/latest/scale-to-width-down/200?cb=20210824002335",
         },
         "Red Bull TV": {
             "url": ["https://www.parsatv.com/name=Red-Bull-TV#sport"],
             "url_hd": "",
-            "image": "https://cdn.imgbin.com/21/11/18/imgbin-red-bull-tv…-bull-red-bull-logo-z5YCPZVM41iy5Sj4NkRsrrbrd.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/3/3c/Red_Bull_TV.svg/revision/latest/scale-to-width-down/250?cb=20180423100712",
         },
         "Fuel TV": {
             "url": ["https://www.parsatv.com/name=Fuel-TV#sport"],
             "url_hd": "",
-            "image": "https://fuel.tv/images/ftv_212x40.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/6/6a/Fuel_TV.svg/revision/latest/scale-to-width-down/150?cb=20100323111006",
         },
         "SportItalia": {
             "url": ["https://www.parsatv.com/name=Sportitalia#sport"],
             "url_hd": "",
-            "image": "https://upload.wikimedia.org/wikipedia/it/c/c0/Sportitalia_Logo.JPG?20140513083418",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/4/4a/Logo_si.JPG/revision/latest/scale-to-width-down/200?cb=20161118191326",
         },
         "Game Plus": {
             "url": ["https://www.parsatv.com/name=Game-Plus#sport"],
             "url_hd": "",
-            "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/…me_Plus_Neetwork.png/400px-Game_Plus_Neetwork.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/1/1a/Game_%282002%29.svg/revision/latest/scale-to-width-down/250?cb=20221221165906",
         },
         "Super Tennis": {
             "url": ["https://www.parsatv.com/name=Super-Tennis#sport"],
             "url_hd": "",
-            "image": "https://upload.wikimedia.org/wikipedia/it/thumb/6/…px-SuperTennis_-_Logo_2016.svg.png?20220105234442",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/4/4e/Super_Tennis_2016.svg/revision/latest/scale-to-width-down/250?cb=20201227003011",
         },
         "beIN Sports Xtra": {
             "url": ["https://www.parsatv.com/name=beIN-Sports-Xtra#sport"],
             "url_hd": "",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thu…in_Sports_Logo.svg/500px-Bein_Sports_Logo.svg.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/0/0b/BeIN_Xtra.PNG/revision/latest/scale-to-width-down/300?cb=20201108180437",
         },
         "ACC Digital Network": {
             "url": ["https://www.parsatv.com/name=ACC-Digital-Network#sport"],
             "url_hd": "",
-            "image": "https://images-cdn3.welcomesoftware.com/assets/ACCDN-hero.jpg/Zz0yMTgwZDE3MGExNDgxMWVmYmUzYjUyYzdiZmFkMzZmZQ==?width=80&height=60",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/6/66/Atlantic_Coast_Conference_2014.svg/revision/latest/scale-to-width-down/250?cb=20250612020101",
         },
         "Fifa +": {
             "url": ["https://www.parsatv.com/name=FIFA-Plus#sport"],
             "url_hd": "",
-            "image": "https://www.cabletv.com/app/uploads/2022/08/fifa-plus-logo-small.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/9/9c/FIFA%2B_%282025%29.svg/revision/latest/scale-to-width-down/300?cb=20250521135758",
         },
         "NHL TV": {
             "url": ["https://www.parsatv.com/name=NHL-TV"],
             "url_hd": "",
-            "image": "https://a.espncdn.com/combiner/i?img=/i/teamlogos/leagues/500/nhl.png?w=100&h=100&transparent=true",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/3/3a/05_NHL_Shield.svg/revision/latest/scale-to-width-down/200?cb=20191208162044",
         },
         "Motor Vision": {
             "url": ["https://www.parsatv.com/name=Motorvision-TV#sport"],
             "url_hd": "",
-            "image": "https://freecast.com/_next/image?url=https%3A%2F%2…c7914d2a-1749657702.103058.256x256.png&w=384&q=75",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/7/70/Motorvision_2023.svg/revision/latest/scale-to-width-down/300?cb=20230921093539",
         },
         "Canal Motor": {
             "url": ["https://www.parsatv.com/name=Canal-Motor#sport"],
             "url_hd": "",
-            "image": "https://freecast.com/_next/image?url=https%3A%2F%2…c7914d2a-1749657702.103058.256x256.png&w=384&q=75",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/8/8e/Motors_TV.svg/revision/latest/scale-to-width-down/300?cb=20100330070517",
         },
         "beIN Sports Xtra Espanol": {
             "url": ["https://www.parsatv.com/name=beIN-Sports-Xtra-Espanol#spanish"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_bein-sports-logo_20240623012954.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/8/8e/Logo-bein-sport-xtra-espanol-plain.png/revision/latest/scale-to-width-down/300?cb=20240923145001",
         },
         "Sports TV": {
             "url": ["https://www.parsatv.com/name=Sports-TV#turkish"],
             "url_hd": "",
-            "image": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/a/a1/Sport_TV_2023.svg/revision/latest/scale-to-width-down/300?cb=20231020131831",
         },
         "RTA Sport": {
             "url": ["https://www.parsatv.com/name=RTA-Sport#afghan"],
             "url_hd": "",
-            "image": "",
+            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
         },
         "KTV Sport 2": {
             "url": ["https://www.parsatv.com/name=KTV-Sport-2#google_vignette"],
             "url_hd": "",
-            "image": "",
-        },
-        "KTV Sport 2": {
-            "url": ["https://www.parsatv.com/name=KTV-Sport-2#google_vignette"],
-            "url_hd": "",
-            "image": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/2/21/KTV_28UHF.png/revision/latest/scale-to-width-down/250?cb=20180715160408",
         },
         "KTV Sport": {
             "url": ["https://www.parsatv.com/name=KTV-Sport#google_vignette"],
             "url_hd": "",
-            "image": "",
-        },
-        "KTV Sport": {
-            "url": ["https://www.parsatv.com/name=KTV-Sport#google_vignette"],
-            "url_hd": "",
-            "image": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/2/21/KTV_28UHF.png/revision/latest/scale-to-width-down/250?cb=20180715160408",
         },
         "Dubai Sports 3 TV": {
             "url": ["https://www.parsatv.com/name=Dubai-Sports-3-TV#arabic"],
             "url_hd": "",
-            "image": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/8/8b/Dubai_Sports_Logo_in_2023.png/revision/latest/scale-to-width-down/300?cb=20241130031009",
         },
         "Dubai Sports 2 TV": {
             "url": ["https://www.parsatv.com/name=Dubai-Sports-2"],
             "url_hd": "",
-            "image": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/8/8b/Dubai_Sports_Logo_in_2023.png/revision/latest/scale-to-width-down/300?cb=20241130031009",
         },
         "Dubai Sports 1 TV": {
             "url": ["https://www.parsatv.com/name=Dubai-Sports-1"],
             "url_hd": "",
-            "image": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/8/8b/Dubai_Sports_Logo_in_2023.png/revision/latest/scale-to-width-down/300?cb=20241130031009",
         },
         "GEM Sport": {
             "url": ["https://www.parsatv.com/name=GEM-Sport#persian"],
             "url_hd": "",
-            "image": "",
+            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
         },
         "Telewebion Sport 3": {
             "url": ["https://www.parsatv.com/name=Telewebion-Sport-3#persian"],
             "url_hd": "",
-            "image": "",
+            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
         },
         "Telewebion Sport 2": {
             "url": ["https://www.parsatv.com/name=Telewebion-Sport-2#persian"],
             "url_hd": "",
-            "image": "",
+            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
         },
         "Telewebion Sport 1": {
             "url": ["https://www.parsatv.com/name=Telewebion-Sport-1#persian"],
             "url_hd": "",
-            "image": "",
+            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
         },
         "Abu Dhabi Sports 2": {
             "url": ["https://www.parsatv.com/name=Abu-Dhabi-Sports-2#arabic"],
             "url_hd": "",
-            "image": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/6/66/AD_Sports_2023.png/revision/latest/scale-to-width-down/300?cb=20231008181135",
         },
         "Abu Dhabi Sports 1": {
             "url": ["https://www.parsatv.com/name=Abu-Dhabi-Sports-1#arabic"],
             "url_hd": "",
-            "image": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/6/66/AD_Sports_2023.png/revision/latest/scale-to-width-down/300?cb=20231008181135",
         },
     },
-    "filmi-channels": {
+    "Movie": {
         "AMC": {
             "url": ["https://www.gledaitv.fan/amc-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_amc-logo_20240819212349.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/a/ad/AMC_Networks_S21.svg/revision/latest/scale-to-width-down/200?cb=20220820072921",
         },
         "AXN": {
             "url": [
@@ -285,12 +275,12 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/axn-live-tv.html",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_axn-logo_20240819212646.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/d/dc/2016_AXN_logo.svg/revision/latest/scale-to-width-down/300?cb=20201126064846",
         },
         "bTV Action": {
             "url": ["https://www.seirsanduk.com/btv-action-online.xhtml"],
             "url_hd": "",
-            "image": "https://www.seirsanduk.com/wp-content/uploads/btv-action-logo.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/5/55/BTV_Action_HD.svg/revision/latest/scale-to-width-down/150?cb=20251208045939",
         },
         "bTV Cinema": {
             "url": [
@@ -298,7 +288,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/btv-cinema-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/btv-cinema-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_btv-cinema-logo_20240819213838.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/f/f5/BTV_Cinema_%282016%29.svg/revision/latest/scale-to-width-down/300?cb=20200125184619",
         },
         "bTV Comedy": {
             "url": [
@@ -306,7 +296,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/btv-comedy-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/btv-comedy-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_btv-comedy-logo_20240819214203.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/9/9f/BTV_Comedy_HD.jpg/revision/latest?cb=20240319192449",
         },
         "bTV Lady": {
             "url": [
@@ -314,12 +304,12 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/btv-lady-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/btv-lady-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_btv-lady-logo_20240819214517.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/5/51/BTV_Lady_%282016%29.svg/revision/latest/scale-to-width-down/250?cb=20200125184015",
         },
         "Diema": {
             "url": ["https://www.gledaitv.fan/diema-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_diema-logo_20240820131916.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/b/b2/Diema.png/revision/latest/scale-to-width-down/150?cb=20170315162656",
         },
         "Diema Family": {
             "url": [
@@ -327,7 +317,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/diema-family-live-tv.html",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_diema-family-logo_20240820132057.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/7/71/Diema_Family_2019.svg/revision/latest/scale-to-width-down/150?cb=20240731170629",
         },
         "Epic Drama": {
             "url": [
@@ -335,27 +325,27 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/epic-drama-live-tv.html",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_epic-drama-logo_20240820132902.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/1/1e/Epic_Drama_2018.svg/revision/latest/scale-to-width-down/200?cb=20191113170018",
         },
         "FilmBox Extra": {
             "url": ["https://www.gledaitv.fan/filmbox-extra-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/filmbox-extra-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_filmbox-extra-logo_20240820133950.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/2/2c/FilmBox_Extra_HD.svg/revision/latest/scale-to-width-down/250?cb=20171210164807",
         },
         "FilmBox Stars": {
             "url": ["https://www.gledaitv.fan/filmbox-stars-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/filmbox-stars-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_filmbox-stars-logo_20240820142839.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/6/6e/FilmBox_Stars.svg/revision/latest/scale-to-width-down/250?cb=20200901135021",
         },
         "Fox Life": {
             "url": ["https://www.gledaitv.fan/fox-life-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/fox-life-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_fox-life-logo_20240820143156.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/4/4e/Fox_Life.svg/revision/latest/scale-to-width-down/300?cb=20190426124214",
         },
         "Fox Crime": {
             "url": ["https://gledaibgtv.com/fox-crime-online"],
             "url_hd": "",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/FOX_Crime_BG.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/6/6b/Fox_Crime_logo.svg/revision/latest/scale-to-width-down/250?cb=20171230124159",
         },
         "Kino Nova": {
             "url": [
@@ -363,17 +353,17 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/kino-nova-live-tv.html",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_kino-nova-logo_20240911200018.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/a/a6/Kinonova_re.svg/revision/latest/scale-to-width-down/250?cb=20260101161359",
         },
         "Movie Star": {
             "url": ["https://www.gledaitv.fan/movie-star-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/movie-star-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_movie-star-logo_20240820144115.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/3/30/Movie_Starz_Video_Logo_%28Fixed%29.svg/revision/latest/scale-to-width-down/300?cb=20230605025253",
         },
         "Scream": {
             "url": ["https://www.gledaitv.fan/scream-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_scream-logo_20241018104926.png",
+            "image": "https://static.wikia.nocookie.net/scream/images/f/f3/Scream_Logo_Fanfic.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20140328233314",
         },
         "STAR Channel": {
             "url": [
@@ -381,7 +371,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/star-channel-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/star-channel-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_star-logo_20240820142504.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/c/cd/Star_Channel_2023.svg/revision/latest/scale-to-width-down/250?cb=20231209070650",
         },
         "Star Crime": {
             "url": [
@@ -389,19 +379,19 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/star-crime-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/star-crime-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_star-crime-logo_20240820143035.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/4/40/Star_Crime_2023.svg/revision/latest/scale-to-width-down/250?cb=20231208002839",
         },
         "Star Life": {
             "url": ["https://www.seirsanduk.com/star-life-online.xhtml"],
             "url_hd": "",
-            "image": "https://www.seirsanduk.com/wp-content/uploads/star-life-logo.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/b/b9/Star_Life_2023.svg/revision/latest/scale-to-width-down/250?cb=20231209041522",
         },
     },
-    "nauka-channels": {
+    "Science": {
         "Animal Planet": {
             "url": ["https://www.gledaitv.fan/animal-planet-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/animal-planet-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_animal-planet-logo_20240819212508.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/e/e3/Animal_Planet_2018.svg/revision/latest/scale-to-width-down/250?cb=20210825085349",
         },
         "Discovery Channel": {
             "url": [
@@ -409,22 +399,22 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/discovery-channel-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/discovery-channel-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_discovery-channel-logo_20240820132208.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/a/a8/Discovery_Channel_2019.svg/revision/latest/scale-to-width-down/300?cb=20210519155203",
         },
         "DMAX": {
             "url": ["https://www.gledaitv.fan/dmax-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/dmax-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_dmax-logo_20240623013500.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/c/c0/DMAX_%282026%29.svg/revision/latest/scale-to-width-down/250?cb=20260113020915",
         },
         "DocuBox": {
             "url": ["https://www.gledaitv.fan/docubox-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/docubox-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_docubox-logo_20240827155005.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/0/02/DocuBox_%282013%29.svg/revision/latest/scale-to-width-down/250?cb=20171210215646",
         },
         "History Channel": {
             "url": ["https://www.gledaitv.fan/history-channel-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/history-channel-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_history-channel-logo_20240820143404.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/e/e8/History_2021.png/revision/latest/scale-to-width-down/200?cb=20240302050750",
         },
         "Investigation Discovery": {
             "url": [
@@ -432,7 +422,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/investigation-discovery-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/investigation-discovery-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_investigation-discovery-logo_20240827154313.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/0/0b/ID-2020.svg/revision/latest/scale-to-width-down/250?cb=20200413032314",
         },
         "Nat Geo Wild": {
             "url": [
@@ -440,7 +430,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/nat-geo-wild-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/nat-geo-wild-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_nat-geo-wild-logo_20240820144252.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/d/d9/National_Geographic_Wild_2018.svg/revision/latest/scale-to-width-down/200?cb=20180903172554",
         },
         "National Geographic": {
             "url": [
@@ -448,7 +438,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/national-geographic-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/national-geographic-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_national-geographic-channel-logo_20240820144345.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/c/c6/National_Geographic_2008.svg/revision/latest/scale-to-width-down/250?cb=20170701154034",
         },
         "TLC": {
             "url": [
@@ -456,42 +446,42 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/tlc-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/tlc-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_tlc-logo_20240623013349.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/b/b1/TLC_%282021%29.svg/revision/latest/scale-to-width-down/250?cb=20220703193228",
         },
         "TRT Belgesel": {
             "url": ["https://www.gledaitv.fan/trt-belgesel-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/trt-belgesel-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_trt-belgesel-logo_20240623013851.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/5/5e/TRT_Belgesel_%282019%29.svg/revision/latest/scale-to-width-down/300?cb=20210205141825",
         },
         "Viasat Explore": {
             "url": ["https://www.gledaitv.fan/viasat-explore-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/viasat-explore-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_viasat-explore-logo_20240820150649.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/e/ec/Viasat_Explore_2022.svg/revision/latest/scale-to-width-down/150?cb=20220119212514",
         },
         "Viasat History": {
             "url": ["https://www.gledaitv.fan/viasat-history-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_viasat-history-logo_20240820150752.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/b/b7/Viasat_History_2022.svg/revision/latest/scale-to-width-down/150?cb=20220119212113",
         },
         "Viasat Nature": {
             "url": ["https://www.gledaitv.fan/viasat-nature-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_viasat-nature-logo_20240820150835.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/b/b5/Viasat_Nature_2022.svg/revision/latest/scale-to-width-down/150?cb=20220119211909",
         },
         "Yaban Tv": {
             "url": ["https://www.gledaitv.fan/yaban-tv-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/yaban-tv-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_yaban-tv-logo_20190705173443.jpg",
+            "image": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20250310164316",
         },
     },
-    "novini-channels": {
+    "News": {
         "Bulgaria ON AIR Tv": {
             "url": [
                 "https://www.seirsanduk.com/bulgaria-on-air-online.xhtml",
                 "https://www.gledaitv.fan/bulgaria-on-air-tv-live-tv.html",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_bulgaria-on-air-tv-logo_20241014173407.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/5/5f/Bgonair-new2.png/revision/latest/scale-to-width-down/210?cb=20160102175130",
         },
         "BNT 1": {
             "url": [
@@ -499,7 +489,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.seirsanduk.com/bnt-1-online.xhtml",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_bnt-1-online-logo_20240819155745.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/6/6f/BNT_1_2018.svg/revision/latest/scale-to-width-down/300?cb=20180909194302",
         },
         "BNT 2": {
             "url": [
@@ -507,7 +497,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/bnt-2-live-tv.html",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_bnt-2-logo_20240819160058.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/1/1f/BNT_2_2018.svg/revision/latest/scale-to-width-down/300?cb=20180909194412",
         },
         "BNT 3": {
             "url": [
@@ -515,7 +505,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/bnt-3-live-tv.html",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_bnt-3-logo_20240819160336.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/3/32/BNT_3_2018.svg/revision/latest/scale-to-width-down/300?cb=20180909194740",
         },
         "BNT 4": {
             "url": [
@@ -523,7 +513,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/bnt-4-live-tv.html",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_bnt-4-logo_20240819160919.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/e/e9/BNT_4_2018.svg/revision/latest/scale-to-width-down/300?cb=20180909194558",
         },
         "bTV": {
             "url": [
@@ -531,12 +521,12 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/btv-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/btv-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_btv-logo_20240819213348.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/e/e6/BTV_Bulgaria_2025.svg/revision/latest/scale-to-width-down/250?cb=20250701093143",
         },
         "Bulgaria 24": {
             "url": ["https://www.gledaitv.fan/bulgaria-24-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_bulgaria-24-logo_20241014172429.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/0/09/300px-Bulgaria_24_TV.png/revision/latest?cb=20200518050332",
         },
         "Evrokom": {
             "url": [
@@ -544,12 +534,12 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/evrokom-live-tv.html",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_evrokom-logo_20240820133731.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/a/a5/Eurokom_1996.png/revision/latest/scale-to-width-down/300?cb=20170802171200",
         },
         "Kanal 3": {
             "url": ["https://www.gledaitv.fan/kanal-3-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_kanal-3-logo_20241014173941.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/3/32/Kanal3.png/revision/latest/scale-to-width-down/150?cb=20160211132831",
         },
         "Nova": {
             "url": [
@@ -557,12 +547,12 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/nova-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/nova-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_nova-tv-logo_20240820145031.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/c/c8/NTV_Logo_%282005-2011%29.svg/revision/latest/scale-to-width-down/250?cb=20210422181644",
         },
         "Pervyy kanal": {
             "url": ["https://www.gledaitv.fan/pervyy-kanal-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/pervyy-kanal-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_--logo_20241018103804.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/4/40/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_2.png/revision/latest/scale-to-width-down/200?cb=20200511140953",
         },
         "VTK": {
             "url": [
@@ -570,105 +560,22 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/vtk-live-tv.html",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_vtk-logo_20241014171657.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/f/f2/Vtk3.png/revision/latest/scale-to-width-down/220?cb=20200518050925",
         },
     },
-    "obshti-channels": {
-        "24 Kitchen": {
-            "url": [
-                "https://www.seirsanduk.com/24-kitchen-televizia-online.xhtml",
-                "https://www.gledaitv.fan/24-kitchen-live-tv.html",
-            ],
-            "url_hd": "https://www.gledaitv.fan/24-kitchen-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_24-kitchen-logo_20240819212026.png",
-        },
-        "AGRO": {
-            "url": ["https://www.gledaitv.fan/agro-live-tv.html"],
-            "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_agro-logo_20241014171951.png",
-        },
-        "bTV Action": {
-            "url": ["https://www.gledaitv.fan/btv-action-live-tv.html"],
-            "url_hd": "https://www.gledaitv.fan/btv-action-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_btv-action-logo_20240819213614.png",
-        },
-        "Bulgaria ON AIR": {
-            "url": ["https://www.gledaitv.fan/bulgaria-on-air-live-tv.html"],
-            "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_bulgaria-on-air-logo_20240819214715.png",
-        },
-        "Byeaz Tv": {
-            "url": ["https://www.gledaitv.fan/byeaz-tv-live-tv.html"],
-            "url_hd": "https://www.gledaitv.fan/byeaz-tv-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_byeaz-tv-logo_20240623011637.jpg",
-        },
-        "Code Fashion": {
-            "url": ["https://www.gledaitv.fan/code-fashion-live-tv.html"],
-            "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_code-fashion-logo_20241014171352.png",
-        },
-        "Code Health": {
-            "url": ["https://www.gledaitv.fan/code-health-live-tv.html"],
-            "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_code-health-logo_20241014171123.png",
-        },
-        "Kanal 0": {
-            "url": ["https://www.gledaitv.fan/kanal-0-live-tv.html"],
-            "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_kanal-0-logo_20241014172146.png",
-        },
-        "Kanal D": {
-            "url": ["https://www.gledaitv.fan/kanal-d-live-tv.html"],
-            "url_hd": "https://www.gledaitv.fan/kanal-d-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_kanal-d-logo_20240623012430.jpg",
-        },
-        "Show Tv": {
-            "url": ["https://www.gledaitv.fan/show-tv-live-tv.html"],
-            "url_hd": "https://www.gledaitv.fan/show-tv-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_show-tv-logo_20240623012328.jpg",
-        },
-        "Star Tv": {
-            "url": ["https://www.gledaitv.fan/star-tv-live-tv.html"],
-            "url_hd": "https://www.gledaitv.fan/star-tv-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_star-tv-logo_20240623012157.jpg",
-        },
-        "TLC BG": {
-            "url": ["https://www.gledaitv.fan/tlc-bg-live-tv.html"],
-            "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_tlc-bg-logo_20240820145759.png",
-        },
-        "Travel Channel": {
-            "url": [
-                "https://www.seirsanduk.com/travel-channel-online.xhtml",
-                "https://www.gledaitv.fan/travel-channel-live-tv.html",
-            ],
-            "url_hd": "https://www.gledaitv.fan/travel-channel-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_travel-channel-logo_20240820150556.png",
-        },
-        "Travel TV": {
-            "url": ["https://www.seirsanduk.com/travel-tv-online.xhtml"],
-            "url_hd": "",
-            "image": "https://www.seirsanduk.com/wp-content/uploads/travel-tv-logo.jpg",
-        },
-        "TVN": {
-            "url": ["https://www.gledaitv.fan/tvn-live-tv.html"],
-            "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_tvn-logo_20241014165058.png",
-        },
-    },
-    "detski-channels": {
+    "Kids": {
         "Cartoon Network": {
             "url": [
                 "https://www.seirsanduk.com/cartoon-network-online.xhtml",
                 "https://www.gledaitv.fan/cartoon-network-live-tv.html",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_cartoon-network-logo_20240819214852.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/e/ee/Cartoon_Network_2010.svg/revision/latest/scale-to-width-down/250?cb=20210726224754",
         },
         "Disney Channel": {
             "url": ["https://www.gledaitv.fan/disney-channel-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_disney-channel-logo_20240820132440.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/f/f0/DISNEYCHANNEL-2025.svg/revision/latest/scale-to-width-down/300?cb=20251113064305",
         },
         "Nick Jr.": {
             "url": [
@@ -676,12 +583,12 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/nick-jr-live-tv.html",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_nick-jr-logo_20240820144650.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/5/55/Nick_Jr..svg/revision/latest/scale-to-width-down/250?cb=20251017154510",
         },
         "Nick Toons": {
             "url": ["https://www.gledaitv.fan/nick-toons-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_nick-toons-logo_20240820151114.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/6/69/Nicktoons_2023_Logo.svg/revision/latest/scale-to-width-down/300?cb=20240724194938",
         },
         "Nickelodeon": {
             "url": [
@@ -689,151 +596,257 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/nickelodeon-live-tv.html",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_nickelodeon-logo_20240820144449.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/0/07/Nickelodeon_%282009%29.svg/revision/latest/scale-to-width-down/350?cb=20180306141612",
         },
         "EKids": {
             "url": ["https://www.seirsanduk.com/ekids-online.xhtml"],
             "url_hd": "",
-            "image": "https://www.seirsanduk.com/wp-content/uploads/ekids-logo.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/0/04/Ekids.png/revision/latest/scale-to-width-down/200?cb=20150912152237",
         },
         "Trt Çocuk": {
             "url": ["https://www.gledaitv.fan/trt-cocuk-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/trt-cocuk-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_trt-cocuk-logo_20240623011311.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/revision/latest/scale-to-width-down/300?cb=20211101143853",
         },
     },
-    "worldwide-channels": {
+    "Worldwide": {
+        "24 Kitchen": {
+            "url": [
+                "https://www.seirsanduk.com/24-kitchen-televizia-online.xhtml",
+                "https://www.gledaitv.fan/24-kitchen-live-tv.html",
+            ],
+            "url_hd": "https://www.gledaitv.fan/24-kitchen-hd-live-tv.html",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/2/29/24_kitchen_2022_Portugal.svg/revision/latest/scale-to-width-down/300?cb=20230117133430",
+        },
+        "AGRO": {
+            "url": ["https://www.gledaitv.fan/agro-live-tv.html"],
+            "url_hd": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/b/b0/Agro-RedeGlobo.JPG/revision/latest/scale-to-width-down/400?cb=20160723011224",
+        },
+        "bTV Action": {
+            "url": ["https://www.gledaitv.fan/btv-action-live-tv.html"],
+            "url_hd": "https://www.gledaitv.fan/btv-action-hd-live-tv.html",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/b/bb/BTV_Action_%282015%29.svg/revision/latest/scale-to-width-down/200?cb=20200125184213",
+        },
+        "Bulgaria ON AIR": {
+            "url": ["https://www.gledaitv.fan/bulgaria-on-air-live-tv.html"],
+            "url_hd": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/5/5f/Bgonair-new2.png/revision/latest/scale-to-width-down/210?cb=20160102175130",
+        },
+        "Byeaz Tv": {
+            "url": ["https://www.gledaitv.fan/byeaz-tv-live-tv.html"],
+            "url_hd": "https://www.gledaitv.fan/byeaz-tv-hd-live-tv.html",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/9/96/Beyaz_tv_2012-2022.png/revision/latest/scale-to-width-down/250?cb=20250720181730",
+        },
+        "Code Fashion": {
+            "url": ["https://www.gledaitv.fan/code-fashion-live-tv.html"],
+            "url_hd": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/6/60/Fashion.png/revision/latest/scale-to-width-down/200?cb=20241104092044",
+        },
+        "Code Health": {
+            "url": ["https://www.gledaitv.fan/code-health-live-tv.html"],
+            "url_hd": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/0/00/Health_2025.png/revision/latest/scale-to-width-down/200?cb=20250117165029",
+        },
+        "Kanal 0": {
+            "url": ["https://www.gledaitv.fan/kanal-0-live-tv.html"],
+            "url_hd": "",
+            "image": "https://static.wikia.nocookie.net/kabal/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20240516211240",
+        },
+        "Kanal D": {
+            "url": ["https://www.gledaitv.fan/kanal-d-live-tv.html"],
+            "url_hd": "https://www.gledaitv.fan/kanal-d-hd-live-tv.html",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/8/86/Kanal_D_Logo_%282011-present%29_-HD-.png/revision/latest/scale-to-width-down/200?cb=20171227122658",
+        },
+        "Show Tv": {
+            "url": ["https://www.gledaitv.fan/show-tv-live-tv.html"],
+            "url_hd": "https://www.gledaitv.fan/show-tv-hd-live-tv.html",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/4/4b/Show_TV.svg/revision/latest/scale-to-width-down/250?cb=20161114192209",
+        },
+        "Star Tv": {
+            "url": ["https://www.gledaitv.fan/star-tv-live-tv.html"],
+            "url_hd": "https://www.gledaitv.fan/star-tv-hd-live-tv.html",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/2/28/Star_TV_2016.svg/revision/latest/scale-to-width-down/200?cb=20201201120714",
+        },
+        "TLC BG": {
+            "url": ["https://www.gledaitv.fan/tlc-bg-live-tv.html"],
+            "url_hd": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/b/b1/TLC_%282021%29.svg/revision/latest/scale-to-width-down/250?cb=20220703193228",
+        },
+        "Travel Channel": {
+            "url": [
+                "https://www.seirsanduk.com/travel-channel-online.xhtml",
+                "https://www.gledaitv.fan/travel-channel-live-tv.html",
+            ],
+            "url_hd": "https://www.gledaitv.fan/travel-channel-hd-live-tv.html",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/8/85/Travel_Channel_2018.svg/revision/latest/scale-to-width-down/250?cb=20241104144156",
+        },
+        "Travel TV": {
+            "url": ["https://www.seirsanduk.com/travel-tv-online.xhtml"],
+            "url_hd": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/5/55/Travel_2024.svg/revision/latest/scale-to-width-down/300?cb=20240815000900",
+        },
+        "TVN": {
+            "url": ["https://www.gledaitv.fan/tvn-live-tv.html"],
+            "url_hd": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/6/66/TVN_Poland.svg/revision/latest/scale-to-width-down/200?cb=20170730155409",
+        },
+        "7/8 TV": {
+            "url": ["https://www.seirsanduk.com/7-8-tv-online.xhtml"],
+            "url_hd": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/f/fa/7-8_TV.svg/revision/latest/scale-to-width-down/158?cb=20210516111115",
+        },
+        "Bloomberg": {
+            "url": ["https://www.seirsanduk.com/bloomberg-tv-online.xhtml"],
+            "url_hd": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/2/21/Bloomberg_2015.svg/revision/latest/scale-to-width-down/300?cb=20171125073306",
+        },
+        "Diema": {
+            "url": ["https://www.seirsanduk.com/diema-online.xhtml"],
+            "url_hd": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/b/b2/Diema.png/revision/latest/scale-to-width-down/150?cb=20170315162656",
+        },
+        "TV 1": {
+            "url": ["https://www.seirsanduk.com/tv-1-online.xhtml"],
+            "url_hd": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/0/08/Jai_Telangana_TV.jpg/revision/latest?cb=20191226124623",
+        },
+        "SKAT": {
+            "url": ["https://www.seirsanduk.com/skat-online.xhtml"],
+            "url_hd": "",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/0/06/%D0%A1%D0%9A%D0%90%D0%A2_logo.png/revision/latest/scale-to-width-down/300?cb=20200517194816",
+        },
         "1 HD TV": {
             "url": ["https://www.gledaitv.fan/1-hd-tv-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/1-hd-tv-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_1-hd-logo_20240822154318.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/5/5e/1tvhd_2.png/revision/latest/scale-to-width-down/250?cb=20160627072930",
         },
         "ARD": {
             "url": ["https://www.gledaitv.fan/ard-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/ard-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_ard-logo_20240827101910.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/f/fc/ARD_2019.svg/revision/latest/scale-to-width-down/250?cb=20191203202109",
         },
         "ATV": {
             "url": ["https://www.gledaitv.fan/atv-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/atv-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_atv-online-logo_20240819155302.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/7/72/%D0%90%D0%A2%D0%921.jpg/revision/latest?cb=20130316004926",
         },
         "Bayerischer Rundfunk": {
             "url": ["https://www.gledaitv.fan/bayerischer-rundfunk-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/bayerischer-rundfunk-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_bayerischer-rundfunk-logo_20241018150811.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/1/17/Bayerischer_Rundfunk_2024.svg/revision/latest/scale-to-width-down/200?cb=20241116232723",
         },
         "BEK SPORTS": {
             "url": ["https://www.gledaitv.fan/bek-sports-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_bek-sports-logo_20240823142135.png",
+            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
         },
         "BFM": {
             "url": ["https://www.gledaitv.fan/bfm-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_bfm-logo_20240824144203.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/9/91/BFM_Business_2025.svg/revision/latest/scale-to-width-down/300?cb=20251217115352",
         },
         "C8 FR": {
             "url": ["https://www.gledaitv.fan/c8-fr-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_c8-fr-logo_20240824144631.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/4/47/C8_logo.jpg/revision/latest/scale-to-width-down/250?cb=20160917134013",
         },
         "Carousel": {
             "url": ["https://www.gledaitv.fan/carousel-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/carousel-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_carousel-logo_20240822162847.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/c/c3/Carousel_%28food%29.png/revision/latest/scale-to-width-down/250?cb=20200701151859",
         },
         "DEUTSCHE WELLE": {
             "url": ["https://www.gledaitv.fan/deutsche-welle-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/deutsche-welle-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_deutsche-welle-logo_20240823145944.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/7/75/Deutsche_Welle_symbol_2012.svg/revision/latest/scale-to-width-down/250?cb=20120227170040",
         },
         "FITE": {
             "url": ["https://www.gledaitv.fan/fite-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_fite-logo_20240823142430.png",
+            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
         },
         "FOX TV": {
             "url": ["https://www.gledaitv.fan/fox-tv-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/fox-tv-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_fox-tv-logo_20240819154846.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/e/e3/Fox_2019.svg/revision/latest/scale-to-width-down/250?cb=20220925085535",
         },
         "France 24": {
             "url": ["https://www.gledaitv.fan/france-24-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_france-24-logo_20240824144839.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/0/02/France_24_2013.svg/revision/latest/scale-to-width-down/200?cb=20210115151030",
         },
         "History Channel RU": {
             "url": ["https://www.gledaitv.fan/history-channel-ru-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/history-channel-ru-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_history-channel-ru-logo_20250404121013.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/e/e8/History_2021.png/revision/latest/scale-to-width-down/200?cb=20240302050750",
         },
         "Nick Jr. RU": {
             "url": ["https://www.gledaitv.fan/nick-jr-ru-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_nick-jr-ru-logo_20250404121512.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/5/55/Nick_Jr..svg/revision/latest/scale-to-width-down/250?cb=20251017154510",
         },
         "Nickelodeon RU": {
             "url": ["https://www.gledaitv.fan/nickelodeon-ru-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_nickelodeon-ru-logo_20250404121253.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/0/07/Nickelodeon_%282009%29.svg/revision/latest/scale-to-width-down/350?cb=20180306141612",
         },
         "PRO 7": {
             "url": ["https://www.gledaitv.fan/pro-7-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/pro-7-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_pro-7-logo_20240823144445.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/2/23/ProSieben.svg/revision/latest/scale-to-width-down/200?cb=20180720004109",
         },
         "RTL": {
             "url": ["https://www.gledaitv.fan/rtl-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/rtl-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_rtl-logo_20240823145302.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/7/7f/RTL_%282021%29_II.svg/revision/latest/scale-to-width-down/300?cb=20210821210002",
         },
         "RU TV": {
             "url": ["https://www.gledaitv.fan/ru-tv-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/ru-tv-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_ru-tv-logo_20240822163725.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/5/5b/RU.TV_%282023%29.webp/revision/latest/scale-to-width-down/200?cb=20240620152821",
         },
         "Russia 1": {
             "url": ["https://www.gledaitv.fan/russia-1-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/russia-1-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_russia-1-logo_20240822162221.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/b/b6/Russia_1_2012.svg/revision/latest/scale-to-width-down/250?cb=20210123160619",
         },
         "Sila": {
             "url": ["https://www.gledaitv.fan/sila-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_sila-logo_20240823142706.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/f/fc/Sila_%28Tricolor%29.svg/revision/latest/scale-to-width-down/200?cb=20250326094942",
         },
         "TRT 1": {
             "url": ["https://www.gledaitv.fan/trt-1-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/trt-1-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_trt-1-logo_20240819154036.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/8/85/TRT_1_logo_%282021-%29.svg/revision/latest/scale-to-width-down/250?cb=20210205115406",
         },
         "TV5 Monde": {
             "url": ["https://www.gledaitv.fan/tv5-monde-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_tv5-monde-logo_20240824145159.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/d/db/TV5Monde_2025.svg/revision/latest/scale-to-width-down/300?cb=20251010001858",
         },
         "WDR": {
             "url": ["https://www.gledaitv.fan/wdr-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/wdr-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_wdr-logo_20241018145854.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/1/14/WDR_2012.svg/revision/latest/scale-to-width-down/250?cb=20210104151500",
         },
         "ZDF": {
             "url": ["https://www.gledaitv.fan/zdf-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/zdf-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_zdf-logo_20240823145011.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/c/c1/ZDF_logo.svg/revision/latest/scale-to-width-down/200?cb=20230702131102",
         },
     },
-    "muzikalni-channels": {
+    "Music": {
         "Balkanika Tv": {
             "url": ["https://www.gledaitv.fan/balkanika-tv-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_balkanika-tv-logo_20240819212856.png",
+            "image": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20250310164316",
         },
         "DSTV": {
             "url": ["https://www.seirsanduk.com/dstv-online.xhtml"],
             "url_hd": "",
-            "image": "https://www.seirsanduk.com/wp-content/uploads/dstv-logo.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/0/03/DStv_2023.svg/revision/latest/scale-to-width-down/300?cb=20240206012331",
         },
         "City Tv": {
             "url": [
@@ -842,144 +855,102 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/city-tv-live-tv.html",
             ],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_city-tv-logo_20240820131656.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/3/30/City_TV_2019.png/revision/latest/scale-to-width-down/300?cb=20210523160019",
         },
         "Fen TV": {
             "url": ["https://www.gledaitv.fan/fen-tv-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_fen-tv-logo_20240820133830.png",
+            "image": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20250310164316",
         },
         "Folklor TV": {
             "url": ["https://www.seirsanduk.com/folklor-tv-online.xhtml"],
             "url_hd": "",
-            "image": "https://www.seirsanduk.com/wp-content/uploads/folklor-tv-logo.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/f/fb/Folklor.jpg/revision/latest/scale-to-width-down/300?cb=20160726114218",
         },
         "Kral Pop Tv": {
             "url": ["https://www.gledaitv.fan/kral-pop-tv-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/kral-pop-tv-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_kral-pop-tv-logo_20240623011836.jpg",
-        },
-        "MTV 00s": {
-            "url": ["https://www.gledaitv.fan/mtv-00s-live-tv.html"],
-            "url_hd": "https://www.gledaitv.fan/mtv-00s-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_mtv-00s-logo_20250404120020.png",
-        },
-        "MTV Hits": {
-            "url": ["https://www.gledaitv.fan/mtv-hits-live-tv.html"],
-            "url_hd": "https://www.gledaitv.fan/mtv-hits-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_mtv-hits-logo_20250404115742.png",
+            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
         },
         "Planeta Folk": {
             "url": ["https://www.gledaitv.fan/planeta-folk-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_planeta-folk-logo_20240820145310.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/5/53/Ggggggggggg.png/revision/latest/scale-to-width-down/180?cb=20200921161244",
         },
         "Planeta HD BG": {
             "url": ["https://www.gledaitv.fan/planeta-hd-bg-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/planeta-hd-bg-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_planeta-hd-logo_20240820145401.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/1/13/Phd1.png/revision/latest/scale-to-width-down/180?cb=20200517141118",
         },
         "Rodina": {
             "url": ["https://www.seirsanduk.com/rodina-online.xhtml"],
             "url_hd": "",
-            "image": "https://www.seirsanduk.com/wp-content/uploads/rodina-tv-logo.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/d/d9/Rodina_tv_bg-1.png/revision/latest/scale-to-width-down/250?cb=20200419055102",
         },
         "Power Türk": {
             "url": ["https://www.gledaitv.fan/power-turk-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/power-turk-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_power-turk-logo_20240623012030.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/1/19/PowerTurk_TV.png/revision/latest/scale-to-width-down/250?cb=20220108110609",
         },
         "Tatlıses Tv": {
             "url": ["https://www.gledaitv.fan/tatlises-tv-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/tatlises-tv-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_tatlises-tv-logo_20240623012808.jpg",
+            "image": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20250310164316",
         },
         "The Voice": {
             "url": ["https://www.gledaitv.fan/the-voice-live-tv.html"],
             "url_hd": "",
-            "image": "https://www.gledaitv.fan/upload/tv/o_the-voice-logo_20240820145619.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/2/2b/The_Voicen_logo.svg/revision/latest/scale-to-width-down/250?cb=20150311194437",
         },
         "Tiankov Folk": {
             "url": ["https://www.seirsanduk.com/tiankov-folk-online.xhtml"],
             "url_hd": "",
-            "image": "https://www.seirsanduk.com/wp-content/uploads/tiankov-folk-logo.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/2/2e/Tiankovfolk.png/revision/latest/scale-to-width-down/200?cb=20200606064852",
         },
         "Trt Müzik": {
             "url": ["https://www.gledaitv.fan/trt-muzik-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/trt-muzik-hd-live-tv.html",
-            "image": "https://www.gledaitv.fan/upload/tv/o_trt-muzik-logo_20240623012606.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/f/f2/TRT_M%C3%BCzik_logo.svg/revision/latest/scale-to-width-down/300?cb=20210827231942",
         },
         "California Music": {
             "url": ["https://www.parsatv.com/name=California-Music-Channel#music"],
             "url_hd": "",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/California_Music_Channel_Logo_%28cropped%29.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/3/3a/CMC_logo.png/revision/latest/scale-to-width-down/200?cb=20211209094543",
         },
         "V2Beat TV": {
             "url": ["https://www.parsatv.com/name=V2Beat-TV#music"],
             "url_hd": "",
-            "image": "https://www.vibee.tv/wp-content/uploads/2025/06/viib-v2beat-logo-neon-1280-x-720.jpg",
+            "image": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20250310164316",
         },
         "Magic TV": {
             "url": ["https://www.parsatv.com/name=Magic-TV#music"],
             "url_hd": "",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thu…c/c3/MagicTV_logo.svg/1024px-MagicTV_logo.svg.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/8/81/Magic_TV_BG.svg/revision/latest/scale-to-width-down/250?cb=20210516105635",
         },
         "Retro Music": {
             "url": ["https://www.parsatv.com/name=Retro-Music#music"],
             "url_hd": "",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thu…o_Music_TV_logo.png/500px-Retro_Music_TV_logo.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/b/b9/Retro_Music_Television_2013.svg/revision/latest/scale-to-width-down/250?cb=20210627161000",
         },
         "Rock TV": {
             "url": ["https://www.parsatv.com/name=Rock-TV#music"],
             "url_hd": "",
-            "image": "https://upload.wikimedia.org/wikipedia/en/d/d9/Rock_TV_logo.jpg",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/6/6e/Rock_TV_2.svg/revision/latest/scale-to-width-down/150?cb=20220626120305",
         },
         "Deejay TV": {
             "url": ["https://www.parsatv.com/name=Deejay-TV#music"],
             "url_hd": "",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Logo_Deejay.svg/520px-Logo_Deejay.svg.png",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/d/d7/NOVE_TV_LOGO_2016.png/revision/latest/scale-to-width-down/200?cb=20160806153837",
         },
         "NRG 91": {
             "url": ["https://www.parsatv.com/name=NRG-91-Music"],
             "url_hd": "",
-            "image": "",
+            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
         },
         "1HD Music": {
             "url": ["https://www.parsatv.com/name=1HD-Music#music"],
             "url_hd": "",
-            "image": "",
-        },
-    },
-    "politicheski-channels": {
-        "7/8 TV": {
-            "url": ["https://www.seirsanduk.com/7-8-tv-online.xhtml"],
-            "url_hd": "",
-            "image": "https://www.seirsanduk.com/wp-content/uploads/7-8-tv-logo.png",
-        },
-        "Bloomberg": {
-            "url": ["https://www.seirsanduk.com/bloomberg-tv-online.xhtml"],
-            "url_hd": "",
-            "image": "https://www.seirsanduk.com/wp-content/uploads/alfa-tv-logo.png",
-        },
-        "Diema": {
-            "url": ["https://www.seirsanduk.com/diema-online.xhtml"],
-            "url_hd": "",
-            "image": "https://www.seirsanduk.com/wp-content/uploads/diema-logo.png",
-        },
-        "TV 1": {
-            "url": ["https://www.seirsanduk.com/tv-1-online.xhtml"],
-            "url_hd": "",
-            "image": "https://www.seirsanduk.com/wp-content/uploads/tv1-logo.png",
-        },
-        "TV 1": {
-            "url": ["https://www.seirsanduk.com/tv-1-online.xhtml"],
-            "url_hd": "",
-            "image": "https://www.seirsanduk.com/wp-content/uploads/tv1-logo.png",
-        },
-        "SKAT": {
-            "url": ["https://www.seirsanduk.com/skat-online.xhtml"],
-            "url_hd": "",
-            "image": "https://www.seirsanduk.com/skat-online.xhtml",
+            "image": "https://static.wikia.nocookie.net/logopedia/images/3/31/1HD_Music_Television.svg/revision/latest/scale-to-width-down/300?cb=20250527035433",
         },
     },
 }
