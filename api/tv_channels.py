@@ -27,7 +27,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "bTV Action": {
             "url": ["https://www.seirsanduk.com/btv-action-online.xhtml"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/logopedia/images/5/58/BTV_Action_HD.jpg/revision/latest/scale-to-width-down/149?cb=20240319191657",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6YU0bglnotgXBthpeCCGK6bGRLRA09gwYg&s",
         },
         "Diema Sport": {
             "url": [
@@ -125,7 +125,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "TJK Tv": {
             "url": ["https://www.gledaitv.fan/tjk-tv-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/tjk-tv-hd-live-tv.html",
-            "image": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20250310164316",
+            "image": "https://about.me/cdn-cgi/image/q=80,dpr=1,f=auto,fit=cover,w=1024,h=512,gravity=auto/https://assets.about.me/background/users/t/j/k/tjktvizle_1595702475_756.jpg",
         },
         "Trt Spor": {
             "url": ["https://www.gledaitv.fan/trt-spor-live-tv.html"],
@@ -205,7 +205,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "RTA Sport": {
             "url": ["https://www.parsatv.com/name=RTA-Sport#afghan"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
+            "image": "https://i.postimg.cc/6qDg2JN8/rtasport.png",
         },
         "KTV Sport 2": {
             "url": ["https://www.parsatv.com/name=KTV-Sport-2#google_vignette"],
@@ -235,22 +235,22 @@ ALL_CHANNELS_NOT_SORTED = {
         "GEM Sport": {
             "url": ["https://www.parsatv.com/name=GEM-Sport#persian"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
+            "image": "https://gemgroup.tv/assets/images/channels/icon_34.png",
         },
         "Telewebion Sport 3": {
             "url": ["https://www.parsatv.com/name=Telewebion-Sport-3#persian"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
+            "image": "https://logoyab.com/wp-content/uploads/2024/05/TELEWEBION-VARZESH-3-Logo-1030x1030.png",
         },
         "Telewebion Sport 2": {
             "url": ["https://www.parsatv.com/name=Telewebion-Sport-2#persian"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
+            "image": "https://logoyab.com/wp-content/uploads/2024/05/TELEWEBION-VARZESH-2-Logo-1030x1030.png",
         },
         "Telewebion Sport 1": {
             "url": ["https://www.parsatv.com/name=Telewebion-Sport-1#persian"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
+            "image": "https://logoyab.com/wp-content/uploads/2024/05/TELEWEBION-VARZESH-1-Logo-1030x1030.png",
         },
         "Abu Dhabi Sports 2": {
             "url": ["https://www.parsatv.com/name=Abu-Dhabi-Sports-2#arabic"],
@@ -280,7 +280,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "bTV Action": {
             "url": ["https://www.seirsanduk.com/btv-action-online.xhtml"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/logopedia/images/5/55/BTV_Action_HD.svg/revision/latest/scale-to-width-down/150?cb=20251208045939",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6YU0bglnotgXBthpeCCGK6bGRLRA09gwYg&s",
         },
         "bTV Cinema": {
             "url": [
@@ -471,7 +471,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Yaban Tv": {
             "url": ["https://www.gledaitv.fan/yaban-tv-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/yaban-tv-hd-live-tv.html",
-            "image": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20250310164316",
+            "image": "https://yt3.googleusercontent.com/ytc/AIdro_ml4Ec8YVG61pHTn1Q1zwpbDv_6RmPPPtFe2e4ysRhBAoo=s900-c-k-c0x00ffffff-no-rj",
         },
     },
     "News": {
@@ -547,7 +547,7 @@ ALL_CHANNELS_NOT_SORTED = {
                 "https://www.gledaitv.fan/nova-live-tv.html",
             ],
             "url_hd": "https://www.gledaitv.fan/nova-hd-live-tv.html",
-            "image": "https://static.wikia.nocookie.net/logopedia/images/c/c8/NTV_Logo_%282005-2011%29.svg/revision/latest/scale-to-width-down/250?cb=20210422181644",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOGhFKRgJ9roOiXry-ysDZreZQzVYuyjXwGw&s",
         },
         "Pervyy kanal": {
             "url": ["https://www.gledaitv.fan/pervyy-kanal-live-tv.html"],
@@ -626,7 +626,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "bTV Action": {
             "url": ["https://www.gledaitv.fan/btv-action-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/btv-action-hd-live-tv.html",
-            "image": "https://static.wikia.nocookie.net/logopedia/images/b/bb/BTV_Action_%282015%29.svg/revision/latest/scale-to-width-down/200?cb=20200125184213",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6YU0bglnotgXBthpeCCGK6bGRLRA09gwYg&s",
         },
         "Bulgaria ON AIR": {
             "url": ["https://www.gledaitv.fan/bulgaria-on-air-live-tv.html"],
@@ -739,7 +739,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "BEK SPORTS": {
             "url": ["https://www.gledaitv.fan/bek-sports-live-tv.html"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
+            "image": "https://media.licdn.com/dms/image/v2/C4E1BAQEWKuXkkKFlUA/company-background_10000/company-background_10000/0/1584254146512/bek_sports_network_cover?e=2147483647&v=beta&t=ZqpJpPhI6yrEWZ3Ynn8iEoFF5viyH2wblydV4qDXxxU",
         },
         "BFM": {
             "url": ["https://www.gledaitv.fan/bfm-live-tv.html"],
@@ -841,7 +841,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Balkanika Tv": {
             "url": ["https://www.gledaitv.fan/balkanika-tv-live-tv.html"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20250310164316",
+            "image": "https://balkanika.tv/wp-content/uploads/2018/07/logo_Balkanika_kvadrat.png",
         },
         "DSTV": {
             "url": ["https://www.seirsanduk.com/dstv-online.xhtml"],
@@ -860,7 +860,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Fen TV": {
             "url": ["https://www.gledaitv.fan/fen-tv-live-tv.html"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20250310164316",
+            "image": "https://fentv.bg/wp-content/uploads/2020/12/Logo_FENTV_Tvoyata_Muzika.png",
         },
         "Folklor TV": {
             "url": ["https://www.seirsanduk.com/folklor-tv-online.xhtml"],
@@ -870,7 +870,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Kral Pop Tv": {
             "url": ["https://www.gledaitv.fan/kral-pop-tv-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/kral-pop-tv-hd-live-tv.html",
-            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
+            "image": "https://img-puhutv.mncdn.com/media/img/content/23-01/26/kral.png",
         },
         "Planeta Folk": {
             "url": ["https://www.gledaitv.fan/planeta-folk-live-tv.html"],
@@ -895,7 +895,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Tatlıses Tv": {
             "url": ["https://www.gledaitv.fan/tatlises-tv-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/tatlises-tv-hd-live-tv.html",
-            "image": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20250310164316",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLH7L5oWqFnXwW03mdTGsxG-4KPbAR3lAaoA&s",
         },
         "The Voice": {
             "url": ["https://www.gledaitv.fan/the-voice-live-tv.html"],
@@ -920,7 +920,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "V2Beat TV": {
             "url": ["https://www.parsatv.com/name=V2Beat-TV#music"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/marveldatabase/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20250310164316",
+            "image": "https://www.vibee.tv/wp-content/uploads/2025/06/viib-v2beat-logo-neon-1280-x-720.jpg",
         },
         "Magic TV": {
             "url": ["https://www.parsatv.com/name=Magic-TV#music"],
@@ -945,7 +945,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "NRG 91": {
             "url": ["https://www.parsatv.com/name=NRG-91-Music"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/ucp-internal-test-starter-commons/images/1/1a/Fandom_wiki_image_placeholder.jpg/revision/latest/thumbnail-down/width/500/height/320?cb=20210813082201",
+            "image": "https://nrg91.gr/wp-content/uploads/2017/07/originalNRG.png",
         },
         "1HD Music": {
             "url": ["https://www.parsatv.com/name=1HD-Music#music"],
@@ -1020,8 +1020,8 @@ def extract_video_url(url):
             print(f"Error processing response: {e}")
 
     with sync_playwright() as p:
-        chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-        # chrome_path = r"/usr/bin/google-chrome" Unix
+        # chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+        chrome_path = r"/usr/bin/google-chrome"
 
         browser = p.chromium.launch(headless=True, executable_path=chrome_path)
         page = browser.new_page()
