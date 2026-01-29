@@ -952,6 +952,31 @@ ALL_CHANNELS_NOT_SORTED = {
             "url_hd": "",
             "image": "https://static.wikia.nocookie.net/logopedia/images/3/31/1HD_Music_Television.svg/revision/latest/scale-to-width-down/300?cb=20250527035433",
         },
+        "Baraza TV": {
+            "url": ["https://www.parsatv.com/name=Baraza-TV#music"],
+            "url_hd": "",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfuMSWQhsui8E03WEq9BPJkKXqE6aM2H2LGg&s",
+        },
+        "V2Beat TV": {
+            "url": ["https://www.parsatv.com/name=V2Beat-TV#music"],
+            "url_hd": "",
+            "image": "https://app.v2beat.com/images/viib-v2beat-logo-neon.jpg",
+        },
+        "RadioU TV": {
+            "url": ["https://www.parsatv.com/name=RadioU-TV#music"],
+            "url_hd": "",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmp5eCElIFY5taK8C8KECn3Ulccgb0K1h44w&s",
+        },
+        "Radio Capital TV": {
+            "url": ["https://www.parsatv.com/name=Radio-Capital-TV#music"],
+            "url_hd": "",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaO8FqtQU8sCq2rpalZGuShoxXBgszUVmqOw&s",
+        },
+        "Activa TV": {
+            "url": ["https://www.parsatv.com/name=Activa-TV#music"],
+            "url_hd": "",
+            "image": "https://www.conectabalear.com/tv/logos/original/149.png",
+        },
     },
 }
 
