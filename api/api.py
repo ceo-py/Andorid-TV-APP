@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
-from tv_channels import ALL_CHANNELS, extract_video_url, remove_proxy_from_link
+from tv_channels import ALL_CHANNELS, extract_video_url_default, extract_video_url_gledai_tv, remove_proxy_from_link
+import asyncio
 
 app = Flask(__name__)
 
@@ -24,7 +25,7 @@ def get_channel():
             if not link:
                 continue
 
-            url = extract_video_url(link)
+            url = extract_video_url_default(link) if "gledaitv.fan" not in link else asyncio.run(extract_video_url_gledai_tv(link))
 
             if len(url) > 0:
                 clean_url = remove_proxy_from_link(url)

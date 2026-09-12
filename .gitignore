@@ -1,6 +1,7 @@
 
 # python ENV
 venv
+.venv
 
 
 # AI helper
