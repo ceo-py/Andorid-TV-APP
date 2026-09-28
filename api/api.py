@@ -10,6 +10,7 @@ from epg_service import (
     load_epg,
     load_meta,
     load_unmatched,
+    programmes_for_day,
     resolve_channel_match,
 )
 
@@ -149,6 +150,7 @@ def get_channel_epg():
     """
     channel_name = request.args.get("channel_name", "").strip()
     channel_type = request.args.get("channel_type", "").strip()
+    date = request.args.get("date", "").strip() or None  # YYYY-MM-DD (UTC)
 
     if not channel_name:
         return jsonify({"success": False, "error": "channel_name is required"}), 400
@@ -188,14 +190,25 @@ def get_channel_epg():
             "category": category,
         }), 404
 
-    # Programmes: lookup is case-insensitive against epg.json keys.
-    epg = load_epg()
-    upper_canonical = canonical_name.upper()
-    programmes = (
-        epg.get(canonical_name)
-        or epg.get(upper_canonical)
-        or next((v for k, v in epg.items() if k.upper() == upper_canonical), [])
-    )
+    # Programmes: full window by default; ?date=YYYY-MM-DD restricts to one day.
+    if date:
+        programmes = programmes_for_day(canonical_name, date)
+        if not programmes:
+            epg = load_epg()
+            upper_canonical = canonical_name.upper()
+            programmes = (
+                epg.get(canonical_name)
+                or epg.get(upper_canonical)
+                or next((v for k, v in epg.items() if k.upper() == upper_canonical), [])
+            )
+    else:
+        epg = load_epg()
+        upper_canonical = canonical_name.upper()
+        programmes = (
+            epg.get(canonical_name)
+            or epg.get(upper_canonical)
+            or next((v for k, v in epg.items() if k.upper() == upper_canonical), [])
+        )
 
     return jsonify({
         "success": True,
@@ -205,6 +218,7 @@ def get_channel_epg():
         "source": match.get("source"),
         "score": match.get("score"),
         "match_type": match.get("match_type"),
+        "date": date,
         "programmes": programmes,
     })
 

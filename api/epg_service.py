@@ -27,7 +27,7 @@ Public API:
 """
 import json
 import logging
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Optional
 
@@ -246,3 +246,54 @@ def current_programmes(channel_name, now=None):
             return current, p
     # ``now`` is past the last programme in the file.
     return current, None
+
+
+def _parse_date(s):
+    """Parse ``YYYY-MM-DD`` as a UTC midnight datetime. Returns None on bad input."""
+    try:
+        return datetime.strptime(s, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    except (ValueError, TypeError):
+        return None
+
+
+def programmes_for_day(channel_name, date_str):
+    # type: (str, Optional[str]) -> list
+    """Return programmes for ``channel_name`` that overlap the given calendar day.
+
+    ``date_str`` is ``YYYY-MM-DD`` interpreted as UTC. Returns an empty list
+    if the date is malformed, the channel is unknown, or no programmes
+    overlap that day.
+
+    A programme "overlaps the day" if ``start < day_end`` and ``stop > day_start``,
+    where ``[day_start, day_end)`` is the 24-hour UTC window starting at
+    midnight on the given date.
+    """
+    day_start = _parse_date(date_str) if date_str else None
+    if day_start is None:
+        return []
+    day_end = day_start + timedelta(days=1)
+
+    epg = load_epg()
+    if not epg:
+        return []
+
+    progs = epg.get(channel_name)
+    if progs is None:
+        upper = channel_name.upper()
+        for key, val in epg.items():
+            if key.upper() == upper:
+                progs = val
+                break
+    if not progs:
+        return []
+
+    out = []
+    for p in progs:
+        try:
+            start, stop = _programme_window(p)
+        except (KeyError, ValueError):
+            continue
+        if stop <= day_start or start >= day_end:
+            continue
+        out.append(p)
+    return out

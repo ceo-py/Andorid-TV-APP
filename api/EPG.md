@@ -17,6 +17,9 @@ curl 'https://tv-api.ceo-py.eu/get-channel-current?channel_name=AMC' | python3 -
 
 # Full schedule for one channel
 curl 'https://tv-api.ceo-py.eu/get-channel-epg?channel_type=Sport&channel_name=MATCH%21%20Futbol%201' | python3 -m json.tool
+
+# Today's schedule for one channel (UTC date)
+curl 'https://tv-api.ceo-py.eu/get-channel-epg?channel_name=AMC&date=2026-09-28' | python3 -m json.tool
 ```
 
 ## 1 · What this is
@@ -262,10 +265,14 @@ Full programme list for one channel (today + tomorrow by default).
 **Query params:**
 - `channel_name` — case-insensitive
 - `channel_type` — optional, speeds up the lookup
+- `date` — optional `YYYY-MM-DD` (UTC). Restricts `programmes` to that one
+  calendar day only. Useful for "show me today's full schedule" without
+  pulling tomorrow's data.
 
 **Request:**
 ```
 GET /get-channel-epg?channel_type=Sport&channel_name=MATCH!%20Futbol%201
+GET /get-channel-epg?channel_name=AMC&date=2026-09-28
 ```
 
 **Response 200:**
