@@ -26,6 +26,9 @@ curl 'https://tv-api.ceo-py.eu/get-channel-epg?channel_type=Sport&channel_name=M
 
 # Today's schedule for one channel (UTC date)
 curl 'https://tv-api.ceo-py.eu/get-channel-epg?channel_name=AMC&date=2026-09-28' | python3 -m json.tool
+
+# Server clock — sync before computing "now" locally
+curl https://tv-api.ceo-py.eu/server-time | python3 -m json.tool
 ```
 
 ## 1 · What this is
@@ -290,9 +293,13 @@ GET /get-channel-epg?channel_name=AMC&date=2026-09-28
   "xmltv_id": "MatchTV.ru",
   "source": "RU1",
   "score": 0.83,
+  "match_type": "fuzzy",
   "programmes": [ { "...": "see epg.json shape" } ]
 }
 ```
+
+`match_type` is `"explicit"` when the channel has `epg_id` + `epg_source` set
+in `tv_channels.ALL_CHANNELS`, otherwise `"fuzzy"`.
 
 **Response 200 with empty programmes** — channel is matched by the upstream
 pipeline but has no programmes in the current date window (e.g. a channel
@@ -382,6 +389,26 @@ data hasn't been refreshed since the client's cached copy.
     "DISNEY CHANNEL":  [ { "...": "programmes" } ]
   }
 }
+```
+
+### 4.5 · `GET /server-time`
+
+Server's current UTC clock. Clients call this once on app start to measure
+clock skew before computing "what's on now" locally from `/get-all-epg`.
+
+**Response 200:**
+```json
+{
+  "success": true,
+  "now_utc": "2026-09-28T15:30:00.123456+00:00",
+  "epoch_ms": 1759068600123
+}
+```
+
+`Cache-Control: no-store` — never cached, always fresh.
+
+The HTTP `Date` response header carries the server's clock independently;
+clients compare it against `epoch_ms` to compute the skew to apply.
 ```
 
 ---

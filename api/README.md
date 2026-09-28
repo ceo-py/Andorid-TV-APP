@@ -17,7 +17,12 @@ Flask app serving TV channel data + EPG (Electronic Program Guide).
 | `GET` | `/get-all-epg` | — | Full EPG dict (large; ~2 MB). Client computes current locally. |
 | `GET` | `/server-time` | — | Server's current UTC time. Clients use this to sync their clock. |
 
-EPG responses include a `Cache-Control: public, max-age=900` header.
+EPG responses are cacheable. `/get-all-epg` uses `Cache-Control: public, max-age=86400`
+(24 h) since the data refreshes only once per day; other EPG endpoints use
+`max-age=900` (15 min). `/get-all-epg` also returns `ETag` + `Last-Modified` so
+clients can cheaply revalidate via `If-None-Match` / `If-Modified-Since`
+(the server replies `304 Not Modified` when the daily fetch hasn't run since
+the client's cached copy). `/server-time` is `Cache-Control: no-store`.
 
 ## Quick examples
 
