@@ -8,9 +8,9 @@ from epg_service import (
     current_programmes,
     is_available,
     load_epg,
-    load_match,
     load_meta,
     load_unmatched,
+    resolve_channel_match,
 )
 
 app = Flask(__name__)
@@ -65,7 +65,15 @@ def _epg_not_ready():
 
 @app.route("/epg-status", methods=["GET"])
 def epg_status():
-    """When was the last refresh? How many channels are covered?"""
+    """When was the last refresh? How many channels are covered?
+
+    Counts:
+      - n_channels_with_epg        — fuzzy + explicit
+      - n_channels_explicit_mapping — pinned in tv_channels.py
+      - n_channels_fuzzy            — fuzzy matched
+      - n_channels_total            — full catalog
+      - n_channels_unmatched        — catalog minus covered
+    """
     if not is_available():
         return _epg_not_ready()
     meta = load_meta()
@@ -90,13 +98,29 @@ def epg_status():
     # {category: {channel_name: {...}}}, so total = sum of per-category sizes.
     n_channels_total = sum(len(chs) for chs in ALL_CHANNELS.values())
 
+    # Count explicit mappings declared in tv_channels.py.
+    n_channels_explicit = 0
+    for channels in ALL_CHANNELS.values():
+        for ch_data in channels.values():
+            epg_id = (ch_data.get("epg_id") or "").strip()
+            epg_source = (ch_data.get("epg_source") or "").strip()
+            if epg_id and epg_source:
+                n_channels_explicit += 1
+
+    n_channels_with_epg = meta.get("n_channels_with_epg", len(epg))
+    n_channels_fuzzy = max(0, n_channels_with_epg - n_channels_explicit)
+    n_channels_unmatched = max(0, n_channels_total - n_channels_with_epg)
+
     return jsonify({
         "success": True,
         "status": {
             "last_refresh_utc": last_refresh,
             "last_refresh_age_hours": age_hours,
-            "n_channels_with_epg": meta.get("n_channels_with_epg", len(epg)),
+            "n_channels_with_epg": n_channels_with_epg,
             "n_channels_total": n_channels_total,
+            "n_channels_explicit_mapping": n_channels_explicit,
+            "n_channels_fuzzy": n_channels_fuzzy,
+            "n_channels_unmatched": n_channels_unmatched,
             "n_programmes": meta.get("n_programmes", sum(len(v) for v in epg.values())),
             "sources_used": meta.get("sources_used", []),
         },
@@ -113,6 +137,15 @@ def get_channel_epg():
         channel_type (optional) — looked up against ALL_CHANNELS to confirm
                                    the channel exists in the catalog.
         channel_name           — channel name (case-insensitive).
+
+    EPG match resolution priority:
+        1. Explicit mapping from ``tv_channels.ALL_CHANNELS`` (epg_id +
+           epg_source) — when both fields are set, those are used as the
+           source of truth for ``xmltv_id`` and ``source``.
+        2. Fuzzy match from ``epg_match.json`` — used otherwise.
+
+    Programmes themselves always come from ``epg.json`` (populated by the
+    daily run).
     """
     channel_name = request.args.get("channel_name", "").strip()
     channel_type = request.args.get("channel_type", "").strip()
@@ -145,51 +178,45 @@ def get_channel_epg():
     if canonical_name is None:
         return jsonify({"success": False, "error": f"Unknown channel: {channel_name}"}), 404
 
+    # EPG match info: explicit > fuzzy.
+    match = resolve_channel_match(canonical_name)
+    if match is None:
+        return jsonify({
+            "success": False,
+            "error": "No EPG for this channel",
+            "channel": canonical_name,
+            "category": category,
+        }), 404
+
+    # Programmes: lookup is case-insensitive against epg.json keys.
     epg = load_epg()
-    # Catalog keys are upper-case (e.g. "NOVA") but the EPG JSON keys
-    # are in natural case (e.g. "Nova"). Resolve case-insensitively so
-    # the lookup doesn't miss a channel just because the casing differs.
     upper_canonical = canonical_name.upper()
     programmes = (
         epg.get(canonical_name)
         or epg.get(upper_canonical)
         or next((v for k, v in epg.items() if k.upper() == upper_canonical), [])
     )
-    if not programmes:
-        match_meta = load_match()
-        match = (
-            match_meta.get(canonical_name)
-            or match_meta.get(upper_canonical)
-            or next((v for k, v in match_meta.items() if k.upper() == upper_canonical), None)
-        )
-        if not match:
-            return jsonify({
-                "success": False,
-                "error": "No EPG for this channel",
-                "channel": canonical_name,
-                "category": category,
-            }), 404
 
-    match_meta_all = load_match()
-    match = (
-        match_meta_all.get(canonical_name)
-        or match_meta_all.get(upper_canonical)
-        or next((v for k, v in match_meta_all.items() if k.upper() == upper_canonical), {})
-    )
     return jsonify({
         "success": True,
         "channel": canonical_name,
         "category": category,
-        "xmltv_id": match.get("matched_xmltv_id"),
-        "source": match.get("matched_source"),
+        "xmltv_id": match.get("xmltv_id"),
+        "source": match.get("source"),
         "score": match.get("score"),
+        "match_type": match.get("match_type"),
         "programmes": programmes,
     })
 
 
 @app.route("/get-channel-current", methods=["GET"])
 def get_channel_current():
-    """What's playing now on a channel + what's next."""
+    """What's playing now on a channel + what's next.
+
+    Match info (``xmltv_id`` / ``source``) follows the same priority as
+    ``/get-channel-epg``: explicit mapping in ``tv_channels.py`` first,
+    then fuzzy match from ``epg_match.json``.
+    """
     channel_name = request.args.get("channel_name", "").strip()
     if not channel_name:
         return jsonify({"success": False, "error": "channel_name is required"}), 400
@@ -211,15 +238,22 @@ def get_channel_current():
 
     current, nxt = current_programmes(canonical_name)
     if current is None and nxt is None:
+        match = resolve_channel_match(canonical_name)
         return jsonify({
             "success": False,
             "error": "No EPG for this channel",
             "channel": canonical_name,
+            "match_type": match.get("match_type") if match else None,
         }), 404
 
+    # Surface the source/xmltv_id so the client can show "from BG1" etc.
+    match = resolve_channel_match(canonical_name)
     return jsonify({
         "success": True,
         "channel": canonical_name,
+        "xmltv_id": match.get("xmltv_id") if match else None,
+        "source": match.get("source") if match else None,
+        "match_type": match.get("match_type") if match else None,
         "current": current,
         "next": nxt,
     })

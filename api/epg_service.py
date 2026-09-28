@@ -4,6 +4,15 @@ The daily scheduler (fetch_epg_daily.py) writes the latest EPG into
 ``epg_data/latest/``. This module loads those JSON files on demand,
 with a tiny in-process mtime cache so repeated requests don't re-parse.
 
+It also resolves a channel's EPG match info by combining two sources:
+
+1. **Explicit mappings** from ``tv_channels.ALL_CHANNELS`` — when a channel
+   has both ``epg_id`` and ``epg_source`` set, those are used directly. This
+   gives 100 % accurate matching for channels the operator has pinned.
+
+2. **Fuzzy matches** from ``epg_data/latest/epg_match.json`` — when no explicit
+   mapping exists, we look up what the upstream fuzzy matcher found.
+
 Public API:
     load_epg()          -> dict[channel_name, list[programme]]
     load_match()        -> dict[channel_name, match metadata]
@@ -13,6 +22,8 @@ Public API:
     current_programmes(channel_name, now=None)
                         -> (current_programme | None, next_programme | None)
     channels_with_epg() -> list[str]   (sorted)
+    resolve_channel_match(channel_name)
+                        -> dict | None   (explicit > fuzzy > None)
 """
 import json
 import logging
@@ -34,6 +45,19 @@ _epg_cache = None
 _match_cache = None
 _meta_cache = None
 _unmatched_cache = None
+
+# Lazy import — tv_channels imports nodriver at module top which is broken on
+# Python 3.14+ on some test boxes. We import inside the function so the API
+# endpoints that don't need it (current_programmes, load_epg, …) still work.
+_ALL_CHANNELS = None
+
+
+def _get_all_channels():
+    global _ALL_CHANNELS
+    if _ALL_CHANNELS is None:
+        from tv_channels import ALL_CHANNELS
+        _ALL_CHANNELS = ALL_CHANNELS
+    return _ALL_CHANNELS
 
 
 def _load_json(path, cache_attr):
@@ -95,6 +119,78 @@ def channels_with_epg():
     # type: () -> list
     """Channel names that have at least one programme, sorted."""
     return sorted(name for name, progs in load_epg().items() if progs)
+
+
+def _find_channel_entry(channel_name):
+    """Look up a channel's full entry dict from ``tv_channels.ALL_CHANNELS``.
+
+    Returns ``(entry_dict, category_name, canonical_name)`` or ``(None, None, None)``
+    if the channel is not in the catalog. Match is case-insensitive.
+    """
+    upper = channel_name.upper()
+    for category, channels in _get_all_channels().items():
+        for name, data in channels.items():
+            if name.upper() == upper:
+                return data, category, name
+    return None, None, None
+
+
+def resolve_channel_match(channel_name):
+    # type: (str) -> Optional[dict]
+    """Resolve a channel's EPG match info, prioritising explicit mappings.
+
+    Resolution order:
+
+    1. **Explicit** — if ``tv_channels.ALL_CHANNELS[...].epg_id`` and
+       ``.epg_source`` are both set and non-empty, use them directly.
+       ``match_type`` is ``"explicit"`` and ``score`` is ``1.0``.
+
+    2. **Fuzzy** — otherwise look up the channel in ``epg_match.json``.
+       ``match_type`` is ``"fuzzy"`` and ``score`` reflects the matcher's
+       confidence.
+
+    3. **None** — channel is in the catalog but has neither an explicit
+       mapping nor a fuzzy match. Returns ``None``.
+
+    Returned dict has keys ``xmltv_id``, ``source``, ``score``, ``match_type``,
+    and (for fuzzy matches) ``reason``.
+    """
+    entry, _category, _canonical = _find_channel_entry(channel_name)
+
+    # Priority 1: explicit mapping from tv_channels.py.
+    if entry is not None:
+        explicit_id = (entry.get("epg_id") or "").strip()
+        explicit_source = (entry.get("epg_source") or "").strip()
+        if explicit_id and explicit_source:
+            return {
+                "xmltv_id": explicit_id,
+                "source": explicit_source,
+                "score": 1.0,
+                "match_type": "explicit",
+            }
+
+    # Priority 2: fuzzy match from epg_match.json.
+    match_meta = load_match()
+    if channel_name in match_meta:
+        m = match_meta[channel_name]
+    else:
+        upper = channel_name.upper()
+        fuzzy = None
+        for k, v in match_meta.items():
+            if k.upper() == upper:
+                fuzzy = v
+                break
+        m = fuzzy
+    if m is not None:
+        return {
+            "xmltv_id": m.get("matched_xmltv_id"),
+            "source": m.get("matched_source"),
+            "score": m.get("score"),
+            "match_type": "fuzzy",
+            "reason": m.get("reason"),
+        }
+
+    return None
 
 
 def _programme_window(p):
