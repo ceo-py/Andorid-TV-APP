@@ -18,15 +18,16 @@ Wraps the existing pipeline at ``fetch_epg.py`` (vendored in this directory):
        the pipeline's output files (``epg.json``, ``epg_match.json``,
        ``epg_unmatched.json``).
     6. Copies everything into ``api/epg_data/latest/`` and writes ``meta.json``.
-    7. Prunes old run directories per ``--keep-runs`` (default 7).
+    7. Prunes old run directories per ``--keep-runs`` (default 1 — overwrite,
+       no history). Pass ``--keep-runs 7`` to retain the last week.
     8. Exits 0 on success, non-zero on failure (systemd will log + alert).
 
 Usage::
 
-    python fetch_epg_daily.py                          # default: curated sources, 2 days, keep 7 runs
+    python fetch_epg_daily.py                          # default: curated sources, 2 days, no history
     python fetch_epg_daily.py --days 3                 # keep 3 days of programmes
     python fetch_epg_daily.py --source BG1 IT1         # restrict to a subset
-    python fetch_epg_daily.py --keep-runs 3            # only keep the 3 newest data/<run-ts>/ dirs
+    python fetch_epg_daily.py --keep-runs 7            # retain last 7 data/<run-ts>/ dirs as history
     python fetch_epg_daily.py --keep-runs 0            # never prune (disk keeps growing)
     python fetch_epg_daily.py --epg-source /opt/egp    # override pipeline location
 
@@ -204,6 +205,25 @@ class _AlwaysExistsPath:
 
     def exists(self) -> bool:
         return True
+
+
+def _close_pipeline_log_handlers() -> None:
+    """Close any FileHandlers the upstream ``egp`` logger opened on run.log.
+
+    The vendored ``fetch_epg._setup_logging`` opens a FileHandler on
+    ``data/<run-ts>/run.log`` and never closes it. On Windows the open
+    handle blocks ``shutil.rmtree`` of the run directory during pruning;
+    on Linux/macOS it leaks a file descriptor across runs. Either way
+    the right thing to do is to close the handler after the pipeline
+    finishes.
+    """
+    egp = logging.getLogger("egp")
+    for h in list(egp.handlers):
+        try:
+            h.close()
+        except Exception:
+            pass
+        egp.removeHandler(h)
 
 
 def _run_pipeline(args: argparse.Namespace) -> int:
@@ -484,9 +504,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--epg-source", type=Path, default=DEFAULT_EGP_SOURCE,
                         help=f"Path to the upstream EPG pipeline "
                              f"(default: {DEFAULT_EGP_SOURCE}).")
-    parser.add_argument("--keep-runs", type=int, default=7,
+    parser.add_argument("--keep-runs", type=int, default=1,
                         help="Keep the N most recent data/<run-ts>/ directories "
-                             "(default 7). 0 = keep all.")
+                             "(default 1 = overwrite each run, no history). "
+                             "0 = keep all runs.")
     parser.add_argument("--verbose", "-v", action="store_true",
                         help="Verbose logging.")
     args = parser.parse_args(argv)
@@ -496,6 +517,9 @@ def main(argv: list[str] | None = None) -> int:
     EPG_LATEST_DIR.mkdir(parents=True, exist_ok=True)
 
     rc = _run_pipeline(args)
+    # Close upstream log handlers so file handles don't block the prune on
+    # Windows (and don't leak FDs on Linux). See _close_pipeline_log_handlers.
+    _close_pipeline_log_handlers()
     if rc != 0:
         LOG.error("pipeline exited with rc=%d", rc)
         return rc

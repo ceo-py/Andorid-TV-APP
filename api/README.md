@@ -138,11 +138,11 @@ journalctl -u epg-fetch.service -n 50
 ### CLI options
 
 ```
-python fetch_epg_daily.py                          # default: curated sources, 2 days, keep 7 runs
+python fetch_epg_daily.py                          # default: curated sources, 2 days, no history
 python fetch_epg_daily.py --days 3                 # keep 3 days of programmes
 python fetch_epg_daily.py --source BG1 IT1         # restrict to a subset
 python fetch_epg_daily.py --refresh-source BG1     # force re-download a source
-python fetch_epg_daily.py --keep-runs 3            # only keep the 3 newest data/<run-ts>/ dirs
+python fetch_epg_daily.py --keep-runs 7            # retain last 7 data/<run-ts>/ dirs as history
 python fetch_epg_daily.py --keep-runs 0            # never prune (disk keeps growing)
 python fetch_epg_daily.py --epg-source /opt/egp    # point at a different location
 python fetch_epg_daily.py --no-fetch               # reuse cache, no network

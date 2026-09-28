@@ -390,9 +390,9 @@ Full EPG dict. **Heavy — ~2 MB.** Clients should prefer
    `epg.json`, `epg_match.json`, `epg_unmatched.json` into
    `api/epg_data/latest/` and writes `meta.json` summarising the run.
 
-5. **Prunes old runs** if `--keep-runs N` is set (default 7). Each run mirror
-   in `data/<run-ts>/` is ~60 MB; without pruning this directory grows by
-   ~2 GB/month.
+5. **Prunes old runs** if `--keep-runs N` is set (default 1). Each run mirror
+   in `data/<run-ts>/` is ~60 MB; the default keeps only the latest one so
+   disk usage stays flat. Pass `--keep-runs 7` to retain a week of history.
 
 6. **Exits.** No loop, no in-process scheduler. Returns exit code 0 on success,
    non-zero on failure (1 = pipeline error, 2 = pipeline not importable,
@@ -461,7 +461,7 @@ the next boot.
 | `--refresh-source ID …` | none | Force re-download of these sources even if cached |
 | `--no-fetch` | off | Don't hit the network; reuse cached XMLTV |
 | `--epg-source PATH` | script's directory | Override the upstream pipeline location |
-| `--keep-runs N` | 7 | Keep the N most recent `data/<run-ts>/` directories. `0` = keep all |
+| `--keep-runs N` | 1 | Keep the N most recent `data/<run-ts>/` directories. Default 1 = overwrite each run, no history. `0` = keep all runs |
 | `--verbose` | off | DEBUG logging |
 
 **Note on `--source`:** if you restrict to specific sources, channels that
