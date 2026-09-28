@@ -41,10 +41,14 @@ curl https://tv-api.ceo-py.eu/server-time | python3 -m json.tool
 ## Recommended client pattern
 
 1. On app start, call `GET /server-time` to get the server's UTC clock and epoch_ms.
-2. Call `GET /get-all-epg` once — full schedule, ~2 MB, cacheable for 15 min.
+2. Call `GET /get-all-epg` once — full schedule, ~2 MB, cacheable for **24 h**
+   (`Cache-Control: public, max-age=86400` since data refreshes only once a day).
+   Pass `If-Modified-Since` or `If-None-Match` on subsequent fetches — the
+   server returns `304 Not Modified` if the daily fetch hasn't run since your
+   cached copy (cheap revalidation, no body transfer).
 3. Compute "what's on now" **locally** by walking each channel's programmes whose
    `[start, stop)` contains the synced server time. No further round-trips until
-   the data goes stale (>15 min).
+   the data goes stale (>24 h, or until the server returns 200 with new data).
 4. On any user action that needs a single channel detail (`/get-channel-epg`),
    the server can do the heavy lifting.
 

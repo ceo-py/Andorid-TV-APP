@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from tv_channels import ALL_CHANNELS, extract_video_url_default, extract_video_url_gledai_tv, remove_proxy_from_link
 import asyncio
 from datetime import datetime, timezone
+import hashlib
 
 from epg_service import (
     EPG_DIR,
@@ -279,22 +280,71 @@ def get_channel_current():
 def get_all_epg():
     """Full EPG dict: ``{channel_name: [programmes]}``.
 
-    Response can be large (~2 MB). Use /get-channel-epg for a single channel.
+    Response can be large (~2 MB). Each programme has ISO-8601 ``start`` /
+    ``stop`` in UTC. The Android app fetches this once per session, caches
+    it locally, and computes "what's on now" from the device clock.
 
-    Each programme has ISO-8601 ``start`` / ``stop`` in UTC. The Android app
-    is expected to fetch this once, cache it for 15+ minutes (server sends
-    ``Cache-Control: public, max-age=900``), and compute "what's on now"
-    locally by walking the programmes whose ``[start, stop)`` contains
-    the current time. Use ``/server-time`` to sync the device clock before
-    computing — avoids client-clock drift over a long session.
+    Caching: ``Cache-Control: public, max-age=86400`` (24 h) since the data
+    is refreshed once per day by the systemd timer. Conditional requests
+    (ETag + ``If-None-Match`` / Last-Modified + ``If-Modified-Since``) let
+    clients cheaply revalidate without re-downloading: the server returns
+    ``304 Not Modified`` when the daily fetch hasn't run since the client's
+    cached copy.
     """
     if not is_available():
         return _epg_not_ready()
-    return jsonify({
+
+    meta = load_meta()
+    last_refresh = meta.get("last_refresh_utc", "")
+    epg_data = load_epg()
+
+    # Last-Modified: when the daily fetch wrote the data (UTC).
+    last_modified_dt = None
+    if last_refresh:
+        try:
+            last_modified_dt = datetime.fromisoformat(
+                last_refresh.replace("Z", "+00:00"))
+            if last_modified_dt.tzinfo is None:
+                last_modified_dt = last_modified_dt.replace(tzinfo=timezone.utc)
+        except ValueError:
+            pass
+
+    # ETag: stable hash of the refresh timestamp. Same data → same ETag.
+    etag = hashlib.md5(last_refresh.encode("utf-8")).hexdigest()
+
+    # Conditional GET — short-circuit with 304 if the client's cached
+    # copy is still current.
+    if_none_match = request.headers.get("If-None-Match")
+    if if_none_match and if_none_match.strip('"') == etag:
+        resp = jsonify({})
+        resp.status_code = 304
+        resp.headers["ETag"] = f'"{etag}"'
+        resp.headers["Cache-Control"] = "public, max-age=86400"
+        if last_modified_dt:
+            resp.last_modified = last_modified_dt
+        return resp
+
+    if_modified_since = request.if_modified_since
+    if if_modified_since and last_modified_dt:
+        # Werkzeug gives us a datetime; compare timestamps.
+        if last_modified_dt.timestamp() <= if_modified_since.timestamp():
+            resp = jsonify({})
+            resp.status_code = 304
+            resp.headers["ETag"] = f'"{etag}"'
+            resp.headers["Cache-Control"] = "public, max-age=86400"
+            resp.last_modified = last_modified_dt
+            return resp
+
+    resp = jsonify({
         "success": True,
         "channels": channels_with_epg(),
-        "epg": load_epg(),
+        "epg": epg_data,
     })
+    resp.headers["ETag"] = f'"{etag}"'
+    resp.headers["Cache-Control"] = "public, max-age=86400"
+    if last_modified_dt:
+        resp.last_modified = last_modified_dt
+    return resp
 
 
 @app.route("/server-time", methods=["GET"])

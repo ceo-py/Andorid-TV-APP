@@ -362,8 +362,15 @@ is `null` and `next` is populated. If the channel has no EPG at all, both are
 
 ### 4.4 · `GET /get-all-epg`
 
-Full EPG dict. **Heavy — ~2 MB.** Clients should prefer
-`/get-channel-epg` or `/get-channel-current` per channel and cache.
+Full EPG dict. **Heavy — ~2 MB.** Each programme has ISO-8601 `start` /
+`stop` in UTC. Clients are expected to fetch this once, cache it locally,
+and compute "what's on now" from the device clock.
+
+**Caching:** `Cache-Control: public, max-age=86400` (24 h) since the data
+is refreshed once per day. Response also includes `ETag` and
+`Last-Modified` — pass `If-None-Match` / `If-Modified-Since` on subsequent
+fetches and the server returns `304 Not Modified` (empty body) when the
+data hasn't been refreshed since the client's cached copy.
 
 **Response 200:**
 ```json
