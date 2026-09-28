@@ -29,6 +29,8 @@ Usage::
     python fetch_epg_daily.py --source BG1 IT1         # restrict to a subset
     python fetch_epg_daily.py --keep-runs 7            # retain last 7 data/<run-ts>/ dirs as history
     python fetch_epg_daily.py --keep-runs 0            # never prune (disk keeps growing)
+    python fetch_epg_daily.py --no-fetch               # use cache, skip network
+    python fetch_epg_daily.py --refresh-source BG1    # force re-download only BG1
     python fetch_epg_daily.py --epg-source /opt/egp    # override pipeline location
 
 Explicit IDs in ``tv_channels.py``::
@@ -259,9 +261,25 @@ def _run_pipeline(args: argparse.Namespace) -> int:
     fetch_epg.load_catalog = lambda _path: catalog
     fetch_epg.CATALOG_PATH = _AlwaysExistsPath()
 
+    # Default behavior: re-download every source we're using so the data is
+    # always fresh. The cache is only used when --no-fetch is passed, or when
+    # --refresh-source is given to selectively force-refresh specific IDs.
+    from sources import SOURCE_IDS
+    if args.no_fetch:
+        source_ids = list(args.source) if args.source else list(SOURCE_IDS)
+        refresh_source = args.refresh_source  # may be None — no refreshes
+    else:
+        source_ids = list(args.source) if args.source else list(SOURCE_IDS)
+        if args.refresh_source:
+            # Selective: refresh only these, cache the rest
+            refresh_source = list(args.refresh_source)
+        else:
+            # Default: refresh ALL sources used (ignore cache)
+            refresh_source = list(source_ids)
+
     inner = argparse.Namespace(
-        source=args.source,
-        refresh_source=args.refresh_source,
+        source=source_ids,
+        refresh_source=refresh_source,
         days=args.days,
         no_fetch=args.no_fetch,
         list_sources=False,
@@ -500,7 +518,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--refresh-source", nargs="+", default=None,
                         help="Force re-download of these source IDs even if cached.")
     parser.add_argument("--no-fetch", action="store_true",
-                        help="Do not hit the network; reuse cached XMLTV files.")
+                        help="Do not hit the network; use cached XMLTV files. "
+                             "Default: re-download every source we're using so the "
+                             "data is always fresh.")
     parser.add_argument("--epg-source", type=Path, default=DEFAULT_EGP_SOURCE,
                         help=f"Path to the upstream EPG pipeline "
                              f"(default: {DEFAULT_EGP_SOURCE}).")

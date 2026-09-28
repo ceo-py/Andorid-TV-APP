@@ -466,7 +466,7 @@ the next boot.
 | `--days N` | 2 | Today + N-1 more days of programmes |
 | `--source ID …` | curated | Restrict to specific XMLTV source IDs |
 | `--refresh-source ID …` | none | Force re-download of these sources even if cached |
-| `--no-fetch` | off | Don't hit the network; reuse cached XMLTV |
+| `--no-fetch` | off | Don't hit the network; reuse cached XMLTV. Default is to re-download every source. |
 | `--epg-source PATH` | script's directory | Override the upstream pipeline location |
 | `--keep-runs N` | 1 | Keep the N most recent `data/<run-ts>/` directories. Default 1 = overwrite each run, no history. `0` = keep all runs |
 | `--verbose` | off | DEBUG logging |
