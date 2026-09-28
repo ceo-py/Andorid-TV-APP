@@ -15,6 +15,12 @@ curl https://tv-api.ceo-py.eu/epg-status | python3 -m json.tool
 # What's playing now on AMC
 curl 'https://tv-api.ceo-py.eu/get-channel-current?channel_name=AMC' | python3 -m json.tool
 
+# What's playing on EVERY channel right now (single request)
+curl https://tv-api.ceo-py.eu/get-current-all | python3 -m json.tool
+
+# Just sport channels
+curl 'https://tv-api.ceo-py.eu/get-current-all?channel_type=Sport' | python3 -m json.tool
+
 # Full schedule for one channel
 curl 'https://tv-api.ceo-py.eu/get-channel-epg?channel_type=Sport&channel_name=MATCH%21%20Futbol%201' | python3 -m json.tool
 

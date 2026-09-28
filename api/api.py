@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from tv_channels import ALL_CHANNELS, extract_video_url_default, extract_video_url_gledai_tv, remove_proxy_from_link
 import asyncio
+from datetime import datetime, timezone
 
 from epg_service import (
     EPG_DIR,
@@ -10,6 +11,7 @@ from epg_service import (
     load_epg,
     load_meta,
     load_unmatched,
+    now_playing_all,
     programmes_for_day,
     resolve_channel_match,
 )
@@ -288,11 +290,51 @@ def get_all_epg():
     })
 
 
+@app.route("/get-current-all", methods=["GET"])
+def get_current_all():
+    """What's airing right now on every channel with EPG data.
+
+    One request returns ``{channel, current, next, progress}`` for every
+    channel that has any programmes in the published window. Designed for
+    the Android app's "what's on now" grid — replaces N individual
+    ``/get-channel-current`` calls with one.
+
+    Response includes ``now_utc`` (server time the snapshot was taken) so
+    the client can show "as of HH:MM" labels.
+
+    Optional ``?channel_type=Sport`` filters to one category.
+    """
+    if not is_available():
+        return _epg_not_ready()
+
+    channel_type = request.args.get("channel_type", "").strip()
+    rows = now_playing_all()
+
+    # Optional category filter — uses ALL_CHANNELS to know which keys
+    # belong to each category.
+    if channel_type:
+        keys = set()
+        if channel_type in ALL_CHANNELS:
+            for name in ALL_CHANNELS[channel_type]:
+                keys.add(name.upper())
+        rows = [r for r in rows if r["channel"] in keys]
+
+    with_current = sum(1 for r in rows if r["current"] is not None)
+    return jsonify({
+        "success": True,
+        "now_utc": datetime.now(tz=timezone.utc).isoformat(),
+        "total_channels": len(rows),
+        "with_current_programme": with_current,
+        "channels": rows,
+    })
+
+
 @app.after_request
 def _cache_control(resp):
     """EPG data is refreshed daily — cacheable for 15 minutes."""
     if request.path.startswith(("/epg-status", "/get-channel-epg",
-                                "/get-channel-current", "/get-all-epg")):
+                                "/get-channel-current", "/get-all-epg",
+                                "/get-current-all")):
         resp.headers["Cache-Control"] = "public, max-age=900"
     return resp
 

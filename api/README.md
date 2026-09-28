@@ -11,8 +11,9 @@ Flask app serving TV channel data + EPG (Electronic Program Guide).
 | `POST` | `/get-channel-video-url` | `{"channel_type": "...", "channel_name": "..."}` | Resolved live stream URL |
 | `GET` | `/get-all-channels` | — | Full channel catalog |
 | `GET` | `/epg-status` | — | When EPG was last refreshed + coverage stats |
-| `GET` | `/get-channel-epg` | `?channel_type=&channel_name=` | All programmes for one channel (today + tomorrow) |
+| `GET` | `/get-channel-epg` | `?channel_type=&channel_name=&date=YYYY-MM-DD` | All programmes for one channel |
 | `GET` | `/get-channel-current` | `?channel_name=` | What's playing now + what's next |
+| `GET` | `/get-current-all` | `?channel_type=` (optional) | What's airing on every channel right now |
 | `GET` | `/get-all-epg` | — | Full EPG dict (large; ~2 MB) |
 
 EPG responses include a `Cache-Control: public, max-age=900` header.

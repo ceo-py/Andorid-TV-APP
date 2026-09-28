@@ -248,6 +248,77 @@ def current_programmes(channel_name, now=None):
     return current, None
 
 
+def now_playing_all(now=None):
+    # type: (Optional[datetime]) -> list
+    """Return ``(channel, current, next)`` for every channel with EPG data.
+
+    Each entry is a dict shaped::
+
+        {
+            "channel":    str,   # catalog key (upper-case)
+            "current":    dict | None,  # programme airing right now, or None
+            "next":       dict | None,  # the next programme after current
+            "progress":   float | None, # 0.0 .. 1.0, current's elapsed fraction
+        }
+
+    Channels whose EPG data has no programme covering ``now`` get
+    ``current=None, next=None``. The result is sorted by channel name.
+    """
+    if now is None:
+        now = datetime.now(tz=timezone.utc)
+
+    epg = load_epg()
+    if not epg:
+        return []
+
+    out = []
+    for channel_name, progs in epg.items():
+        if not progs:
+            continue
+        current = None
+        nxt = None
+        progress = None
+        for p in progs:
+            try:
+                start, stop = _programme_window(p)
+            except (KeyError, ValueError):
+                continue
+            if start <= now < stop:
+                current = p
+                total = (stop - start).total_seconds()
+                elapsed = (now - start).total_seconds()
+                if total > 0:
+                    progress = round(elapsed / total, 4)
+                break
+            if start > now:
+                nxt = p
+                break
+        out.append({
+            "channel": channel_name,
+            "current": current,
+            "next": nxt,
+            "progress": progress,
+        })
+    out.sort(key=lambda r: r["channel"])
+    return out
+
+    current = None
+    for p in progs:
+        try:
+            start, stop = _programme_window(p)
+        except (KeyError, ValueError):
+            continue
+        if start <= now < stop:
+            current = p
+            break
+        if start > now:
+            # Programmes are sorted by start ascending in epg.json, so this is
+            # the first one in the future.
+            return current, p
+    # ``now`` is past the last programme in the file.
+    return current, None
+
+
 def _parse_date(s):
     """Parse ``YYYY-MM-DD`` as a UTC midnight datetime. Returns None on bad input."""
     try:
