@@ -28,37 +28,25 @@ ALL_CHANNELS_NOT_SORTED = {
             "image": "https://static.wikia.nocookie.net/logopedia/images/4/45/Diema_Sport_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505001930",
         },
         "Diema Sport 2": {
-            "url": ["https://www.gledaitv.fan/diema-sport-2-alternative-live-tv.html", 
-                    "https://www.gledaitv.fan/diema-sport-2-live-tv.html", 
-                    "https://www.gledaitv.live/watch-tv/12/diema-sport-2-online",
-                    "https://streamsports99.su/live-tv/Diema%20Sport%202__bg",
+            "url": ["https://www.gledaitv.fan/diema-sport-2-alternative-live-tv.html", "https://www.gledaitv.fan/diema-sport-2-live-tv.html", "https://www.gledaitv.live/watch-tv/12/diema-sport-2-online"
             ],
             "url_hd": "https://www.gledaitv.fan/diema-sport-2-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/3/36/Diema_Sport_2_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505001624",
         },
         "Diema Sport 3": {
-            "url": ["https://www.gledaitv.fan/diema-sport-3-alternative-live-tv.html",
-                     "https://www.gledaitv.fan/diema-sport-3-live-tv.html",
-                     "https://www.gledaitv.live/watch-tv/38/diema-sport-3-online",
-                     "https://streamsports99.su/live-tv/Diema%20Sport%203__bg",
+            "url": ["https://www.gledaitv.fan/diema-sport-3-alternative-live-tv.html", "https://www.gledaitv.fan/diema-sport-3-live-tv.html", "https://www.gledaitv.live/watch-tv/38/diema-sport-3-online"
             ],
             "url_hd": "https://www.gledaitv.fan/diema-sport-3-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/1/17/Diema_Sport_3_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505000657",
         },
         "Eurosport 1 BG": {
-            "url": ["https://www.gledaitv.fan/eurosport-1-bg-alternative-live-tv.html", 
-                    "https://www.gledaitv.fan/eurosport-1-bg-live-tv.html", 
-                    "https://www.gledaitv.live/watch-tv/33/eurosport-1-online",
-                    "https://streamsports99.su/live-tv/Euro%20Sport%201__bg",
+            "url": ["https://www.gledaitv.fan/eurosport-1-bg-alternative-live-tv.html", "https://www.gledaitv.fan/eurosport-1-bg-live-tv.html", "https://www.gledaitv.live/watch-tv/33/eurosport-1-online"
             ],
             "url_hd": "https://www.gledaitv.fan/eurosport-1-bg-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/e/e7/Eurosport_1_2022.svg/revision/latest/scale-to-width-down/300?cb=20220806090310",
         },
         "Eurosport 2 BG": {
-            "url": ["https://www.gledaitv.fan/eurosport-2-bg-alternative-live-tv.html",
-                     "https://www.gledaitv.fan/eurosport-2-bg-live-tv.html", 
-                     "https://www.gledaitv.live/watch-tv/34/eurosport-2-online",
-                     "https://streamsports99.su/live-tv/Euro%20Sport%202__bg",
+            "url": ["https://www.gledaitv.fan/eurosport-2-bg-alternative-live-tv.html", "https://www.gledaitv.fan/eurosport-2-bg-live-tv.html", "https://www.gledaitv.live/watch-tv/34/eurosport-2-online"
             ],
             "url_hd": "https://www.gledaitv.fan/eurosport-2-bg-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/1/16/Eurosport_2_2022.svg/revision/latest/scale-to-width-down/300?cb=20220417183127",
@@ -899,6 +887,7 @@ ALL_CHANNELS_NOT_SORTED = {
         },
     },
 }
+
 
 
 def remove_proxy_from_link(url: list) -> list:
