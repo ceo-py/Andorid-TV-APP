@@ -14,7 +14,8 @@ Flask app serving TV channel data + EPG (Electronic Program Guide).
 | `GET` | `/get-channel-epg` | `?channel_type=&channel_name=&date=YYYY-MM-DD` | All programmes for one channel |
 | `GET` | `/get-channel-current` | `?channel_name=` | What's playing now + what's next |
 | `GET` | `/get-current-all` | `?channel_type=` (optional) | What's airing on every channel right now |
-| `GET` | `/get-all-epg` | — | Full EPG dict (large; ~2 MB) |
+| `GET` | `/get-all-epg` | — | Full EPG dict (large; ~2 MB). Client computes current locally. |
+| `GET` | `/server-time` | — | Server's current UTC time. Clients use this to sync their clock. |
 
 EPG responses include a `Cache-Control: public, max-age=900` header.
 
@@ -24,12 +25,31 @@ EPG responses include a `Cache-Control: public, max-age=900` header.
 # Refresh status + unmatched list
 curl https://tv-api.ceo-py.eu/epg-status | python3 -m json.tool
 
-# What's playing now on AMC
+# What's playing now on AMC (single channel)
 curl 'https://tv-api.ceo-py.eu/get-channel-current?channel_name=AMC' | python3 -m json.tool
+
+# What's airing on every channel right now (bulk)
+curl https://tv-api.ceo-py.eu/get-current-all | python3 -m json.tool
 
 # Full schedule for one channel
 curl 'https://tv-api.ceo-py.eu/get-channel-epg?channel_type=Sport&channel_name=MATCH%21%20Futbol%201' | python3 -m json.tool
+
+# Server clock — sync before computing "now" locally
+curl https://tv-api.ceo-py.eu/server-time | python3 -m json.tool
 ```
+
+## Recommended client pattern
+
+1. On app start, call `GET /server-time` to get the server's UTC clock and epoch_ms.
+2. Call `GET /get-all-epg` once — full schedule, ~2 MB, cacheable for 15 min.
+3. Compute "what's on now" **locally** by walking each channel's programmes whose
+   `[start, stop)` contains the synced server time. No further round-trips until
+   the data goes stale (>15 min).
+4. On any user action that needs a single channel detail (`/get-channel-epg`),
+   the server can do the heavy lifting.
+
+This keeps the Android app snappy: one bulk fetch per session, then everything
+is local computation.
 
 ## Run the API
 

@@ -280,6 +280,13 @@ def get_all_epg():
     """Full EPG dict: ``{channel_name: [programmes]}``.
 
     Response can be large (~2 MB). Use /get-channel-epg for a single channel.
+
+    Each programme has ISO-8601 ``start`` / ``stop`` in UTC. The Android app
+    is expected to fetch this once, cache it for 15+ minutes (server sends
+    ``Cache-Control: public, max-age=900``), and compute "what's on now"
+    locally by walking the programmes whose ``[start, stop)`` contains
+    the current time. Use ``/server-time`` to sync the device clock before
+    computing — avoids client-clock drift over a long session.
     """
     if not is_available():
         return _epg_not_ready()
@@ -287,6 +294,25 @@ def get_all_epg():
         "success": True,
         "channels": channels_with_epg(),
         "epg": load_epg(),
+    })
+
+
+@app.route("/server-time", methods=["GET"])
+def server_time():
+    """Server's current UTC time.
+
+    Clients use this to sync their clock before computing "now playing"
+    locally from /get-all-epg. Without sync, a device with a drifted
+    clock would show the wrong programme for every channel.
+
+    Response also includes the ``Date`` HTTP header (set by the WSGI
+    server). Comparing those two is how the client measures clock skew.
+    """
+    now = datetime.now(tz=timezone.utc)
+    return jsonify({
+        "success": True,
+        "now_utc": now.isoformat(),
+        "epoch_ms": int(now.timestamp() * 1000),
     })
 
 
@@ -336,6 +362,9 @@ def _cache_control(resp):
                                 "/get-channel-current", "/get-all-epg",
                                 "/get-current-all")):
         resp.headers["Cache-Control"] = "public, max-age=900"
+    # /server-time must NOT be cached — clients use it to sync their clock.
+    if request.path == "/server-time":
+        resp.headers["Cache-Control"] = "no-store"
     return resp
 
 
