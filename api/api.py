@@ -146,9 +146,22 @@ def get_channel_epg():
         return jsonify({"success": False, "error": f"Unknown channel: {channel_name}"}), 404
 
     epg = load_epg()
-    programmes = epg.get(canonical_name) or []
+    # Catalog keys are upper-case (e.g. "NOVA") but the EPG JSON keys
+    # are in natural case (e.g. "Nova"). Resolve case-insensitively so
+    # the lookup doesn't miss a channel just because the casing differs.
+    upper_canonical = canonical_name.upper()
+    programmes = (
+        epg.get(canonical_name)
+        or epg.get(upper_canonical)
+        or next((v for k, v in epg.items() if k.upper() == upper_canonical), [])
+    )
     if not programmes:
-        match = load_match().get(canonical_name)
+        match_meta = load_match()
+        match = (
+            match_meta.get(canonical_name)
+            or match_meta.get(upper_canonical)
+            or next((v for k, v in match_meta.items() if k.upper() == upper_canonical), None)
+        )
         if not match:
             return jsonify({
                 "success": False,
@@ -157,7 +170,12 @@ def get_channel_epg():
                 "category": category,
             }), 404
 
-    match = load_match().get(canonical_name, {})
+    match_meta_all = load_match()
+    match = (
+        match_meta_all.get(canonical_name)
+        or match_meta_all.get(upper_canonical)
+        or next((v for k, v in match_meta_all.items() if k.upper() == upper_canonical), {})
+    )
     return jsonify({
         "success": True,
         "channel": canonical_name,

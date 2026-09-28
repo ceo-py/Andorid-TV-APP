@@ -8,15 +8,18 @@ EPG, copies it into ``epg_data/latest/`` for the API to read, and exits.
 Wraps the existing pipeline at ``fetch_epg.py`` (vendored in this directory):
 
     1. Imports it.
-    2. Builds an in-memory catalog from ``tv_channels.ALL_CHANNELS_NOT_SORTED``
-       (single source of truth — no catalog.json on disk).
-    3. Patches the pipeline so it consumes that catalog instead of reading
-       from a file, then calls ``run()``.
-    4. Copies ``epg.json`` / ``epg_match.json`` / ``epg_unmatched.json`` from
-       the newest ``data/<UTC-ts>`` run directory into
-       ``api/epg_data/latest/``.
-    5. Writes a small ``meta.json`` next to them summarising the run.
-    6. Exits 0 on success, non-zero on failure (systemd will log + alert).
+    2. Reads ``tv_channels.ALL_CHANNELS_NOT_SORTED`` and finds channels that
+       declare explicit ``epg_id`` / ``epg_source`` fields. These get a
+       100 %-accurate direct lookup — fuzzy matching is bypassed.
+    3. Builds an in-memory catalog from the remaining channels (those without
+       explicit IDs) and patches the pipeline to consume it.
+    4. Runs ``fetch_epg.run()`` on the filtered catalog.
+    5. Merges the explicit-ID channels' programmes + match records back into
+       the pipeline's output files (``epg.json``, ``epg_match.json``,
+       ``epg_unmatched.json``).
+    6. Copies everything into ``api/epg_data/latest/`` and writes ``meta.json``.
+    7. Prunes old run directories per ``--keep-runs`` (default 7).
+    8. Exits 0 on success, non-zero on failure (systemd will log + alert).
 
 Usage::
 
@@ -26,6 +29,20 @@ Usage::
     python fetch_epg_daily.py --keep-runs 3            # only keep the 3 newest data/<run-ts>/ dirs
     python fetch_epg_daily.py --keep-runs 0            # never prune (disk keeps growing)
     python fetch_epg_daily.py --epg-source /opt/egp    # override pipeline location
+
+Explicit IDs in ``tv_channels.py``::
+
+    "AMC": {
+        "url": [...],
+        "url_hd": "...",
+        "image": "...",
+        "epg_id": "AMC.bg",        # <- new, optional. XMLTV channel id.
+        "epg_source": "BG1",       # <- new, optional. XMLTV source id.
+    },
+
+When both fields are set, the pipeline uses the exact ``epg_id`` from the
+named ``epg_source`` instead of fuzzy-matching. When either field is missing,
+the channel goes through the normal fuzzy matcher.
 
 Systemd timer example::
 
@@ -58,7 +75,7 @@ import json
 import logging
 import shutil
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 # tv_channels.py lives next to this script — that's the single source of truth
@@ -94,9 +111,9 @@ def _setup_logging(verbose: bool = False) -> None:
 
 
 # -----------------------------------------------------------------------------
-# Catalog (built in-memory from tv_channels).
+# Catalog + explicit-ID handling.
 # -----------------------------------------------------------------------------
-def _build_catalog():
+def _build_catalog(skip_upper_names: set[str] | None = None):
     """Build a ``fetch_epg.Catalog`` from ``tv_channels.ALL_CHANNELS_NOT_SORTED``.
 
     No JSON on disk — the pipeline reads from disk only because we tell it to,
@@ -105,24 +122,73 @@ def _build_catalog():
     Channel names are upper-cased so epg.json / epg_match.json keys match the
     keys in ``tv_channels.ALL_CHANNELS`` (which the Flask API looks up against).
     Without this the two could drift if the source dict has mixed case.
+
+    ``skip_upper_names`` — channel names (uppercase) to exclude from the
+    catalog. Used to filter out channels that have explicit ``epg_id``
+    mappings (they get handled by the direct lookup path, not fuzzy match).
     """
     import fetch_epg  # local import; fetch_epg may need sys.path setup first
 
+    skip = skip_upper_names or set()
     catalog = fetch_epg.Catalog(channels=[])
     for cat, chs in ALL_CHANNELS_NOT_SORTED.items():
         for ch_name, ch_data in chs.items():
+            upper = ch_name.upper()
+            if upper in skip:
+                continue
             urls = list(ch_data.get("url") or [])
             url_hd = ch_data.get("url_hd")
             if url_hd:
                 urls.append(url_hd)
             catalog.channels.append(fetch_epg.Catalog.Channel(
-                category=cat, name=ch_name.upper(),
+                category=cat, name=upper,
                 image=ch_data.get("image"),
                 urls=urls,
                 url_hd=url_hd,
             ))
     catalog.by_name = {ch.name: ch for ch in catalog.channels}
     return catalog
+
+
+def _collect_explicit_matches():
+    """Find channels in tv_channels.py that declare ``epg_id`` and ``epg_source``.
+
+    Returns ``(matches, sources)`` where:
+      - matches: dict[str, ChannelMatch] keyed by upper-case channel name
+      - sources: dict[str, Path]      keyed by source ID -> cached .xml.gz path
+
+    A channel is "explicit" only when both ``epg_id`` and ``epg_source`` are
+    present and non-empty. Anything else falls through to the fuzzy matcher.
+    """
+    import fetch_epg
+
+    matches: dict[str, fetch_epg.ChannelMatch] = {}
+    sources: dict[str, Path] = {}
+
+    cache_dir = THIS_DIR / "cache"
+
+    for cat, chs in ALL_CHANNELS_NOT_SORTED.items():
+        for ch_name, ch_data in chs.items():
+            epg_id = (ch_data.get("epg_id") or "").strip()
+            epg_source = (ch_data.get("epg_source") or "").strip()
+            if not epg_id or not epg_source:
+                continue
+            upper = ch_name.upper()
+            src_path = cache_dir / f"epg_ripper_{epg_source}.xml.gz"
+            matches[upper] = fetch_epg.ChannelMatch(
+                channel=upper,
+                category=cat,
+                matched_xmltv_id=epg_id,
+                matched_xmltv_name=epg_id,
+                matched_source=epg_source,
+                score=1.0,
+                reason="explicit-mapping",
+                alternatives=[],
+                n_programmes=0,
+            )
+            sources[epg_source] = src_path
+
+    return matches, sources
 
 
 # -----------------------------------------------------------------------------
@@ -156,11 +222,17 @@ def _run_pipeline(args: argparse.Namespace) -> int:
         LOG.error("failed to import fetch_epg from %s: %s", epg_source, e)
         return 2
 
-    # Build the catalog in-memory and inject it into the pipeline.
-    catalog = _build_catalog()
-    LOG.info("loaded %d channels across %d categories from tv_channels",
-             len(catalog.channels),
-             len({ch.category for ch in catalog.channels}))
+    # Build the catalog excluding channels that have explicit epg_id mappings.
+    explicit_matches, explicit_sources = _collect_explicit_matches()
+    explicit_names = set(explicit_matches.keys())
+    catalog = _build_catalog(skip_upper_names=explicit_names)
+    LOG.info("loaded %d channels from tv_channels (%d explicit, %d fuzzy)",
+             len(catalog.channels) + len(explicit_names),
+             len(explicit_names),
+             len(catalog.channels))
+    if explicit_sources:
+        LOG.info("explicit EPG sources required: %s",
+                 sorted(explicit_sources.keys()))
 
     original_load_catalog = fetch_epg.load_catalog
     original_catalog_path = fetch_epg.CATALOG_PATH
@@ -178,14 +250,121 @@ def _run_pipeline(args: argparse.Namespace) -> int:
              args.days,
              args.source if args.source else "curated")
     try:
-        return fetch_epg.run(inner)
+        rc = fetch_epg.run(inner)
     finally:
         fetch_epg.load_catalog = original_load_catalog
         fetch_epg.CATALOG_PATH = original_catalog_path
 
+    if rc == 0 and explicit_matches:
+        _merge_explicit_matches(epg_source, explicit_matches, explicit_sources,
+                                args.days)
+    return rc
+
+
+def _merge_explicit_matches(epg_source: Path, explicit_matches, explicit_sources,
+                            days: int) -> None:
+    """Add explicit-ID channels' programmes + match records to the run output.
+
+    After the pipeline writes epg.json / epg_match.json / epg_unmatched.json
+    for the fuzzy-matched channels, this function reads those files, extracts
+    programmes for each explicit match from the named source XMLTV file, and
+    writes the merged result back. Channel names in the explicit set are also
+    stripped from epg_unmatched.json.
+    """
+    import fetch_epg
+    from xmltv import list_programmes  # vendored in this directory
+
+    run_dir = _latest_run_dir(epg_source)
+    if run_dir is None:
+        LOG.warning("merge: no run dir found, explicit matches not added")
+        return
+
+    epg_path = run_dir / "epg.json"
+    match_path = run_dir / "epg_match.json"
+    unmatched_path = run_dir / "epg_unmatched.json"
+
+    try:
+        with open(epg_path, encoding="utf-8") as f:
+            epg = json.load(f)
+        with open(match_path, encoding="utf-8") as f:
+            matches = json.load(f)
+        with open(unmatched_path, encoding="utf-8") as f:
+            unmatched = json.load(f)
+    except (OSError, json.JSONDecodeError) as e:
+        LOG.warning("merge: failed to read pipeline outputs: %s", e)
+        return
+
+    days = max(1, days)
+    window_start = datetime.now(tz=timezone.utc).replace(
+        hour=0, minute=0, second=0, microsecond=0)
+    window_end = window_start + timedelta(days=days)
+
+    added = 0
+    matched_now = 0
+    for name, cm in explicit_matches.items():
+        src_path = explicit_sources[cm.matched_source]
+        if not src_path.exists():
+            LOG.warning("merge: source file %s missing for '%s' — skipped",
+                        src_path, name)
+            continue
+
+        wanted = {cm.matched_xmltv_id: cm}
+        try:
+            progs_iter = list_programmes(src_path, channel_ids=set(wanted),
+                                         window_start=window_start,
+                                         window_end=window_end)
+        except Exception as e:
+            LOG.warning("merge: list_programmes failed for '%s': %s", name, e)
+            continue
+
+        for prog in progs_iter:
+            if prog.channel != cm.matched_xmltv_id:
+                continue
+            d = prog.to_dict()
+            d["channel"] = name
+            d["xmltv_id"] = prog.channel
+            d["source"] = cm.matched_source
+            epg.setdefault(name, []).append(d)
+            added += 1
+
+        matches[name] = {
+            "channel": name,
+            "category": cm.category,
+            "matched_xmltv_id": cm.matched_xmltv_id,
+            "matched_xmltv_name": cm.matched_xmltv_name,
+            "matched_source": cm.matched_source,
+            "score": cm.score,
+            "reason": cm.reason,
+            "alternatives": [],
+            "n_programmes": 0,
+        }
+        matched_now += 1
+        # Strip from unmatched list (matched via direct mapping, not fuzzy).
+        unmatched = [u for u in unmatched
+                     if u.get("name", "").upper() != name]
+
+    # Sort programmes by start time per channel.
+    for lst in epg.values():
+        lst.sort(key=lambda p: p["start"])
+
+    # Refresh n_programmes on every match record.
+    for n in matches:
+        matches[n]["n_programmes"] = len(epg.get(n, []))
+
+    # Write back the merged files.
+    with open(epg_path, "w", encoding="utf-8") as f:
+        json.dump(epg, f, indent=2, ensure_ascii=False)
+    with open(match_path, "w", encoding="utf-8") as f:
+        json.dump(matches, f, indent=2, ensure_ascii=False)
+    with open(unmatched_path, "w", encoding="utf-8") as f:
+        json.dump(unmatched, f, indent=2, ensure_ascii=False)
+
+    LOG.info("merged %d programmes across %d explicit matches",
+             added, matched_now)
+
 
 def _latest_run_dir(epg_source: Path) -> Path | None:
-    """Find the most recent ``data/<UTC-ts>`` directory under ``epg_source``."""
+    """Find the most recent ``data/<UTC-ts>/`` directory under ``epg_source``."""
     data_dir = epg_source / "data"
     if not data_dir.is_dir():
         return None

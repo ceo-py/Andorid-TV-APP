@@ -167,6 +167,8 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": ["https://www.gledaitv.fan/amc-live-tv.html", "https://www.gledaitv.fan/amc-alternative-live-tv.html", "https://www.gledaitv.live/watch-tv/66/amc-online"],
             "url_hd": "https://www.gledaitv.fan/amc-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/a/ad/AMC_Networks_S21.svg/revision/latest/scale-to-width-down/200?cb=20220820072921",
+            "epg_id": "AMC.bg",
+            "epg_source": "BG1",
         },
         "AXN": {
             "url": ["https://www.gledaitv.fan/axn-live-tv.html", "https://www.gledaitv.fan/axn-alternative-live-tv.html", "https://www.gledaitv.live/watch-tv/59/axn-online"
@@ -434,6 +436,8 @@ ALL_CHANNELS_NOT_SORTED = {
             ],
             "url_hd": "https://www.gledaitv.fan/cartoon-network-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/e/ee/Cartoon_Network_2010.svg/revision/latest/scale-to-width-down/250?cb=20210726224754",
+            "epg_id": "Cartoon.Network.bg",
+            "epg_source": "BG1",
         },
         "Cartoonito": {
             "url": [
@@ -442,6 +446,8 @@ ALL_CHANNELS_NOT_SORTED = {
             ],
             "url_hd": "https://www.gledaitv.fan/cartoonito-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/e/ee/Cartoon_Network_2010.svg/revision/latest/scale-to-width-down/250?cb=20210726224754",
+            "epg_id": "Cartoonito.it",
+            "epg_source": "IT1",
         },
         "Disney Channel": {
             "url": ["https://www.gledaitv.fan/disney-channel-live-tv.html",
@@ -449,6 +455,8 @@ ALL_CHANNELS_NOT_SORTED = {
                     ],
             "url_hd": "https://www.gledaitv.fan/disney-channel-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/f/f0/DISNEYCHANNEL-2025.svg/revision/latest/scale-to-width-down/300?cb=20251113064305",
+            "epg_id": "Disney.Channel.bg",
+            "epg_source": "BG1",
         },
         "Nick Jr.": {
             "url": [

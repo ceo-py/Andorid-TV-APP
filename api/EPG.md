@@ -89,6 +89,72 @@ The channel catalog comes from
 `catalog.json` is required. [fetch_epg_daily._build_catalog()](api/fetch_epg_daily.py)
 builds an in-memory `fetch_epg.Catalog` from that dict on every run.
 
+### Explicit EPG IDs in `tv_channels.py`
+
+The fuzzy matcher in the upstream pipeline gets ~95 % of channels right, but
+the wrong 5 % matter — they show the wrong schedule to the user. To get
+100 %-accurate matching for the channels you care most about, add two optional
+fields to the channel entry:
+
+```python
+"AMC": {
+    "url": [...],
+    "url_hd": "...",
+    "image": "...",
+    "epg_id": "AMC.bg",          # XMLTV channel id from the source feed
+    "epg_source": "BG1",         # XMLTV source id (e.g. BG1, IT1, US2, ...)
+},
+```
+
+When both `epg_id` and `epg_source` are set:
+
+- The channel is excluded from the fuzzy matcher entirely.
+- Its programmes are pulled directly from `cache/epg_ripper_<epg_source>.xml.gz`.
+- The match record's `reason` is `"explicit-mapping"` and `score` is `1.0`.
+
+When either field is missing or empty, the channel falls through to the normal
+fuzzy matcher. This means you can gradually opt channels in over time without
+touching every entry.
+
+[fetch_epg_daily._collect_explicit_matches()](api/fetch_epg_daily.py) collects
+the explicit mappings, [fetch_epg_daily._build_catalog()](api/fetch_epg_daily.py)
+filters them out of the fuzzy catalog, and
+[fetch_epg_daily._merge_explicit_matches()](api/fetch_epg_daily.py) merges
+their programmes + match records into the pipeline output after `run()`
+completes.
+
+#### How to find the right `epg_id`
+
+The XMLTV feeds are in `api/cache/epg_ripper_<SOURCE>.xml.gz` after the first
+network run. To discover the channel id for a given channel name:
+
+```bash
+# Example: find AMC's id in the BG1 feed
+python -c "
+import gzip, re
+with gzip.open('cache/epg_ripper_BG1.xml.gz', 'rt', encoding='utf-8') as f:
+    content = f.read()
+m = re.search(r'<channel id=\"([^\"]+)\">[^<]*<display-name[^>]*>AMC[^<]*</display-name>', content)
+print(m.group(1) if m else 'not found')
+"
+```
+
+To see ALL channel ids in a source, list the `<channel id="...">` entries:
+
+```bash
+python -c "
+import gzip, re
+with gzip.open('cache/epg_ripper_BG1.xml.gz', 'rt', encoding='utf-8') as f:
+    content = f.read()
+print('\n'.join(re.findall(r'<channel id=\"([^\"]+)\">[^<]*<display-name[^>]*>([^<]+)</display-name>', content)))
+" | head -30
+```
+
+The full list of source IDs is in [sources.py:ALL_SOURCE_IDS](api/sources.py) —
+commonly useful ones are `BG1` (Bulgaria), `IT1` (Italy), `DE1` (Germany),
+`ES1` (Spain), `FR1` (France), `RO1` (Romania), `UK1` (UK), `US2` (US),
+`GR1` (Greece), `TR1` (Turkey), `AL1` (Albania).
+
 ---
 
 ## 3 · Data layout
@@ -398,6 +464,11 @@ the next boot.
 | `--keep-runs N` | 7 | Keep the N most recent `data/<run-ts>/` directories. `0` = keep all |
 | `--verbose` | off | DEBUG logging |
 
+**Note on `--source`:** if you restrict to specific sources, channels that
+have an explicit `epg_source` field pointing to an excluded source will fail
+silently (their cache file won't exist). The default curated list covers
+all 21 sources, which is the safe option.
+
 ---
 
 ## 6 · Caching strategy
@@ -458,6 +529,8 @@ fetch). See [`_load_json()`](api/epg_service.py).
 | How does the daily job publish? | [fetch_epg_daily.py:_publish()](api/fetch_epg_daily.py) |
 | How is the upstream pipeline invoked? | [fetch_epg_daily.py:_run_pipeline()](api/fetch_epg_daily.py) |
 | How is the catalog built in-memory? | [fetch_epg_daily.py:_build_catalog()](api/fetch_epg_daily.py) |
+| Where do explicit `epg_id` mappings come from? | [fetch_epg_daily.py:_collect_explicit_matches()](api/fetch_epg_daily.py) |
+| How do explicit mappings get merged back in? | [fetch_epg_daily.py:_merge_explicit_matches()](api/fetch_epg_daily.py) |
 | How does old-run pruning work? | [fetch_epg_daily.py:_prune_old_runs()](api/fetch_epg_daily.py) |
 | Channel catalog shape | [api/tv_channels.py](api/tv_channels.py) — `ALL_CHANNELS` |
 | Upstream pipeline (vendored in this repo) | [api/fetch_epg.py](api/fetch_epg.py) |

@@ -54,6 +54,26 @@ channel catalog. `fetch_epg_daily.py` builds an in-memory `fetch_epg.Catalog`
 from it on every run and patches the pipeline to consume that catalog instead
 of reading a JSON file. No `catalog.json` is written or required.
 
+### 100 %-accurate matching for specific channels
+
+The upstream fuzzy matcher gets ~95 % of channels right, but the wrong 5 %
+matter — they show the wrong schedule. To pin a channel to a specific XMLTV
+feed entry, add two optional fields to its `tv_channels.py` entry:
+
+```python
+"AMC": {
+    "url": [...],
+    "url_hd": "...",
+    "image": "...",
+    "epg_id": "AMC.bg",          # XMLTV channel id
+    "epg_source": "BG1",         # XMLTV source id (BG1, IT1, DE1, ...)
+},
+```
+
+When both fields are set, the channel bypasses fuzzy matching entirely and
+uses the exact id from the named source. The full workflow + tips for finding
+the right `epg_id` are in [EPG.md](EPG.md#explicit-epg-ids-in-tv_channelspy).
+
 ### First-time bootstrap
 
 ```bash
