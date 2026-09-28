@@ -8,3 +8,4 @@
 - [iLiveTV-v3.01.apk](releases/iLiveTV-v3.01.apk) — Initial release
 - [iLiveTV-v3.02.apk](releases/iLiveTV-v3.02.apk) — Initial release
 - [iLiveTV-v3.03.apk](releases/iLiveTV-v3.03.apk) — Initial release
+- [iLiveTV-v3.04.apk](releases/iLiveTV-v3.04.apk) — Initial release
