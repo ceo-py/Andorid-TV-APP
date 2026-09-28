@@ -32,5 +32,10 @@ api/data/
 # single source of truth, fed to the pipeline in-memory.
 
 
+# app/iLiveTV was a git submodule but is no longer in scope for this repo —
+# the Android app lives in its own repo. Ignore it so it stops cluttering
+# `git status`.
+app/iLiveTV/
+
 __pycache__
 *.json
