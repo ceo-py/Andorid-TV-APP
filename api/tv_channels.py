@@ -28,7 +28,13 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "",
         },
         "Diema Sport": {
-            "url": ["https://www.gledaitv.fan/diema-sport-live-tv.html", "https://www.gledaitv.fan/diema-sport-alternative-live-tv.html", "https://www.gledaitv.live/watch-tv/13/diema-sport-online"
+            "url": [
+                "https://www.gledaitv.fan/diema-sport-live-tv.html",
+                "https://www.gledaitv.fan/diema-sport-alternative-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/13/diema-sport-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-diema-sport-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-diema-sport-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-diema-sport-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/diema-sport-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/4/45/Diema_Sport_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505001930",
@@ -36,7 +42,13 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "BG1",
         },
         "Diema Sport 2": {
-            "url": ["https://www.gledaitv.fan/diema-sport-2-alternative-live-tv.html", "https://www.gledaitv.fan/diema-sport-2-live-tv.html", "https://www.gledaitv.live/watch-tv/12/diema-sport-2-online"
+            "url": [
+                "https://www.gledaitv.fan/diema-sport-2-alternative-live-tv.html",
+                "https://www.gledaitv.fan/diema-sport-2-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/12/diema-sport-2-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-diema-sport-2-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-diema-sport-2-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-diema-sport-2-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/diema-sport-2-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/3/36/Diema_Sport_2_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505001624",
@@ -44,7 +56,13 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "BG1",
         },
         "Diema Sport 3": {
-            "url": ["https://www.gledaitv.fan/diema-sport-3-alternative-live-tv.html", "https://www.gledaitv.fan/diema-sport-3-live-tv.html", "https://www.gledaitv.live/watch-tv/38/diema-sport-3-online"
+            "url": [
+                "https://www.gledaitv.fan/diema-sport-3-alternative-live-tv.html",
+                "https://www.gledaitv.fan/diema-sport-3-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/38/diema-sport-3-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-diema-sport-3-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-diema-sport-3-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-diema-sport-3-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/diema-sport-3-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/1/17/Diema_Sport_3_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505000657",
@@ -52,7 +70,13 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "BG1",
         },
         "Eurosport 1 BG": {
-            "url": ["https://www.gledaitv.fan/eurosport-1-bg-alternative-live-tv.html", "https://www.gledaitv.fan/eurosport-1-bg-live-tv.html", "https://www.gledaitv.live/watch-tv/33/eurosport-1-online"
+            "url": [
+                "https://www.gledaitv.fan/eurosport-1-bg-alternative-live-tv.html",
+                "https://www.gledaitv.fan/eurosport-1-bg-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/33/eurosport-1-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-eurosport-1-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-eurosport-1-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-eurosport-1-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/eurosport-1-bg-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/e/e7/Eurosport_1_2022.svg/revision/latest/scale-to-width-down/300?cb=20220806090310",
@@ -60,15 +84,38 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "BG1",
         },
         "Eurosport 2 BG": {
-            "url": ["https://www.gledaitv.fan/eurosport-2-bg-alternative-live-tv.html", "https://www.gledaitv.fan/eurosport-2-bg-live-tv.html", "https://www.gledaitv.live/watch-tv/34/eurosport-2-online"
+            "url": [
+                "https://www.gledaitv.fan/eurosport-2-bg-alternative-live-tv.html",
+                "https://www.gledaitv.fan/eurosport-2-bg-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/34/eurosport-2-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-eurosport-2-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-eurosport-2-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-eurosport-2-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/eurosport-2-bg-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/1/16/Eurosport_2_2022.svg/revision/latest/scale-to-width-down/300?cb=20220417183127",
             "epg_id": "Eurosport.2.bg",
             "epg_source": "BG1",
         },
+        "Max One": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=hd-max-one-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-max-one-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-max-one-hd&pass=",
+            ],
+            "url_hd": "",
+            "image": "https://www.predavatel.com/bg/tv/cable-sat_img/max-one.png",
+            "epg_id": "",
+            "epg_source": "",
+        },
         "Max Sport 1": {
-            "url": ["https://www.gledaitv.fan/max-sport-1-alternative-live-tv.html", "https://www.gledaitv.fan/max-sport-1-live-tv.html", "https://www.gledaitv.live/watch-tv/9/max-sport-bg-1-online"
+            "url": [
+                "https://www.gledaitv.fan/max-sport-1-alternative-live-tv.html",
+                "https://www.gledaitv.fan/max-sport-1-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/9/max-sport-bg-1-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-max-sport-1-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-max-sport-1-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-max-sport-1-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/max-sport-1-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/5/5e/Max_Sport_1_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505002452",
@@ -76,15 +123,26 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "BG1",
         },
         "Max Sport 2": {
-            "url": ["https://www.gledaitv.fan/max-sport-2-alternative-live-tv.html", "https://www.gledaitv.fan/max-sport-2-live-tv.html", "https://www.gledaitv.live/watch-tv/10/max-sport-2-bg-online"
-            ],
+            "url": ["https://www.gledaitv.fan/max-sport-2-alternative-live-tv.html",
+                    "https://www.gledaitv.fan/max-sport-2-live-tv.html",
+                    "https://www.gledaitv.live/watch-tv/10/max-sport-2-bg-online",
+                    "https://www.seirsanduk.online/?player=11&id=hd-max-sport-2-hd&pass=",
+                    "https://www.seirsanduk.online/?player=12&id=hd-max-sport-2-hd&pass=",
+                    "https://www.seirsanduk.online/?player=13&id=hd-max-sport-2-hd&pass=",
+                    ],
             "url_hd": "https://www.gledaitv.fan/max-sport-2-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/a/ac/Max_Sport_2_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505002701",
             "epg_id": "MAX.Sport.2.bg",
             "epg_source": "BG1",
         },
         "Max Sport 3": {
-            "url": ["https://www.gledaitv.fan/max-sport-3-alternative-live-tv.html", "https://www.gledaitv.fan/max-sport-3-live-tv.html", "https://www.gledaitv.live/watch-tv/11/max-sport-3-bg-online"
+            "url": [
+                "https://www.gledaitv.fan/max-sport-3-alternative-live-tv.html",
+                "https://www.gledaitv.fan/max-sport-3-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/11/max-sport-3-bg-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-max-sport-3-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-max-sport-3-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-max-sport-3-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/max-sport-3-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/6/61/Max_Sport_3_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505002837",
@@ -92,7 +150,13 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "BG1",
         },
         "Max Sport 4": {
-            "url": ["https://www.gledaitv.fan/max-sport-4-alternative-live-tv.html", "https://www.gledaitv.fan/max-sport-4-live-tv.html", "https://www.gledaitv.live/watch-tv/65/max-sport-4-bg-online"
+            "url": [
+                "https://www.gledaitv.fan/max-sport-4-alternative-live-tv.html",
+                "https://www.gledaitv.fan/max-sport-4-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/65/max-sport-4-bg-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-max-sport-4-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-max-sport-4-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-max-sport-4-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/max-sport-4-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/6/62/Max_Sport_4_HD.svg/revision/latest/scale-to-width-down/300?cb=20250505003011",
@@ -100,14 +164,27 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "BG1",
         },
         "Nova Sport": {
-            "url": ["https://www.gledaitv.fan/nova-sport-live-tv.html", "https://www.gledaitv.fan/nova-sport-alternative-live-tv.html", "https://www.gledaitv.live/watch-tv/32/nova-sport-online"],
+            "url": [
+                "https://www.gledaitv.fan/nova-sport-live-tv.html",
+                "https://www.gledaitv.fan/nova-sport-alternative-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/32/nova-sport-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-nova-sport-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-nova-sport-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-nova-sport-hd&pass=",
+            ],
             "url_hd": "https://www.gledaitv.fan/nova-sport-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/9/9e/Nova_Sport_2010_flat.svg/revision/latest/scale-to-width-down/150?cb=20240731175840",
             "epg_id": "Нова.Спорт.bg",
             "epg_source": "BG1",
         },
         "Ring BG": {
-            "url": ["https://www.gledaitv.fan/ring-bg-alternative-live-tv.html", "https://www.gledaitv.fan/ring-bg-live-tv.html", "https://www.gledaitv.live/watch-tv/31/ring-bg-online"
+            "url": [
+                "https://www.gledaitv.fan/ring-bg-alternative-live-tv.html",
+                "https://www.gledaitv.fan/ring-bg-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/31/ring-bg-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-ring-bg-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-ring-bg-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-ring-bg-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/ring-bg-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/0/03/Ring.svg/revision/latest/scale-to-width-down/200?cb=20210516104914",
@@ -229,38 +306,87 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "BG1",
         },
         "AXN": {
-            "url": ["https://www.gledaitv.fan/axn-live-tv.html", "https://www.gledaitv.fan/axn-alternative-live-tv.html", "https://www.gledaitv.live/watch-tv/59/axn-online"
+            "url": [
+                "https://www.gledaitv.fan/axn-live-tv.html",
+                "https://www.gledaitv.fan/axn-alternative-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/59/axn-online",
+                "https://www.seirsanduk.online/?player=11&id=axn&pass=",
+                "https://www.seirsanduk.online/?player=12&id=axn&pass=",
+                "https://www.seirsanduk.online/?player=13&id=axn&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/axn-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/d/dc/2016_AXN_logo.svg/revision/latest/scale-to-width-down/300?cb=20201126064846",
+            "epg_id": "AXN.bg",
+            "epg_source": "BG1",
+        },
+        "AXN Black": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=axn-black&pass=",
+                "https://www.seirsanduk.online/?player=12&id=axn-black&pass=",
+                "https://www.seirsanduk.online/?player=13&id=axn-black&pass=",
+            ],
+            "url_hd": "",
+            "image": "https://www.predavatel.com/bg/tv/cable-sat_img/axn-black2.png",
             "epg_id": "AXN.Black.bg",
             "epg_source": "BG1",
         },
+        "AXN White": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=axn-white&pass=",
+                "https://www.seirsanduk.online/?player=12&id=axn-white&pass=",
+                "https://www.seirsanduk.online/?player=13&id=axn-white&pass=",
+            ],
+            "url_hd": "",
+            "image": "https://www.predavatel.com/bg/tv/cable-sat_img/axn-white2.png",
+            "epg_id": "AXN.White.bg",
+            "epg_source": "BG1",
+        },
         "bTV Action": {
-            "url": ["https://www.gledaitv.fan/btv-action-live-tv.html", "https://www.gledaitv.fan/btv-action-alternative-live-tv.html"],
+            "url": [
+                "https://www.gledaitv.fan/btv-action-live-tv.html", 
+                "https://www.gledaitv.fan/btv-action-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=hd-btv-action-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-btv-action-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-btv-action-hd&pass=",
+                ],
             "url_hd": "https://www.gledaitv.fan/btv-action-hd-live-tv.html",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6YU0bglnotgXBthpeCCGK6bGRLRA09gwYg&s",
             "epg_id": "bTV.Action.bg",
             "epg_source": "BG1",
         },
         "bTV Cinema": {
-            "url": ["https://www.gledaitv.fan/btv-cinema-live-tv.html", "https://www.gledaitv.fan/btv-cinema-alternative-live-tv.html"
-            ],
+            "url": [
+                "https://www.gledaitv.fan/btv-cinema-live-tv.html", 
+                "https://www.gledaitv.fan/btv-cinema-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=btv-cinema&pass=",
+                "https://www.seirsanduk.online/?player=12&id=btv-cinema&pass=",
+                "https://www.seirsanduk.online/?player=13&id=btv-cinema&pass=",
+                    ],
             "url_hd": "https://www.gledaitv.fan/btv-cinema-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/f/f5/BTV_Cinema_%282016%29.svg/revision/latest/scale-to-width-down/300?cb=20200125184619",
             "epg_id": "bTV.Cinema.bg",
             "epg_source": "BG1",
         },
         "bTV Comedy": {
-            "url": ["https://www.gledaitv.fan/btv-comedy-live-tv.html", "https://www.gledaitv.fan/btv-comedy-alternative-live-tv.html"
-            ],
+            "url": [
+                "https://www.gledaitv.fan/btv-comedy-live-tv.html", 
+                "https://www.gledaitv.fan/btv-comedy-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=hd-btv-comedy-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-btv-comedy-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-btv-comedy-hd&pass=",
+                    ],
             "url_hd": "https://www.gledaitv.fan/btv-comedy-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/9/9f/BTV_Comedy_HD.jpg/revision/latest?cb=20240319192449",
             "epg_id": "bTV.Comedy.bg",
             "epg_source": "BG1",
         },
         "bTV Lady": {
-            "url": ["https://www.gledaitv.fan/btv-lady-live-tv.html", "https://www.gledaitv.fan/btv-lady-alternative-live-tv.html"
+            "url": [
+                "https://www.gledaitv.fan/btv-lady-live-tv.html",
+                "https://www.gledaitv.fan/btv-lady-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=btv-story&pass=",
+                "https://www.seirsanduk.online/?player=12&id=btv-story&pass=",
+                "https://www.seirsanduk.online/?player=13&id=btv-story&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/btv-lady-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/5/51/BTV_Lady_%282016%29.svg/revision/latest/scale-to-width-down/250?cb=20200125184015",
@@ -268,21 +394,42 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "BG1",
         },
         "Diema": {
-            "url": ["https://www.gledaitv.fan/diema-live-tv.html", "https://www.gledaitv.fan/diema-alternative-live-tv.html", "https://www.gledaitv.live/watch-tv/52/diema-online"],
+            "url": [
+                "https://www.gledaitv.fan/diema-live-tv.html",
+                "https://www.gledaitv.fan/diema-alternative-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/52/diema-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-diema-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-diema-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-diema-hd&pass=",
+            ],
             "url_hd": "https://www.gledaitv.fan/diema-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/b/b2/Diema.png/revision/latest/scale-to-width-down/150?cb=20170315162656",
             "epg_id": "Диема.bg",
             "epg_source": "BG1",
         },
         "Diema Family": {
-            "url": ["https://www.gledaitv.fan/diema-family-live-tv.html", "https://www.gledaitv.fan/diema-family-alternative-live-tv.html", "https://www.gledaitv.live/watch-tv/51/diema-family-online"],
+            "url": [
+                "https://www.gledaitv.fan/diema-family-live-tv.html",
+                "https://www.gledaitv.fan/diema-family-alternative-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/51/diema-family-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-diema-family-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-diema-family-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-diema-family-hd&pass=",
+            ],
             "url_hd": "https://www.gledaitv.fan/diema-family-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/7/71/Diema_Family_2019.svg/revision/latest/scale-to-width-down/150?cb=20240731170629",
             "epg_id": "Диема.Фемили.bg",
             "epg_source": "BG1",
         },
         "Epic Drama": {
-            "url": ["https://www.gledaitv.fan/epic-drama-live-tv.html", "https://www.gledaitv.fan/epic-drama-alternative-live-tv.html", "https://www.gledaitv.live/watch-tv/75/epic-drama-online"],
+            "url": [
+                "https://www.gledaitv.fan/epic-drama-live-tv.html",
+                "https://www.gledaitv.fan/epic-drama-alternative-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/75/epic-drama-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-epic-drama-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-epic-drama-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-epic-drama-hd&pass=",
+            ],
             "url_hd": "https://www.gledaitv.fan/epic-drama-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/1/1e/Epic_Drama_2018.svg/revision/latest/scale-to-width-down/200?cb=20191113170018",
             "epg_id": "Epic.Drama.bg",
@@ -309,11 +456,25 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_id": "FilmBox.bg",
             "epg_source": "BG1",
         },
+        "ID Xtra": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=hd-id-xtra-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-id-xtra-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-id-xtra-hd&pass=",
+            ],
+            "url_hd": "",
+            "image": "https://ngimg.siol.tv/sioltv/logo/color/discidx.png?height=60",
+            "epg_id": "",
+            "epg_source": "",
+        },
         "Kino Nova": {
             "url": [
                 "https://www.gledaitv.fan/kino-nova-live-tv.html",
                 "https://www.gledaitv.fan/kino-nova-alternative-live-tv.html",
                 "https://www.gledaitv.live/watch-tv/44/kino-nova-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-kino-nova-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-kino-nova-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-kino-nova-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/kino-nova-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/a/a6/Kinonova_re.svg/revision/latest/scale-to-width-down/250?cb=20260101161359",
@@ -331,6 +492,9 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/star-channel-alternative-live-tv.html",
                 "https://www.gledaitv.fan/star-channel-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=hd-star-channel-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-star-channel-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-star-channel-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/star-channel-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/c/cd/Star_Channel_2023.svg/revision/latest/scale-to-width-down/250?cb=20231209070650",
@@ -341,6 +505,9 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/star-crime-alternative-live-tv.html",
                 "https://www.gledaitv.fan/star-crime-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=hd-star-crime-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-star-crime-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-star-crime-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/star-crime-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/4/40/Star_Crime_2023.svg/revision/latest/scale-to-width-down/250?cb=20231208002839",
@@ -348,7 +515,14 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "BG1",
         },
         "Star Life": {
-            "url": ["https://www.gledaitv.fan/star-tv-live-tv.html", "https://www.gledaitv.fan/star-life-alternative-live-tv.html", "https://www.gledaitv.live/watch-tv/46/fox-life-online"],
+            "url": [
+                "https://www.gledaitv.fan/star-tv-live-tv.html",
+                "https://www.gledaitv.fan/star-life-alternative-live-tv.html",
+                "https://www.gledaitv.live/watch-tv/46/fox-life-online",
+                "https://www.seirsanduk.online/?player=11&id=hd-star-life-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-star-life-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-star-life-hd&pass=",
+            ],
             "url_hd": "https://www.gledaitv.fan/star-life-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/b/b9/Star_Life_2023.svg/revision/latest/scale-to-width-down/250?cb=20231209041522",
             "epg_id": "StarLife.bg",
@@ -356,6 +530,17 @@ ALL_CHANNELS_NOT_SORTED = {
         },
     },
     "Science": {
+        "Food Network": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=hd-food-network-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-food-network-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-food-network-hd&pass=",
+            ],
+            "url_hd": "",
+            "image": "",
+            "epg_id": "Food.Network.HD.bg",
+            "epg_source": "BG1",
+        },
         "Animal Planet": {
             "url": ["https://www.gledaitv.fan/animal-planet-live-tv.html", "https://www.gledaitv.fan/animal-planet-alternative-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/animal-planet-hd-live-tv.html",
@@ -367,6 +552,9 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/discovery-channel-alternative-live-tv.html",
                 "https://www.gledaitv.fan/discovery-channel-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=hd-discovery-channel-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-discovery-channel-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-discovery-channel-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/discovery-channel-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/a/a8/Discovery_Channel_2019.svg/revision/latest/scale-to-width-down/300?cb=20210519155203",
@@ -389,7 +577,7 @@ ALL_CHANNELS_NOT_SORTED = {
         },
         "History Channel": {
             "url": [""
-            "https://www.gledaitv.fan/test-h-live-tv.html", "https://www.gledaitv.fan/test-h-alternative-live-tv.html"],
+                    "https://www.gledaitv.fan/test-h-live-tv.html", "https://www.gledaitv.fan/test-h-alternative-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/test-h-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/e/e8/History_2021.png/revision/latest/scale-to-width-down/200?cb=20240302050750",
             "epg_id": "History.bg",
@@ -409,6 +597,9 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/nat-geo-wild-live-tv.html",
                 "https://www.gledaitv.fan/nat-geo-wild-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=hd-nat-geo-wild-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-nat-geo-wild-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-nat-geo-wild-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/nat-geo-wild-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/d/d9/National_Geographic_Wild_2018.svg/revision/latest/scale-to-width-down/200?cb=20180903172554",
@@ -419,6 +610,9 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/national-geographic-live-tv.html",
                 "https://www.gledaitv.fan/national-geographic-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=hd-nat-geo-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-nat-geo-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-nat-geo-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/national-geographic-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/c/c6/National_Geographic_2008.svg/revision/latest/scale-to-width-down/250?cb=20170701154034",
@@ -429,6 +623,9 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/tlc-live-tv.html",
                 "https://www.gledaitv.fan/tlc-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=tlc&pass=",
+                "https://www.seirsanduk.online/?player=12&id=tlc&pass=",
+                "https://www.seirsanduk.online/?player=13&id=tlc&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/tlc-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/b/b1/TLC_%282021%29.svg/revision/latest/scale-to-width-down/250?cb=20220703193228",
@@ -443,7 +640,13 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "",
         },
         "Viasat Explore": {
-            "url": ["https://www.gledaitv.fan/viasat-explore-live-tv.html", "https://www.gledaitv.fan/viasat-explore-alternative-live-tv.html"],
+            "url": [
+                "https://www.gledaitv.fan/viasat-explore-live-tv.html",
+                "https://www.gledaitv.fan/viasat-explore-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=hd-viasat-explore-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-viasat-explore-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-viasat-explore-hd&pass=",
+            ],
             "url_hd": "https://www.gledaitv.fan/viasat-explore-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/e/ec/Viasat_Explore_2022.svg/revision/latest/scale-to-width-down/150?cb=20220119212514",
             "epg_id": "Viasat.Explorer.bg",
@@ -482,11 +685,47 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_id": "България.он.еър.bg",
             "epg_source": "BG1",
         },
+        "EuroNews Bulgaria": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=hd-euronews-bulgaria-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-euronews-bulgaria-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-euronews-bulgaria-hd&pass=",
+            ],
+            "url_hd": "",
+            "image": "https://www.predavatel.com/bg/tv/cable-sat_img/euronews.svg",
+            "epg_id": "",
+            "epg_source": "",
+        },
+        "Nova News": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=hd-nova-news-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-nova-news-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-nova-news-hd&pass=",
+            ],
+            "url_hd": "",
+            "image": "https://www.predavatel.com/bg/tv/nova_images/nova-news.svg",
+            "epg_id": "NOVANEWS.bg",
+            "epg_source": "BG1",
+        },
+        "Kanal 3": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=kanal-3&pass=",
+                "https://www.seirsanduk.online/?player=12&id=kanal-3&pass=",
+                "https://www.seirsanduk.online/?player=13&id=kanal-3&pass=",
+            ],
+            "url_hd": "",
+            "image": "https://www.predavatel.com/bg/6/dobrich_img/tv-kanal3.png",
+            "epg_id": "",
+            "epg_source": "",
+        },
         "BNT 1": {
             "url": [
                 "https://www.gledaitv.fan/bnt-1-live-tv.html",
                 "https://www.gledaitv.fan/bnt-1-alternative-live-tv.html",
-                "https://tv.bnt.bg/bnt1"
+                "https://tv.bnt.bg/bnt1",
+                "https://www.seirsanduk.online/?player=11&id=hd-bnt-1-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-bnt-1-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-bnt-1-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/bnt-1-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/6/6f/BNT_1_2018.svg/revision/latest/scale-to-width-down/300?cb=20180909194302",
@@ -497,7 +736,10 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/bnt-2-live-tv.html",
                 "https://www.gledaitv.fan/bnt-2-alternative-live-tv.html",
-                "https://tv.bnt.bg/bnt2"
+                "https://tv.bnt.bg/bnt2",
+                "https://www.seirsanduk.online/?player=11&id=bnt-2&pass=",
+                "https://www.seirsanduk.online/?player=12&id=bnt-2&pass=",
+                "https://www.seirsanduk.online/?player=13&id=bnt-2&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/bnt-2-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/1/1f/BNT_2_2018.svg/revision/latest/scale-to-width-down/300?cb=20180909194412",
@@ -508,7 +750,10 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/bnt-3-live-tv.html",
                 "https://www.gledaitv.fan/bnt-3-alternative-live-tv.html",
-                "https://tv.bnt.bg/bnt3"
+                "https://tv.bnt.bg/bnt3",
+                "https://www.seirsanduk.online/?player=11&id=bnt-3&pass=",
+                "https://www.seirsanduk.online/?player=12&id=bnt-3&pass=",
+                "https://www.seirsanduk.online/?player=13&id=bnt-3&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/bnt-3-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/3/32/BNT_3_2018.svg/revision/latest/scale-to-width-down/300?cb=20180909194740",
@@ -519,7 +764,10 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/bnt-4-live-tv.html",
                 "https://www.gledaitv.fan/bnt-4-alternative-live-tv.html",
-                "https://tv.bnt.bg/bnt4"
+                "https://tv.bnt.bg/bnt4",
+                "https://www.seirsanduk.online/?player=11&id=bnt-4&pass=",
+                "https://www.seirsanduk.online/?player=12&id=bnt-4&pass=",
+                "https://www.seirsanduk.online/?player=13&id=bnt-4&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/bnt-4-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/e/e9/BNT_4_2018.svg/revision/latest/scale-to-width-down/300?cb=20180909194558",
@@ -530,16 +778,66 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/btv-live-tv.html",
                 "https://www.gledaitv.fan/btv-alternative-live-tv.html",
-                "https://btvplus.bg/live/"
+                "https://btvplus.bg/live/",
+                "https://www.seirsanduk.online/?player=11&id=hd-btv-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-btv-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-btv-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/btv-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/e/e6/BTV_Bulgaria_2025.svg/revision/latest/scale-to-width-down/250?cb=20250701093143",
             "epg_id": "bTV.bg",
             "epg_source": "BG1",
         },
+        "BLOOMBERG TV": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=bloomberg-tv&pass=",
+                "https://www.seirsanduk.online/?player=12&id=bloomberg-tv&pass=",
+                "https://www.seirsanduk.online/?player=13&id=bloomberg-tv&pass=",
+            ],
+            "url_hd": "https://www.bloombergtv.bg/video",
+            "image": "https://www.predavatel.com/bg/tv/bgonair_img/bloomberg.svg",
+            "epg_id": "Bloomberg.TV.Bulgaria.bg",
+            "epg_source": "BG1",
+        },
+        "VTK": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=vtk&pass=",
+                "https://www.seirsanduk.online/?player=12&id=vtk-tv&pass=",
+                "https://www.seirsanduk.online/?player=13&id=vtk-tv&pass=",
+            ],
+            "url_hd": "",
+            "image": "https://www.predavatel.com/bg/tv/cable-sat_img/vtk.svg",
+            "epg_id": "",
+            "epg_source": "",
+        },
+        "SKAT": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=skat&pass=",
+                "https://www.seirsanduk.online/?player=12&id=skat-tv&pass=",
+                "https://www.seirsanduk.online/?player=13&id=skat-tv&pass=",
+            ],
+            "url_hd": "",
+            "image": "https://www.predavatel.com/bg/5/burgas-radiotv_img/tv-skat2.png",
+            "epg_id": "СКАТ.bg",
+            "epg_source": "BG1",
+        },
+        "7/8 TV": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=hd-78-tv-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-78-tv-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-78-tv-hd&pass=",
+            ],
+            "url_hd": "",
+            "image": "https://www.predavatel.com/bg/tv/images/78.png",
+            "epg_id": "ТВ.78.bg",
+            "epg_source": "BG1",
+        },
         "Evrokom": {
             "url": [
                 "https://eurocom.bg/live",
+                "https://www.seirsanduk.online/?player=11&id=evrokom&pass=",
+                "https://www.seirsanduk.online/?player=12&id=evrokom&pass=",
+                "https://www.seirsanduk.online/?player=13&id=evrokom&pass=",
             ],
             "url_hd": "",
             "image": "https://static.wikia.nocookie.net/logopedia/images/a/a5/Eurokom_1996.png/revision/latest/scale-to-width-down/300?cb=20170802171200",
@@ -550,7 +848,10 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/nova-live-tv.html",
                 "https://www.gledaitv.fan/nova-alternative-live-tv.html",
-                "https://nova.bg/live"
+                "https://nova.bg/live",
+                "https://www.seirsanduk.online/?player=11&id=hd-nova-tv-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-nova-tv-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-nova-tv-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/nova-hd-live-tv.html",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOGhFKRgJ9roOiXry-ysDZreZQzVYuyjXwGw&s",
@@ -563,10 +864,24 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/cartoon-network-live-tv.html",
                 "https://www.gledaitv.fan/cartoon-network-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=cartoon-network&pass=",
+                "https://www.seirsanduk.online/?player=12&id=cartoon-network&pass=",
+                "https://www.seirsanduk.online/?player=13&id=cartoon-network&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/cartoon-network-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/e/ee/Cartoon_Network_2010.svg/revision/latest/scale-to-width-down/250?cb=20210726224754",
             "epg_id": "Cartoon.Network.bg",
+            "epg_source": "BG1",
+        },
+        "E Kids": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=e-kids&pass=",
+                "https://www.seirsanduk.online/?player=12&id=e-kids&pass=",
+                "https://www.seirsanduk.online/?player=13&id=e-kids&pass=",
+            ],
+            "url_hd": "",
+            "image": "https://www.predavatel.com/bg/tv/cable-sat_img/ekids.svg",
+            "epg_id": "EKids.bg",
             "epg_source": "BG1",
         },
         "Cartoonito": {
@@ -581,7 +896,10 @@ ALL_CHANNELS_NOT_SORTED = {
         },
         "Disney Channel": {
             "url": ["https://www.gledaitv.fan/disney-channel-live-tv.html",
-                    "https://www.gledaitv.fan/disney-channel-alternative-live-tv.html"
+                    "https://www.gledaitv.fan/disney-channel-alternative-live-tv.html",
+                    "https://www.seirsanduk.online/?player=11&id=disney-channel&pass=",
+                    "https://www.seirsanduk.online/?player=12&id=disney-channel&pass=",
+                    "https://www.seirsanduk.online/?player=13&id=disney-channel&pass=",
                     ],
             "url_hd": "https://www.gledaitv.fan/disney-channel-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/f/f0/DISNEYCHANNEL-2025.svg/revision/latest/scale-to-width-down/300?cb=20251113064305",
@@ -592,6 +910,9 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/nick-jr-live-tv.html",
                 "https://www.gledaitv.fan/nick-jr-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=nick-jr&pass=",
+                "https://www.seirsanduk.online/?player=12&id=nick-jr&pass=",
+                "https://www.seirsanduk.online/?player=13&id=nick-jr&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/nick-jr-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/5/55/Nick_Jr..svg/revision/latest/scale-to-width-down/250?cb=20251017154510",
@@ -599,7 +920,13 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "BG1",
         },
         "Nick Toons": {
-            "url": ["https://www.gledaitv.fan/nick-toons-live-tv.html", "https://www.gledaitv.fan/nick-toons-alternative-live-tv.html"],
+            "url": [
+                "https://www.gledaitv.fan/nick-toons-live-tv.html",
+                "https://www.gledaitv.fan/nick-toons-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=nicktoons&pass=",
+                "https://www.seirsanduk.online/?player=12&id=nicktoons&pass=",
+                "https://www.seirsanduk.online/?player=13&id=nicktoons&pass=",
+            ],
             "url_hd": "https://www.gledaitv.fan/nick-toons-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/6/69/Nicktoons_2023_Logo.svg/revision/latest/scale-to-width-down/300?cb=20240724194938",
             "epg_id": "",
@@ -609,6 +936,9 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/nickelodeon-live-tv.html",
                 "https://www.gledaitv.fan/nickelodeon-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=nickelodeon&pass=",
+                "https://www.seirsanduk.online/?player=12&id=nickelodeon&pass=",
+                "https://www.seirsanduk.online/?player=13&id=nickelodeon&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/nickelodeon-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/0/07/Nickelodeon_%282009%29.svg/revision/latest/scale-to-width-down/350?cb=20180306141612",
@@ -618,7 +948,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Trt Çocuk": {
             "url": ["https://www.gledaitv.fan/trt-cocuk-live-tv.html",
                     "https://www.gledaitv.fan/trt-cocuk-alternative-live-tv.html"
-            ],
+                    ],
             "url_hd": "https://www.gledaitv.fan/trt-cocuk-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/revision/latest/scale-to-width-down/300?cb=20211101143853",
             "epg_id": "TRT.ÇOCUK.tr",
@@ -630,6 +960,9 @@ ALL_CHANNELS_NOT_SORTED = {
             "url": [
                 "https://www.gledaitv.fan/24-kitchen-live-tv.html",
                 "https://www.gledaitv.fan/24-kitchen-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=hd-24-kitchen-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-24-kitchen-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-24-kitchen-hd&pass=",
             ],
             "url_hd": "https://www.gledaitv.fan/24-kitchen-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/2/29/24_kitchen_2022_Portugal.svg/revision/latest/scale-to-width-down/300?cb=20230117133430",
@@ -646,7 +979,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "bTV Action": {
             "url": ["https://www.gledaitv.fan/btv-action-live-tv.html",
                     "https://www.gledaitv.fan/btv-action-alternative-live-tv.html"
-            ],
+                    ],
             "url_hd": "https://www.gledaitv.fan/btv-action-hd-live-tv.html",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS6YU0bglnotgXBthpeCCGK6bGRLRA09gwYg&s",
             "epg_id": "bTV.Action.bg",
@@ -654,8 +987,11 @@ ALL_CHANNELS_NOT_SORTED = {
         },
         "Bulgaria ON AIR": {
             "url": ["https://www.gledaitv.fan/bulgaria-on-air-live-tv.html",
-                    "https://www.gledaitv.fan/bulgaria-on-air-alternative-live-tv.html"
-            ],
+                    "https://www.gledaitv.fan/bulgaria-on-air-alternative-live-tv.html",
+                    "https://www.seirsanduk.online/?player=11&id=bulgaria-on-air&pass=",
+                    "https://www.seirsanduk.online/?player=12&id=bulgaria-on-air&pass=",
+                    "https://www.seirsanduk.online/?player=13&id=bulgaria-on-air&pass=",
+                    ],
             "url_hd": "https://www.gledaitv.fan/bulgaria-on-air-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/5/5f/Bgonair-new2.png/revision/latest/scale-to-width-down/210?cb=20160102175130",
             "epg_id": "България.он.еър.bg",
@@ -664,7 +1000,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Byeaz Tv": {
             "url": ["https://www.gledaitv.fan/byeaz-tv-live-tv.html",
                     "https://www.gledaitv.fan/byeaz-tv-alternative-live-tv.html"
-            ],
+                    ],
             "url_hd": "https://www.gledaitv.fan/byeaz-tv-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/9/96/Beyaz_tv_2012-2022.png/revision/latest/scale-to-width-down/250?cb=20250720181730",
             "epg_id": "",
@@ -672,8 +1008,11 @@ ALL_CHANNELS_NOT_SORTED = {
         },
         "Code Fashion": {
             "url": ["https://www.gledaitv.fan/code-fashion-live-tv.html",
-                    "https://www.gledaitv.fan/code-fashion-alternative-live-tv.html"
-            ],
+                    "https://www.gledaitv.fan/code-fashion-alternative-live-tv.html",
+                    "https://www.seirsanduk.online/?player=11&id=hd-code-fashion-tv-hd&pass=",
+                    "https://www.seirsanduk.online/?player=12&id=hd-code-fashion-tv-hd&pass=",
+                    "https://www.seirsanduk.online/?player=13&id=hd-code-fashion-tv-hd&pass=",
+                    ],
             "url_hd": "https://www.gledaitv.fan/code-fashion-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/6/60/Fashion.png/revision/latest/scale-to-width-down/200?cb=20241104092044",
             "epg_id": "",
@@ -682,7 +1021,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Code Health": {
             "url": ["https://www.gledaitv.fan/code-health-live-tv.html",
                     "https://www.gledaitv.fan/code-health-alternative-live-tv.html"
-            ],
+                    ],
             "url_hd": "https://www.gledaitv.fan/code-health-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/0/00/Health_2025.png/revision/latest/scale-to-width-down/200?cb=20250117165029",
             "epg_id": "",
@@ -691,7 +1030,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Kanal 0": {
             "url": ["https://www.gledaitv.fan/kanal-0-live-tv.html",
                     "https://www.gledaitv.fan/kanal-0-alternative-live-tv.html"
-            ],
+                    ],
             "url_hd": "https://www.gledaitv.fan/kanal-0-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/kabal/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20240516211240",
             "epg_id": "",
@@ -708,7 +1047,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Show Tv": {
             "url": ["https://www.gledaitv.fan/show-tv-live-tv.html",
                     "https://www.gledaitv.fan/show-tv-alternative-live-tv.html"
-            ],
+                    ],
             "url_hd": "https://www.gledaitv.fan/show-tv-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/4/4b/Show_TV.svg/revision/latest/scale-to-width-down/250?cb=20161114192209",
             "epg_id": "",
@@ -717,7 +1056,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "TLC BG": {
             "url": ["https://www.gledaitv.fan/tlc-bg-live-tv.html",
                     "https://www.gledaitv.fan/tlc-bg-alternative-live-tv.html"
-            ],
+                    ],
             "url_hd": "https://www.gledaitv.fan/tlc-bg-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/b/b1/TLC_%282021%29.svg/revision/latest/scale-to-width-down/250?cb=20220703193228",
             "epg_id": "TLC.Balkans.bg",
@@ -726,11 +1065,25 @@ ALL_CHANNELS_NOT_SORTED = {
         "Travel Channel": {
             "url": [
                 "https://www.gledaitv.fan/travel-channel-live-tv.html",
-                "https://www.gledaitv.fan/travel-channel-alternative-live-tv.html"
+                "https://www.gledaitv.fan/travel-channel-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=hd-travel-channel-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-travel-channel-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-travel-channel-hd&pass="
             ],
             "url_hd": "https://www.gledaitv.fan/travel-channel-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/8/85/Travel_Channel_2018.svg/revision/latest/scale-to-width-down/250?cb=20241104144156",
             "epg_id": "Travel.Channel.bg",
+            "epg_source": "BG1",
+        },
+        "Travel TV": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=travel-tv&pass=",
+                "https://www.seirsanduk.online/?player=12&id=travel-tv&pass=",
+                "https://www.seirsanduk.online/?player=13&id=travel-tv&pass="
+            ],
+            "url_hd": "",
+            "image": "https://www.predavatel.com/bg/tv/cable-sat_img/traveltv.png",
+            "epg_id": "Travel.TV.bg",
             "epg_source": "BG1",
         },
         "TVN": {
@@ -910,15 +1263,39 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_id": "Balkanika.MTV.bg",
             "epg_source": "BG1",
         },
+        "Rodina Tv": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=rodina-tv&pass=",
+                "https://www.seirsanduk.online/?player=12&id=rodina-tv&pass=",
+                "https://www.seirsanduk.online/?player=13&id=rodina-tv&pass=",
+            ],
+            "url_hd": "",
+            "image": "https://www.predavatel.com/bg/2/blagoevgrad_img/tv-rodina.png",
+            "epg_id": "",
+            "epg_source": "",
+        },
         "DSTV": {
-            "url": ["https://www.gledaitv.fan/dstv-live-tv.html", "https://www.gledaitv.fan/dstv-alternative-live-tv.html"],
+            "url": [
+                "https://www.gledaitv.fan/dstv-live-tv.html",
+                "https://www.gledaitv.fan/dstv-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=dstv&pass=",
+                "https://www.seirsanduk.online/?player=12&id=dstv&pass=",
+                "https://www.seirsanduk.online/?player=13&id=dstv&pass=",
+            ],
             "url_hd": "https://www.gledaitv.fan/dstv-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/0/03/DStv_2023.svg/revision/latest/scale-to-width-down/300?cb=20240206012331",
             "epg_id": "",
             "epg_source": "",
         },
         "City Tv": {
-            "url": ["https://www.gledaitv.fan/city-tv-live-tv.html", "https://www.gledaitv.fan/city-tv-alternative-live-tv.html", "https://freetv.studio/channel/CityTV.bg"],
+            "url": [
+                "https://www.gledaitv.fan/city-tv-live-tv.html",
+                "https://www.gledaitv.fan/city-tv-alternative-live-tv.html",
+                "https://freetv.studio/channel/CityTV.bg",
+                "https://www.seirsanduk.online/?player=11&id=city-tv&pass=",
+                "https://www.seirsanduk.online/?player=12&id=city-tv&pass=",
+                "https://www.seirsanduk.online/?player=13&id=city-tv&pass=",
+            ],
             "url_hd": "https://www.gledaitv.fan/city-tv-hd-live-tv.html",
             "image": "https://www.city.bg/theme_assets/city/images/sharing/radio_default_banner.jpg",
             "epg_id": "",
@@ -939,14 +1316,37 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "",
         },
         "Planeta Folk": {
-            "url": ["https://www.gledaitv.fan/planeta-folk-live-tv.html", "https://www.gledaitv.fan/planeta-folk-alternative-live-tv.html"],
+            "url": [
+                "https://www.gledaitv.fan/planeta-folk-live-tv.html",
+                "https://www.gledaitv.fan/planeta-folk-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=planeta-folk&pass=",
+                "https://www.seirsanduk.online/?player=12&id=planeta-folk&pass=",
+                "https://www.seirsanduk.online/?player=13&id=planeta-folk&pass="
+            ],
             "url_hd": "https://www.gledaitv.fan/planeta-folk-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/5/53/Ggggggggggg.png/revision/latest/scale-to-width-down/180?cb=20200921161244",
             "epg_id": "Планета.Фолк.bg",
             "epg_source": "BG1",
         },
+        "Folklor TV": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=folklor-tv&pass=",
+                "https://www.seirsanduk.online/?player=12&id=folklor-tv&pass=",
+                "https://www.seirsanduk.online/?player=13&id=folklor-tv&pass=",
+            ],
+            "url_hd": "",
+            "image": "https://www.predavatel.com/bg/tv/cable-sat_img/folklor.png",
+            "epg_id": "",
+            "epg_source": "",
+        },
         "Planeta HD BG": {
-            "url": ["https://www.gledaitv.fan/planeta-hd-bg-live-tv.html", "https://www.gledaitv.fan/planeta-hd-bg-alternative-live-tv.html"],
+            "url": [
+                "https://www.gledaitv.fan/planeta-hd-bg-live-tv.html",
+                "https://www.gledaitv.fan/planeta-hd-bg-alternative-live-tv.html",
+                "https://www.seirsanduk.online/?player=11&id=hd-planeta-hd&pass=",
+                "https://www.seirsanduk.online/?player=12&id=hd-planeta-hd&pass=",
+                "https://www.seirsanduk.online/?player=13&id=hd-planeta-hd&pass="
+            ],
             "url_hd": "https://www.gledaitv.fan/planeta-hd-bg-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/1/13/Phd1.png/revision/latest/scale-to-width-down/180?cb=20200517141118",
             "epg_id": "Планета.HD.bg",
@@ -967,7 +1367,14 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "",
         },
         "The Voice": {
-            "url": ["https://www.gledaitv.fan/the-voice-live-tv.html", "https://www.gledaitv.fan/the-voice-alternative-live-tv.html", "https://freetv.studio/channel/TheVoice.bg"],
+            "url": [
+                "https://www.gledaitv.fan/the-voice-live-tv.html",
+                "https://www.gledaitv.fan/the-voice-alternative-live-tv.html",
+                "https://freetv.studio/channel/TheVoice.bg",
+                "https://www.seirsanduk.online/?player=11&id=the-voice&pass=",
+                "https://www.seirsanduk.online/?player=12&id=the-voice&pass=",
+                "https://www.seirsanduk.online/?player=13&id=the-voice&pass="
+            ],
             "url_hd": "https://www.gledaitv.fan/the-voice-hd-live-tv.html",
             "image": "https://static.wikia.nocookie.net/logopedia/images/2/2b/The_Voicen_logo.svg/revision/latest/scale-to-width-down/250?cb=20150311194437",
             "epg_id": "",
@@ -979,6 +1386,17 @@ ALL_CHANNELS_NOT_SORTED = {
             "image": "https://static.wikia.nocookie.net/logopedia/images/f/f2/TRT_M%C3%BCzik_logo.svg/revision/latest/scale-to-width-down/300?cb=20210827231942",
             "epg_id": "TRT.MÜZİK.tr",
             "epg_source": "TR1",
+        },
+        "Tiankov TV": {
+            "url": [
+                "https://www.seirsanduk.online/?player=11&id=tiankov-tv&pass=",
+                "https://www.seirsanduk.online/?player=12&id=tiankov-tv&pass=",
+                "https://www.seirsanduk.online/?player=13&id=tiankov-tv&pass=",
+            ],
+            "url_hd": "",
+            "image": "https://www.predavatel.com/bg/3/asenovgrad_img/tv-tiankov-folk.png",
+            "epg_id": "",
+            "epg_source": "",
         },
         "V2Beat TV": {
             "url": ["https://www.parsatv.com/name=V2Beat-TV#music"],
@@ -1009,14 +1427,14 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_source": "",
         },
         "Rock Zone": {
-            "url":["https://rockzone.life/#live-broadcast"],
+            "url": ["https://rockzone.life/#live-broadcast"],
             "url_hd": "",
             "image": "https://rockzone.life/wp-content/uploads/2025/04/logo.png",
             "epg_id": "",
             "epg_source": "",
         },
         "Pulse Rock": {
-            "url":["https://www.pulserocktv.com/tvversion.htm"],
+            "url": ["https://www.pulserocktv.com/tvversion.htm"],
             "url_hd": "",
             "image": "https://www.pulserocktv.com/logos/pulsesmall.jpg",
             "epg_id": "",
@@ -1187,7 +1605,6 @@ ALL_CHANNELS_NOT_SORTED = {
 }
 
 
-
 def remove_proxy_from_link(url: list) -> list:
     clean_url = url[0]
     if "/?url=" in clean_url:
@@ -1264,7 +1681,8 @@ def extract_video_url_default(url):
 
         try:
             page.goto(url, wait_until="networkidle")
-            page.wait_for_selector('p:has-text("Не давам съгласие")', timeout=1000)
+            page.wait_for_selector(
+                'p:has-text("Не давам съгласие")', timeout=1000)
             page.click('p:has-text("Не давам съгласие")')
 
             page.wait_for_selector('a:has-text("Player 1")', timeout=1000)
@@ -1279,7 +1697,6 @@ def extract_video_url_default(url):
             browser.close()
 
     return captured_urls
-
 
 
 async def extract_video_url_gledai_tv(url):
@@ -1317,12 +1734,13 @@ async def extract_video_url_gledai_tv(url):
                     body_data = await browser.connection.send(
                         uc.cdp.network.get_response_body(event.request_id)
                     )
-                    content = body_data[0] # The actual body text
+                    content = body_data[0]  # The actual body text
 
                     if ".m3u8" in content:
                         m3u8 = await extract_m3u8_from_text(content)
                         if m3u8:
-                            print(f"DEBUG: Found M3U8 in response body: {m3u8}")
+                            print(
+                                f"DEBUG: Found M3U8 in response body: {m3u8}")
                             captured_urls.append(m3u8)
                             return
                 except:
