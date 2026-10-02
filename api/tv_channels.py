@@ -1096,7 +1096,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "1 HD TV": {
             "url": ["https://www.gledaitv.fan/1-hd-tv-live-tv.html", "https://www.gledaitv.fan/1-hd-tv-alternative-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/1-hd-tv-hd-live-tv.html",
-            "image": "https://static.wikia.nocookie.net/logopedia/images/5/5e/1tvhd_2.png/revision/latest/scale-to-width-down/250?cb=20160627072930",
+            "image": "https://1hd.ru/img/logo.svg",
             "epg_id": "",
             "epg_source": "",
         },
