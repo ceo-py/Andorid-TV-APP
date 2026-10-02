@@ -1520,7 +1520,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Lamore Rock Show WebTV": {
             "url": ["https://freetv.studio/channel/LamoreRockShowWebTV.br"],
             "url_hd": "",
-            "image": "",
+            "image": "https://www.lamorerockshowwebtv.com.br/wp-content/uploads/2024/11/logo_rockshow.avif",
             "epg_id": "",
             "epg_source": "",
         },
