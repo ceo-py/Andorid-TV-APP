@@ -208,7 +208,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "DAZN Combat": {
             "url": ["https://www.parsatv.com/name=DAZN-Combat#sport"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/logopedia/images/8/83/DAZN_2019_logo.svg/revision/latest/scale-to-width-down/200?cb=20210824002335",
+            "image": "https://github.com/tv-logo/tv-logos/raw/main/countries/international/dazn-int.png",
             "epg_id": "",
             "epg_source": "",
         },
@@ -250,7 +250,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Fifa +": {
             "url": ["https://www.parsatv.com/name=FIFA-Plus#sport"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/logopedia/images/9/9c/FIFA%2B_%282025%29.svg/revision/latest/scale-to-width-down/300?cb=20250521135758",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/0/01/FIFA%2B.svg",
             "epg_id": "",
             "epg_source": "",
         },
@@ -264,7 +264,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Canal Motor": {
             "url": ["https://www.parsatv.com/name=Canal-Motor#sport"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/logopedia/images/8/8e/Motors_TV.svg/revision/latest/scale-to-width-down/300?cb=20100330070517",
+            "image": "https://github.com/tv-logo/tv-logos/raw/main/countries/italy/ms-motor-tv-it.png",
             "epg_id": "",
             "epg_source": "",
         },
@@ -1032,7 +1032,7 @@ ALL_CHANNELS_NOT_SORTED = {
                     "https://www.gledaitv.fan/kanal-0-alternative-live-tv.html"
                     ],
             "url_hd": "https://www.gledaitv.fan/kanal-0-hd-live-tv.html",
-            "image": "https://static.wikia.nocookie.net/kabal/images/3/39/Site-community-image/revision/latest/thumbnail-down/width/500/height/320?cb=20240516211240",
+            "image": "https://kanal0.bg/wp-content/uploads/2026/08/cropped-kanal0-header-6.png",
             "epg_id": "",
             "epg_source": "",
         },
@@ -1145,7 +1145,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Carousel": {
             "url": ["https://www.gledaitv.fan/carousel-live-tv.html", "https://www.gledaitv.fan/carousel-alternative-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/carousel-hd-live-tv.html",
-            "image": "https://static.wikia.nocookie.net/logopedia/images/c/c3/Carousel_%28food%29.png/revision/latest/scale-to-width-down/250?cb=20200701151859",
+            "image": "https://github.com/tv-logo/tv-logos/raw/main/countries/bulgaria/karusel-bg.png",
             "epg_id": "Carousel.cz",
             "epg_source": "CZ1",
         },
@@ -1208,14 +1208,14 @@ ALL_CHANNELS_NOT_SORTED = {
         "RU TV": {
             "url": ["https://www.gledaitv.fan/ru-tv-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/ru-tv-hd-live-tv.html",
-            "image": "https://static.wikia.nocookie.net/logopedia/images/5/5b/RU.TV_%282023%29.webp/revision/latest/scale-to-width-down/200?cb=20240620152821",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Ru_tv_%D0%BB%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF.png",
             "epg_id": "",
             "epg_source": "",
         },
         "Russia 1": {
             "url": ["https://www.gledaitv.fan/russia-1-live-tv.html"],
             "url_hd": "https://www.gledaitv.fan/russia-1-hd-live-tv.html",
-            "image": "https://static.wikia.nocookie.net/logopedia/images/b/b6/Russia_1_2012.svg/revision/latest/scale-to-width-down/250?cb=20210123160619",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Russia-1.svg",
             "epg_id": "",
             "epg_source": "",
         },
@@ -1415,7 +1415,7 @@ ALL_CHANNELS_NOT_SORTED = {
         "Retro Music": {
             "url": ["https://www.parsatv.com/name=Retro-Music#music"],
             "url_hd": "",
-            "image": "https://static.wikia.nocookie.net/logopedia/images/b/b9/Retro_Music_Television_2013.svg/revision/latest/scale-to-width-down/250?cb=20210627161000",
+            "image": "https://github.com/tv-logo/tv-logos/raw/main/countries/czech-republic/retro-cz.png",
             "epg_id": "RETRO.Music.TV.sk",
             "epg_source": "SK1",
         },
