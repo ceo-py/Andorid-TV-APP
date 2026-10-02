@@ -114,6 +114,69 @@ def _setup_logging(verbose: bool = False) -> None:
 
 
 # -----------------------------------------------------------------------------
+# Date shift: globetvapp/epg upstream generates its dates around Nov 2025 —
+# nearly a year stale — so the standard today+N-day window filters everything
+# out. To keep the data usable we shift all programme dates forward so the
+# earliest one lands on today (UTC). Runs once after each cache file is
+# downloaded (or when --no-fetch is used).
+# -----------------------------------------------------------------------------
+_STALE_DATE_SOURCES = {"GLOBETV1", "GLOBETV2"}
+
+import datetime as _dt
+
+
+def _shift_source_dates_to_today(cache_path: Path) -> int:
+    """Shift all programme dates in ``cache_path`` so the earliest one is today.
+
+    Globetvapp's upstream feed regenerates with hard-coded Nov-2025 dates; without
+    this the pipeline filters the whole file out. Returns the number of programmes
+    rewritten (0 if the file was already current).
+    """
+    import gzip as _gzip, re as _re
+
+    try:
+        content = _gzip.open(cache_path, "rt", encoding="utf-8").read()
+    except FileNotFoundError:
+        return 0
+
+    starts = _re.findall(r'<programme[^>]*start="(\d{8})\d+', content)
+    if not starts:
+        return 0
+
+    earliest_str = min(starts)
+    earliest = _dt.date(int(earliest_str[:4]), int(earliest_str[4:6]), int(earliest_str[6:8]))
+    today = _dt.datetime.now(_dt.timezone.utc).date()
+    if earliest >= today:
+        return 0  # already current, no shift needed
+
+    delta_days = (today - earliest).days
+    # Skip pathological shifts (>400 days = upstream probably broken differently)
+    if delta_days > 400:
+        LOG.warning("refusing to shift %s by %d days — looks wrong, skipping",
+                    cache_path.name, delta_days)
+        return 0
+
+    def shift_date(match: "re.Match[str]") -> str:
+        prefix = match.group(1)
+        body = match.group(2)
+        d = _dt.date(int(body[:4]), int(body[4:6]), int(body[6:8]))
+        new_d = d + _dt.timedelta(days=delta_days)
+        return f"{prefix}{new_d.strftime('%Y%m%d')}{match.group(3)}"
+
+    # Match start/stop attributes whose value starts with an 8-digit date.
+    pattern = _re.compile(r'((?:start|stop)=")(\d{8})(\d+[^"]*")')
+    new_content = pattern.sub(shift_date, content)
+    if new_content == content:
+        return 0
+
+    with _gzip.open(cache_path, "wt", encoding="utf-8") as f:
+        f.write(new_content)
+    LOG.info("shifted %s dates by +%d days (earliest was %s -> now %s)",
+             cache_path.name, delta_days, earliest, today)
+    return len(starts)
+
+
+# -----------------------------------------------------------------------------
 # Catalog + explicit-ID handling.
 # -----------------------------------------------------------------------------
 def _build_catalog(skip_upper_names: set[str] | None = None):
@@ -292,6 +355,16 @@ def _run_pipeline(args: argparse.Namespace) -> int:
     finally:
         fetch_epg.load_catalog = original_load_catalog
         fetch_epg.CATALOG_PATH = original_catalog_path
+
+    # Globetvapp's upstream dates are stuck around Nov 2025; shift them so the
+    # window filter keeps the data. Has to happen after fetch_epg.run() so
+    # the freshly downloaded file is on disk, but before _merge_explicit_matches
+    # reads it.
+    if rc == 0:
+        for sid in source_ids:
+            if sid in _STALE_DATE_SOURCES:
+                _shift_source_dates_to_today(
+                    THIS_DIR / "cache" / f"epg_ripper_{sid}.xml.gz")
 
     if rc == 0 and explicit_matches:
         _merge_explicit_matches(epg_source, explicit_matches, explicit_sources,
