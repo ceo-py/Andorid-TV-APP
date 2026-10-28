@@ -86,6 +86,7 @@ from pathlib import Path
 # built without touching disk.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from tv_channels import ALL_CHANNELS_NOT_SORTED, DLHD_LOAD_ERROR  # noqa: E402
+import channel_index                                                       # noqa: E402
 
 # -----------------------------------------------------------------------------
 # Paths.
@@ -441,47 +442,81 @@ def _merge_explicit_matches(epg_source: Path, explicit_matches, explicit_sources
 
     added = 0
     matched_now = 0
+
+    # Group the explicit matches by source and parse each XMLTV file
+    # ONCE. Calling list_programmes() per match re-parsed the whole file
+    # every time — with 840 explicit matches spread over ~50 sources
+    # that meant hundreds of full parses of files with thousands of
+    # channels, and it dominated the runtime (7+ minutes locally, far
+    # longer on a small VPS).
+    by_source: dict[str, list[tuple[str, object]]] = {}
     for name, cm in explicit_matches.items():
-        src_path = explicit_sources[cm.matched_source]
+        by_source.setdefault(cm.matched_source, []).append((name, cm))
+
+    for source_id, items in by_source.items():
+        src_path = explicit_sources[source_id]
         if not src_path.exists():
-            LOG.warning("merge: source file %s missing for '%s' — skipped",
-                        src_path, name)
+            LOG.warning("merge: source file %s missing — skipped "
+                        "(%d channels)", src_path, len(items))
+            for name, _cm in items:
+                matched_now += 1
             continue
 
-        wanted = {cm.matched_xmltv_id: cm}
-        try:
-            progs_iter = list_programmes(src_path, channel_ids=set(wanted),
-                                         window_start=window_start,
-                                         window_end=window_end)
-        except Exception as e:
-            LOG.warning("merge: list_programmes failed for '%s': %s", name, e)
-            continue
+        wanted = {cm.matched_xmltv_id for _name, cm in items}
 
-        for prog in progs_iter:
-            if prog.channel != cm.matched_xmltv_id:
-                continue
-            d = prog.to_dict()
-            d["channel"] = name
-            d["xmltv_id"] = prog.channel
-            d["source"] = cm.matched_source
-            epg.setdefault(name, []).append(d)
-            added += 1
+        # Cache hit? The wanted programmes are already on disk — no
+        # need to walk the feed again.
+        cached_progs = channel_index.load_programmes(src_path)
+        by_channel: dict[str, list] = {}
+        if cached_progs is not None:
+            LOG.info("merge: %s — using cached programmes", source_id)
+            for cid, plist in cached_progs.items():
+                if cid in wanted:
+                    by_channel[cid] = plist
+        else:
+            LOG.info("merge: parsing %s for %d channel(s)", source_id, len(wanted))
+            try:
+                progs_iter = list(list_programmes(src_path, channel_ids=wanted,
+                                                  window_start=window_start,
+                                                  window_end=window_end))
+            except Exception as e:
+                LOG.warning("merge: list_programmes failed for %s: %s", source_id, e)
+                progs_iter = []
 
-        matches[name] = {
-            "channel": name,
-            "category": cm.category,
-            "matched_xmltv_id": cm.matched_xmltv_id,
-            "matched_xmltv_name": cm.matched_xmltv_name,
-            "matched_source": cm.matched_source,
-            "score": cm.score,
-            "reason": cm.reason,
-            "alternatives": [],
-            "n_programmes": 0,
-        }
-        matched_now += 1
-        # Strip from unmatched list (matched via direct mapping, not fuzzy).
-        unmatched = [u for u in unmatched
-                     if u.get("name", "").upper() != name]
+            # Index by XMLTV channel id so each explicit match can pick its
+            # own programmes out of the single parse.
+            for prog in progs_iter:
+                by_channel.setdefault(prog.channel, []).append(prog.to_dict())
+
+            # Cache the programmes for next time. The feed's (size, mtime)
+            # is the cache key, so a re-download invalidates it.
+            channel_index.store_programmes(
+                src_path, {cid: plist for cid, plist in by_channel.items()})
+
+        for name, cm in items:
+            for d in by_channel.get(cm.matched_xmltv_id, ()):
+                d = dict(d)
+                d["channel"] = name
+                d["xmltv_id"] = cm.matched_xmltv_id
+                d["source"] = cm.matched_source
+                epg.setdefault(name, []).append(d)
+                added += 1
+
+            matches[name] = {
+                "channel": name,
+                "category": cm.category,
+                "matched_xmltv_id": cm.matched_xmltv_id,
+                "matched_xmltv_name": cm.matched_xmltv_name,
+                "matched_source": cm.matched_source,
+                "score": cm.score,
+                "reason": cm.reason,
+                "alternatives": [],
+                "n_programmes": 0,
+            }
+            matched_now += 1
+            # Strip from unmatched list (matched via direct mapping, not fuzzy).
+            unmatched = [u for u in unmatched
+                         if u.get("name", "").upper() != name]
 
     # Sort programmes by start time per channel.
     for lst in epg.values():

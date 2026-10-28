@@ -138,6 +138,101 @@ class Match:
         return self.score < other.score
 
 
+@dataclass
+class PreparedQuery:
+    """A catalog channel name normalised once, ready for many comparisons."""
+    __slots__ = ("name", "normalised", "tokens", "token_set")
+
+    def __init__(self, name: str):
+        self.name = name
+        self.normalised = normalise(name)
+        self.tokens = tokenise(name)
+        self.token_set = frozenset(self.tokens)
+
+
+@dataclass
+class PreparedCandidate:
+    """A source channel name normalised once, ready for many comparisons."""
+    __slots__ = ("channel_id", "display_name", "normalised", "tokens",
+                 "token_set")
+
+    def __init__(self, channel_id: str, display_name: str):
+        self.channel_id = channel_id
+        self.display_name = display_name
+        self.normalised = normalise(display_name)
+        self.tokens = tokenise(display_name)
+        self.token_set = frozenset(self.tokens)
+
+
+def prepare_candidates(candidates: Iterable[tuple[str, str]]) -> list[PreparedCandidate]:
+    """Pre-normalise a source's channel list.
+
+    Scoring a catalog of N channels against a source of M channels does
+    N×M comparisons, and ``score()`` normalises *both* sides on every one.
+    The candidate side is identical across the N comparisons, so
+    normalising it once turns N×M normalisations into N+M. With 1,200
+    catalog channels and 20,000 source channels that is the difference
+    between 24 million and 21,000 normalise() calls — minutes of CPU
+    versus milliseconds.
+
+    Results are identical to calling ``score()`` directly.
+    """
+    return [PreparedCandidate(cid, dname) for cid, dname in candidates]
+
+
+def score_prepared(query: PreparedQuery, cand: PreparedCandidate) -> Match:
+    """``score()`` with both sides already normalised.
+
+    Identical scoring logic to :func:`score` — see its docstring for the
+    score components.
+    """
+    qn = query.normalised
+    cn = cand.normalised
+
+    if qn == cn:
+        return Match(cand.display_name, cand.display_name, 1.0, "exact-normalised")
+
+    qt = query.tokens
+    ct = cand.tokens
+    if not qt and not ct:
+        return Match(cand.display_name, cand.display_name, 0.0, "both-empty")
+
+    qs = query.token_set
+    cs = cand.token_set
+
+    # Exact token-set equality after dropping generic words.
+    if qs and cs and qs == cs:
+        return Match(cand.display_name, cand.display_name, 0.9, "token-set-equal")
+
+    # Substring containment: one fully inside the other after normalisation.
+    if qn and cn and (qn in cn or cn in qn):
+        longer = max(len(qn), len(cn))
+        shorter = min(len(qn), len(cn))
+        bonus = shorter / longer  # longer containment scores higher
+        return Match(cand.display_name, cand.display_name,
+                     0.78 + 0.07 * bonus, "substring")
+
+    # Token overlap (Jaccard) — computed from the pre-built frozensets.
+    if qs and cs:
+        inter = len(qs & cs)
+        union = len(qs | cs)
+        j = inter / union if union else 0.0
+    else:
+        j = 0.0
+    if j >= 0.5:
+        return Match(cand.display_name, cand.display_name,
+                     0.6 + 0.25 * j, f"jaccard={j:.2f}")
+
+    # Bonus for shared first token (helps with "24Kitchen" / "24 Kitchen").
+    if qt and ct and qt[0] == ct[0] and len(qt[0]) >= 3:
+        partial = 0.45 + 0.30 * j
+        return Match(cand.display_name, cand.display_name,
+                     partial, f"first-token-match+jaccard={j:.2f}")
+
+    reason_str = "no-signal" if j < 0.2 else f"low-jaccard={j:.2f}"
+    return Match(cand.display_name, cand.display_name, j * 0.5, reason_str)
+
+
 def score(query_name: str, candidate_name: str) -> Match:
     """Return a scored ``Match`` for ``query_name`` against ``candidate_name``.
 
@@ -148,44 +243,8 @@ def score(query_name: str, candidate_name: str) -> Match:
       * 0.6–0.85 — Jaccard token overlap
       * 0–0.6 — lower
     """
-    qn = normalise(query_name)
-    cn = normalise(candidate_name)
-    reason = []
-
-    if qn == cn:
-        return Match(candidate_name, candidate_name, 1.0, "exact-normalised")
-
-    qt = tokenise(query_name)
-    ct = tokenise(candidate_name)
-    if not qt and not ct:
-        return Match(candidate_name, candidate_name, 0.0, "both-empty")
-
-    # Exact token-set equality after dropping generic words.
-    if qt and ct and set(qt) == set(ct):
-        return Match(candidate_name, candidate_name, 0.9, "token-set-equal")
-
-    # Substring containment: one fully inside the other after normalisation.
-    if qn and cn and (qn in cn or cn in qn):
-        longer = max(len(qn), len(cn))
-        shorter = min(len(qn), len(cn))
-        bonus = shorter / longer  # longer containment scores higher
-        return Match(candidate_name, candidate_name,
-                     0.78 + 0.07 * bonus, "substring")
-
-    # Token overlap (Jaccard).
-    j = jaccard(qt, ct)
-    if j >= 0.5:
-        return Match(candidate_name, candidate_name,
-                     0.6 + 0.25 * j, f"jaccard={j:.2f}")
-
-    # Bonus for shared first token (helps with "24Kitchen" / "24 Kitchen").
-    if qt and ct and qt[0] == ct[0] and len(qt[0]) >= 3:
-        partial = 0.45 + 0.30 * j
-        return Match(candidate_name, candidate_name,
-                     partial, f"first-token-match+jaccard={j:.2f}")
-
-    reason_str = "no-signal" if j < 0.2 else f"low-jaccard={j:.2f}"
-    return Match(candidate_name, candidate_name, j * 0.5, reason_str)
+    return score_prepared(PreparedQuery(query_name),
+                          PreparedCandidate("", candidate_name))
 
 
 def best_match(query_name: str,

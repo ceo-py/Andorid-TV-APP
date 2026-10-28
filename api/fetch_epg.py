@@ -45,8 +45,10 @@ from config import (                       # noqa: E402
     EPGSHARE_BASE, MATCH_THRESHOLD, PARALLEL_DOWNLOADS,
 )
 from sources import SOURCE_IDS, ALL_SOURCE_IDS, filename_for, url_for, curated  # noqa: E402
-from matchers import best_match, normalise, score                          # noqa: E402
+from matchers import (PreparedQuery, best_match, normalise,                # noqa: E402
+                      prepare_candidates, score, score_prepared)
 from xmltv import XChannel, XProgramme, list_channels, list_programmes      # noqa: E402
+import channel_index                                                       # noqa: E402
 
 
 # -----------------------------------------------------------------------------
@@ -192,8 +194,22 @@ class RunStats:
 
 
 def _materialize_channels(path: Path) -> dict[str, XChannel]:
-    """Materialise channels (small per file, BG is ~86, IT is ~193)."""
-    return {ch.id: ch for ch in list_channels(path)}
+    """Materialise channels (small per file, BG is ~86, IT is ~193).
+
+    The parsed index is cached on disk next to the feed — streaming a
+    feed means reading the whole file, and across the 86 curated sources
+    that is ~1.7 GB of XML per run for a list that changes every few
+    days. The cache is keyed by the feed's (size, mtime), so a
+    re-downloaded feed invalidates it automatically.
+    """
+    cached = channel_index.load_index(path)
+    if cached is not None:
+        return {cid: XChannel(id=cid, name=name)
+                for cid, name in cached.items()}
+
+    chs = {ch.id: ch for ch in list_channels(path)}
+    channel_index.store_index(path, {cid: ch.name for cid, ch in chs.items()})
+    return chs
 
 
 def _pick_universe() -> dict[str, str]:
@@ -224,11 +240,15 @@ def _best_for_catalog(catalog: Catalog, source_path: Path,
     per_cat_info: list[tuple[str, XChannel, float]] = []
 
     # Build a candidate list once per source; iterate catalog and score.
-    cands = [(ch.id, ch.name) for ch in candidates]
+    # The candidates are normalised up front — the same source channel is
+    # compared against every catalog channel, so normalising it once per
+    # comparison instead of once per source is pure waste.
+    prepared = prepare_candidates((ch.id, ch.name) for ch in candidates)
+    queries = [(ch, PreparedQuery(ch.name)) for ch in catalog.channels]
 
-    for ch in catalog.channels:
+    for ch, query in queries:
         scores = [
-            (score(ch.name, dname), cid) for cid, dname in cands
+            (score_prepared(query, cand), cand.channel_id) for cand in prepared
         ]
         scores.sort(key=lambda t: t[0].score, reverse=True)
         # Track all candidates as alternatives we evaluated.

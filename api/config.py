@@ -18,5 +18,7 @@ DEFAULT_DAYS = 2  # today + tomorrow
 # Fuzzy-match threshold below which a candidate is dropped.
 MATCH_THRESHOLD = 0.78
 
-# Concurrent fetches when downloading new XMLTV sources.
-PARALLEL_DOWNLOADS = 4
+# Concurrent fetches when downloading new XMLTV sources. The curated set is
+# ~86 files / ~160 MB, so this is network-bound rather than CPU-bound —
+# 8 threads keeps the pipe full on a small VPS.
+PARALLEL_DOWNLOADS = 8

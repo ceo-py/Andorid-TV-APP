@@ -350,6 +350,25 @@ Exit codes:
   Fix with `git checkout -- api/dlhd-channels.json api/dlhd_epg_mapping.json`
   and re-run.
 
+### Runtime
+
+The DLHD catalog pushed the run from ~8 minutes to ~13 seconds. Where the
+time went, and what changed:
+
+| Phase | Before | After | Fix |
+|---|---|---|---|
+| Channel pass (parse 1.7 GB of XML) | 52 s | ~0 s | Parsed channel index cached per feed in `cache/.chindex/`, keyed on the feed's `(size, mtime)` so a re-download invalidates it |
+| Fuzzy matching | 71 s | 2 s | `matchers.prepare_candidates()` normalises each source channel once instead of once per comparison; token sets are pre-built too |
+| Explicit-match merge | 414 s | 8 s | `list_programmes()` re-parsed the whole feed per channel. Now grouped by source and parsed **once** per feed |
+| Programme pass (repeat runs) | 8 s | ~0 s | Wanted programmes cached per feed, same `(size, mtime)` key |
+| Downloads | 4 threads | 8 threads | `config.PARALLEL_DOWNLOADS` — the fetch is network-bound |
+
+A cold run (fresh downloads, empty cache) is ~1 min 50 s; a warm run
+(reusing the cache) is ~13 s. The output is byte-identical either way.
+
+The caches live in `api/cache/.chindex/` and are git-ignored with the rest
+of `api/cache/`. Delete that directory to force a full re-parse.
+
 ## Directory layout
 
 ```
