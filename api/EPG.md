@@ -35,7 +35,7 @@ curl https://tv-api.ceo-py.eu/server-time | python3 -m json.tool
 
 Four new endpoints on the existing Flask API that return **what's playing now**,
 **what's coming up**, and **the full schedule** for every channel in the
-catalog at [api/tv_channels.py](api/tv_channels.py). The API itself does no
+catalog at [api/tv_channels.py](tv_channels.py). The API itself does no
 EPG work — it just serves JSON files that a separate daily job writes to disk.
 The daily job reuses the existing pipeline at
 `D:\ak47\mokup\egp\` (no rewrite).
@@ -52,8 +52,9 @@ The daily job reuses the existing pipeline at
         |  (systemd timer @ 12:00)                    |
         |                                             |
         |  1. builds Catalog from tv_channels         |
+        |     (curated 167 + DLHD 1,105 = 1,272)      |
         |  2. runs api/fetch_epg.py (imported)        |
-        |  3. matches 152 channels -> 145 (95 %)      |
+        |  3. matches 1,272 -> 889 (70 %)             |
         |  4. copies outputs -> api/epg_data/latest/  |
         |  5. writes meta.json                        |
         +--------------------+------------------------+
@@ -82,23 +83,23 @@ The daily job reuses the existing pipeline at
 
 | File | Role |
 |---|---|
-| [api/fetch_epg_daily.py](api/fetch_epg_daily.py) | One-shot script. Imports and runs [api/fetch_epg.py](api/fetch_epg.py) (which lives in the same directory), then publishes the result into `api/epg_data/latest/`. Triggered by systemd / cron — no in-process scheduler. |
-| [api/fetch_epg.py](api/fetch_epg.py) | CLI entrypoint of the upstream pipeline. Matches catalog channels against XMLTV feeds, emits `epg.json` + `epg_match.json` + `epg_unmatched.json` into `api/data/<run-ts>/`. |
-| [api/config.py](api/config.py), [api/matchers.py](api/matchers.py), [api/sources.py](api/sources.py), [api/xmltv.py](api/xmltv.py) | Pipeline internals (paths, fuzzy matcher, source list, XMLTV parser). |
-| [api/epg_service.py](api/epg_service.py) | Read-side helpers: `load_epg()`, `load_match()`, `load_meta()`, `load_unmatched()`, `current_programmes()`, `channels_with_epg()`, `is_available()`. In-process mtime cache so repeated requests don't re-parse JSON. |
-| [api/api.py](api/api.py) | Flask app. Adds four EPG routes. Existing `/get-channel-video-url` and `/get-all-channels` are unchanged. |
+| [api/fetch_epg_daily.py](fetch_epg_daily.py) | One-shot script. Imports and runs [api/fetch_epg.py](fetch_epg.py) (which lives in the same directory), then publishes the result into `api/epg_data/latest/`. Triggered by systemd / cron — no in-process scheduler. |
+| [api/fetch_epg.py](fetch_epg.py) | CLI entrypoint of the upstream pipeline. Matches catalog channels against XMLTV feeds, emits `epg.json` + `epg_match.json` + `epg_unmatched.json` into `api/data/<run-ts>/`. |
+| [api/config.py](config.py), [api/matchers.py](matchers.py), [api/sources.py](sources.py), [api/xmltv.py](xmltv.py) | Pipeline internals (paths, fuzzy matcher, source list, XMLTV parser). |
+| [api/epg_service.py](epg_service.py) | Read-side helpers: `load_epg()`, `load_match()`, `load_meta()`, `load_unmatched()`, `current_programmes()`, `channels_with_epg()`, `is_available()`. In-process mtime cache so repeated requests don't re-parse JSON. |
+| [api/api.py](api.py) | Flask app. Adds four EPG routes. Existing `/get-channel-video-url` and `/get-all-channels` are unchanged. |
 
 The pipeline modules (`fetch_epg.py`, `config.py`, `matchers.py`, `sources.py`,
 `xmltv.py`) live **in this directory** — the API repo is self-contained.
 `--epg-source` defaults to `Path(__file__).parent`, so running
 `python fetch_epg_daily.py` from anywhere Just Works as long as the script
 lives next to those modules. See
-[fetch_epg_daily.py:65](api/fetch_epg_daily.py#L65) for the default-path
+[fetch_epg_daily.py:65](fetch_epg_daily.py#L65) for the default-path
 logic.
 
 The channel catalog comes from
-[api/tv_channels.py:ALL_CHANNELS_NOT_SORTED](api/tv_channels.py) — no
-`catalog.json` is required. [fetch_epg_daily._build_catalog()](api/fetch_epg_daily.py)
+[api/tv_channels.py:ALL_CHANNELS_NOT_SORTED](tv_channels.py) — no
+`catalog.json` is required. [fetch_epg_daily._build_catalog()](fetch_epg_daily.py)
 builds an in-memory `fetch_epg.Catalog` from that dict on every run.
 
 ### Explicit EPG IDs in `tv_channels.py`
@@ -128,10 +129,10 @@ When either field is missing or empty, the channel falls through to the normal
 fuzzy matcher. This means you can gradually opt channels in over time without
 touching every entry.
 
-[fetch_epg_daily._collect_explicit_matches()](api/fetch_epg_daily.py) collects
-the explicit mappings, [fetch_epg_daily._build_catalog()](api/fetch_epg_daily.py)
+[fetch_epg_daily._collect_explicit_matches()](fetch_epg_daily.py) collects
+the explicit mappings, [fetch_epg_daily._build_catalog()](fetch_epg_daily.py)
 filters them out of the fuzzy catalog, and
-[fetch_epg_daily._merge_explicit_matches()](api/fetch_epg_daily.py) merges
+[fetch_epg_daily._merge_explicit_matches()](fetch_epg_daily.py) merges
 their programmes + match records into the pipeline output after `run()`
 completes.
 
@@ -162,7 +163,7 @@ print('\n'.join(re.findall(r'<channel id=\"([^\"]+)\">[^<]*<display-name[^>]*>([
 " | head -30
 ```
 
-The full list of source IDs is in [sources.py:ALL_SOURCE_IDS](api/sources.py) —
+The full list of source IDs is in [sources.py:ALL_SOURCE_IDS](sources.py) —
 commonly useful ones are `BG1` (Bulgaria), `IT1` (Italy), `DE1` (Germany),
 `ES1` (Spain), `FR1` (France), `RO1` (Romania), `UK1` (UK), `US2` (US),
 `GR1` (Greece), `TR1` (Turkey), `AL1` (Albania).
@@ -180,12 +181,12 @@ api/epg_data/
     └── meta.json           # {last_refresh_utc, n_channels_with_epg, n_programmes, sources_used}
 ```
 
-The directory is populated by [fetch_epg_daily.py:_publish()](api/fetch_epg_daily.py). The API reads from it on every EPG request.
+The directory is populated by [fetch_epg_daily.py:_publish()](fetch_epg_daily.py). The API reads from it on every EPG request.
 
 ### `epg.json` shape
 
 Top-level is a dict keyed by **catalog channel name** (matches the keys in
-[api/tv_channels.py:ALL_CHANNELS](api/tv_channels.py)). Values are sorted
+[api/tv_channels.py:ALL_CHANNELS](tv_channels.py)). Values are sorted
 ascending by `start`.
 
 ```json
@@ -235,7 +236,7 @@ All four return JSON. Common error shape:
 ```
 
 EPG responses set `Cache-Control: public, max-age=900` (15 minutes) — see
-[api.py:_cache_control()](api/api.py).
+[api.py:_cache_control()](api.py).
 
 ### 4.1 · `GET /epg-status`
 
@@ -250,9 +251,12 @@ Last refresh time, coverage stats, unmatched channels.
   "status": {
     "last_refresh_utc": "2026-09-28T07:47:49+00:00",
     "last_refresh_age_hours": 4.2,
-    "n_channels_with_epg": 145,
-    "n_channels_total": 152,
-    "n_programmes": 5161,
+    "n_channels_with_epg": 889,
+    "n_channels_total": 1272,
+    "n_channels_explicit_mapping": 840,
+    "n_channels_fuzzy": 49,
+    "n_channels_unmatched": 383,
+    "n_programmes": 41898,
     "sources_used": ["BG1", "IT1", "DE1", "..."]
   },
   "unmatched": [
@@ -261,6 +265,9 @@ Last refresh time, coverage stats, unmatched channels.
   "data_dir": "D:\\VSC\\Andorid-TV-APP\\api\\epg_data\\latest"
 }
 ```
+
+`n_channels_total` counts the **whole** catalog (1,272), not just the served
+subset — see §4.6.
 
 **Response 503** — the daily job hasn't run yet:
 ```json
@@ -369,15 +376,41 @@ is `null` and `next` is populated. If the channel has no EPG at all, both are
 
 ### 4.4 · `GET /get-all-epg`
 
-Full EPG dict. **Heavy — ~2 MB.** Each programme has ISO-8601 `start` /
-`stop` in UTC. Clients are expected to fetch this once, cache it locally,
-and compute "what's on now" from the device clock.
+Full EPG dict. **Heavy — ~17 MB** (1,272 channels × 51 XMLTV sources).
+Each programme has ISO-8601 `start` / `stop` in UTC. Clients are expected
+to fetch this once, cache it locally, and compute "what's on now" from
+the device clock.
 
 **Caching:** `Cache-Control: public, max-age=86400` (24 h) since the data
 is refreshed once per day. Response also includes `ETag` and
 `Last-Modified` — pass `If-None-Match` / `If-Modified-Since` on subsequent
 fetches and the server returns `304 Not Modified` (empty body) when the
 data hasn't been refreshed since the client's cached copy.
+
+**Optional filters.** A client that only needs a slice can ask for it
+instead of pulling the whole payload. Filters combine with AND; with no
+filter the response is unchanged.
+
+| Parameter | Example | Effect |
+|---|---|---|
+| `source` | `?source=BG1,US2` | Only programmes from these XMLTV sources |
+| `category` | `?category=Sport,Movie` | Only these catalog categories |
+| `channels` | `?channels=AMC%20USA,BNT%203` | Only these channel names (exact, case-insensitive) |
+
+```bash
+# Bulgarian set only — ~2.6 MB instead of 17 MB
+curl 'https://tv-api.ceo-py.eu/get-all-epg?source=BG1,GLOBETV2,IPTVEPG_BG'
+
+# One category — ~4 MB
+curl 'https://tv-api.ceo-py.eu/get-all-epg?category=Sport'
+
+# Two channels — ~50 KB
+curl 'https://tv-api.ceo-py.eu/get-all-epg?channels=AMC%20USA,BNT%203'
+```
+
+A filtered response gets its own `ETag` (derived from the refresh
+timestamp **plus** the filter set), so a client holding the full-payload
+ETag never gets a `304` for a different slice.
 
 **Response 200:**
 ```json
@@ -411,6 +444,40 @@ The HTTP `Date` response header carries the server's clock independently;
 clients compare it against `epoch_ms` to compute the skew to apply.
 ```
 
+### 4.6 · `GET /get-all-channels`
+
+The channel catalog. **Only the channels the matcher covered are returned** —
+889 of the 1,272 in the catalog. A channel with no schedule would render as
+an empty "now playing" row in the app, which is noise for the user, so the
+383 unmatched ones are left out.
+
+**Request:** none. `?include_no_epg=1` returns the complete 1,272-channel
+catalog instead (useful for debugging coverage, or for a client that wants
+to show a channel even without a schedule).
+
+**Response 200:**
+```json
+{
+  "success": true,
+  "channels": {
+    "Sport": { "NBA TV": { "url": ["..."], "url_hd": "", "image": "", "epg_id": "...", "epg_source": "..." } },
+    "Movie": { "...": "..." }
+  },
+  "n_channels": 889
+}
+```
+
+The filter is applied **at request time**, not in the catalog:
+
+- The EPG pipeline still sees all 1,272 channels, so a channel can pick up a
+  match on a later run.
+- `/get-channel-video-url` still resolves any channel that was ever in the
+  catalog (it looks up `ALL_CHANNELS`, not the filtered response).
+- `/epg-status` still reports the full picture — total 1,272, covered 889,
+  unmatched 383 — plus the list of unmatched names.
+
+Categories that end up empty after filtering are omitted entirely.
+
 ---
 
 ## 5 · Daily refresh pipeline
@@ -418,11 +485,11 @@ clients compare it against `epoch_ms` to compute the skew to apply.
 `fetch_epg_daily.py` does six things in order:
 
 1. **Builds the catalog in-memory** from
-   [api/tv_channels.py:ALL_CHANNELS_NOT_SORTED](api/tv_channels.py). No
+   [api/tv_channels.py:ALL_CHANNELS_NOT_SORTED](tv_channels.py). No
    `catalog.json` is written or read. Channel names are upper-cased so the
    resulting `epg.json` keys match `tv_channels.ALL_CHANNELS` (which the Flask
    API looks up against). See
-   [fetch_epg_daily.py:_build_catalog()](api/fetch_epg_daily.py).
+   [fetch_epg_daily.py:_build_catalog()](fetch_epg_daily.py).
 
 2. **Imports the upstream pipeline.** `sys.path.insert(0, <epg_source>)`
    then `import fetch_epg`. Defaults `--epg-source` to the script's own
@@ -430,7 +497,7 @@ clients compare it against `epoch_ms` to compute the skew to apply.
 
 3. **Patches the pipeline** so it consumes our in-memory catalog instead of
    reading `catalog.json`, then calls `fetch_epg.run(ns)`. Defaults: curated
-   21 sources, 2 days of programmes.
+   77 sources, 2 days of programmes.
 
 4. **Publishes.** `_latest_run_dir()` finds the newest
    `data/<UTC-ts>/` directory in the upstream pipeline. `_publish()` copies
@@ -448,7 +515,7 @@ clients compare it against `epoch_ms` to compute the skew to apply.
 
 ### First run
 
-The first invocation downloads ~58 MB of XMLTV feeds across 21 sources. After
+The first invocation downloads ~162 MB of XMLTV feeds across 77 sources. After
 that `D:\ak47\mokup\egp\cache\` keeps subsequent runs to a few seconds.
 
 ### systemd timer (production)
@@ -514,7 +581,7 @@ the next boot.
 **Note on `--source`:** if you restrict to specific sources, channels that
 have an explicit `epg_source` field pointing to an excluded source will fail
 silently (their cache file won't exist). The default curated list covers
-all 21 sources, which is the safe option.
+all 77 sources, which is the safe option.
 
 ---
 
@@ -525,7 +592,7 @@ There are two caches in play.
 **Server side** — `epg_service.py` keeps an in-process mtime cache per JSON
 file. After the first request, subsequent requests don't re-parse. The cache
 auto-invalidates when the file's mtime changes (i.e. after the next daily
-fetch). See [`_load_json()`](api/epg_service.py).
+fetch). See [`_load_json()`](epg_service.py).
 
 **Client side** — every EPG response sets
 `Cache-Control: public, max-age=900`. The Android app can poll
@@ -550,10 +617,12 @@ fetch). See [`_load_json()`](api/epg_service.py).
 
 - **No secrets.** Every XMLTV endpoint hit is plaintext HTTPS — no API keys, no
   cookies, no signing.
-- **Disk space.** `api/epg_data/latest/` is small (~2 MB). The upstream pipeline
-  retains a per-run mirror at `api/data/<run-ts>/` (~60 MB each) — without
-  pruning this directory grows by ~2 GB/month. The script's `--keep-runs N`
-  flag (default 7) prunes old run dirs at the end of every run.
+- **Disk space.** `api/epg_data/latest/` is ~19 MB (it holds the full 1,272-channel
+  catalog). The upstream pipeline retains a per-run mirror at
+  `api/data/<run-ts>/` (~60 MB each) — without pruning this directory grows by
+  ~2 GB/month. The script's `--keep-runs N` flag (default 1) prunes old run
+  dirs at the end of every run. The XMLTV feed cache is ~162 MB and is reused
+  between runs.
 - **Idempotent re-runs.** Re-running `fetch_epg_daily.py` is safe. The new
   run's outputs overwrite the previous publish; old run dirs in
   `D:\ak47\mokup\egp\data\` stay untouched until pruned.
@@ -570,14 +639,74 @@ fetch). See [`_load_json()`](api/epg_service.py).
 
 | Question | Look at |
 |---|---|
-| What does `/epg-status` actually return? | [api.py:epg_status()](api/api.py) |
-| How does `/get-channel-current` find "now"? | [epg_service.py:current_programmes()](api/epg_service.py) |
-| Where does the JSON come from? | [epg_service.py:_load_json()](api/epg_service.py) |
-| How does the daily job publish? | [fetch_epg_daily.py:_publish()](api/fetch_epg_daily.py) |
-| How is the upstream pipeline invoked? | [fetch_epg_daily.py:_run_pipeline()](api/fetch_epg_daily.py) |
-| How is the catalog built in-memory? | [fetch_epg_daily.py:_build_catalog()](api/fetch_epg_daily.py) |
-| Where do explicit `epg_id` mappings come from? | [fetch_epg_daily.py:_collect_explicit_matches()](api/fetch_epg_daily.py) |
-| How do explicit mappings get merged back in? | [fetch_epg_daily.py:_merge_explicit_matches()](api/fetch_epg_daily.py) |
-| How does old-run pruning work? | [fetch_epg_daily.py:_prune_old_runs()](api/fetch_epg_daily.py) |
-| Channel catalog shape | [api/tv_channels.py](api/tv_channels.py) — `ALL_CHANNELS` |
-| Upstream pipeline (vendored in this repo) | [api/fetch_epg.py](api/fetch_epg.py) |
+| What does `/epg-status` actually return? | [api.py:epg_status()](api.py) |
+| How does `/get-channel-current` find "now"? | [epg_service.py:current_programmes()](epg_service.py) |
+| Where does the JSON come from? | [epg_service.py:_load_json()](epg_service.py) |
+| How does the daily job publish? | [fetch_epg_daily.py:_publish()](fetch_epg_daily.py) |
+| How is the upstream pipeline invoked? | [fetch_epg_daily.py:_run_pipeline()](fetch_epg_daily.py) |
+| How is the catalog built in-memory? | [fetch_epg_daily.py:_build_catalog()](fetch_epg_daily.py) |
+| Where do explicit `epg_id` mappings come from? | [fetch_epg_daily.py:_collect_explicit_matches()](fetch_epg_daily.py) |
+| How do explicit mappings get merged back in? | [fetch_epg_daily.py:_merge_explicit_matches()](fetch_epg_daily.py) |
+| How does old-run pruning work? | [fetch_epg_daily.py:_prune_old_runs()](fetch_epg_daily.py) |
+| Channel catalog shape | [api/tv_channels.py](tv_channels.py) — `ALL_CHANNELS` |
+| Upstream pipeline (vendored in this repo) | [api/fetch_epg.py](fetch_epg.py) |
+
+---
+
+## 10 · DLHD catalog
+
+The DLHD (DaddyLiveHD) site carries ~1,100 additional international
+streams. They live outside `tv_channels.py` so that file stays readable:
+
+| File | Role |
+|---|---|
+| [api/dlhd-channels.json](dlhd-channels.json) | The raw channel list (`letter`, `name`, `id`, `watchUrl`) |
+| [api/dlhd_epg_mapping.json](dlhd_epg_mapping.json) | Generated + hand-audited `name → {epg_id, epg_source}` table (683 entries) |
+| [api/dlhd_channels.py](dlhd_channels.py) | Turns the two files above into catalog entries |
+
+`tv_channels.py` merges the DLHD catalog into `ALL_CHANNELS_NOT_SORTED`
+at import time, so every consumer (Flask API, EPG pipeline, Android
+app) sees one unified list of **1,272 channels**. A DLHD entry whose name
+already exists anywhere in the curated catalog is skipped, so no channel is
+listed twice (the DLHD list duplicates `BTV ACTION`, `TLC` and
+`TRAVEL CHANNEL`).
+
+**Categories.** DLHD exposes no genre metadata, so the category is
+inferred from the channel name using the keyword table in
+`dlhd_channels._CATEGORY_RULES`. Anything unrecognised lands in
+`Worldwide`.
+
+**Explicit vs fuzzy matching.** Every DLHD channel with a mapping in
+`dlhd_epg_mapping.json` gets an explicit `epg_id` / `epg_source` and
+bypasses the fuzzy matcher. The 428 channels without a mapping carry the
+marker `epg_excluded: True` — `fetch_epg_daily._build_catalog()` keeps
+them out of the fuzzy catalog entirely, because the DLHD names contain
+many near-collisions ("TNT USA" vs "TNT Brasil", "RTP 3 Portugal" vs
+"RTP 3 Switzerland") that a fuzzy matcher gets wrong. They still show up
+in `epg_unmatched.json` (and therefore in `/epg-status`) so the coverage
+report stays truthful.
+
+**Stream URLs** point at the site's current host,
+`https://thedaddy.pk/watch.php?id=<id>` — `dlive.sx` 301-redirects
+there. The `dlhd_id` field on each channel carries the raw id.
+
+**Sources.** Covering the DLHD catalog needs far broader EPG coverage
+than the original 21 curated feeds, so `sources.SOURCE_IDS` was widened
+to **77 feeds** (US_LOCALS1, US_SPORTS1, PLEX1, IN1, AE1, CA2, CH1,
+BR1/BR2, MX1, TR3, …). Four ids were dropped because they 404 upstream:
+`US1`, `ALL_AT1`, `MK1`, plus `TW1` / `CN1`. (`ALL_AT1` was a
+pre-existing bug — Austria's feed is `AT1`.)
+
+**Date shifting.** The `globetvapp/epg` upstream generates its dates
+around Nov 2025, so the standard today+N-day window would filter the
+whole file out. `fetch_epg_daily._shift_source_dates_to_today()` shifts
+all programme dates in the `GLOBETV1` / `GLOBETV2` cache files forward so
+the earliest one lands on today. It runs after each download and is
+idempotent.
+
+**What the client sees.** Only the EPG-covered channels are served —
+`/get-all-channels` returns 889, not 1,272 (see §4.6). The 383 channels
+with no usable schedule are dropped from the response so the app doesn't
+render empty "now playing" rows, but they stay in the catalog so the daily
+job keeps trying them.
+

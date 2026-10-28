@@ -976,15 +976,6 @@ ALL_CHANNELS_NOT_SORTED = {
             "epg_id": "Agro.TV.rs",
             "epg_source": "RS1",
         },
-        "bTV Action": {
-            "url": ["https://www.gledaitv.fan/btv-action-live-tv.html",
-                    "https://www.gledaitv.fan/btv-action-alternative-live-tv.html"
-                    ],
-            "url_hd": "https://www.gledaitv.fan/btv-action-hd-live-tv.html",
-            "image": "https://github.com/tv-logo/tv-logos/raw/main/countries/bulgaria/btv-action-bg.png",
-            "epg_id": "bTV.Action.bg",
-            "epg_source": "BG1",
-        },
         "Bulgaria ON AIR": {
             "url": ["https://www.gledaitv.fan/bulgaria-on-air-live-tv.html",
                     "https://www.gledaitv.fan/bulgaria-on-air-alternative-live-tv.html",
@@ -1630,6 +1621,41 @@ def sort_channels_and_lowercase_keys(channels_dict):
 
 
 ALL_CHANNELS = sort_channels_and_lowercase_keys(ALL_CHANNELS_NOT_SORTED)
+
+
+# ---------------------------------------------------------------------------
+# DLHD (DaddyLiveHD) catalog.
+#
+# The DLHD site carries ~1,100 additional international streams. They live
+# in their own JSON file and their own module so this file stays readable;
+# here we merge them into the catalog so every downstream consumer (Flask
+# API, EPG pipeline, Android app) sees one unified list.
+#
+# Channels that could not be matched to an XMLTV feed carry the marker
+# ``epg_excluded: True``. The EPG pipeline honours it by keeping them out
+# of the fuzzy matcher entirely — a near-miss ("TNT USA" vs "TNT Brasil")
+# would otherwise publish a wrong schedule.
+# ---------------------------------------------------------------------------
+try:
+    from dlhd_channels import build_dlhd_catalog as _build_dlhd_catalog
+
+    # Names already present anywhere in the catalog win — the curated
+    # entries have real logos and hand-picked stream URLs. The DLHD list
+    # duplicates a few ("BTV ACTION", "TLC", "TRAVEL CHANNEL"), and
+    # letting it through would show the same channel in two categories.
+    _taken = {n.upper() for _chs in ALL_CHANNELS_NOT_SORTED.values() for n in _chs}
+
+    _DLHD_CATALOG = _build_dlhd_catalog()
+    for _cat, _chs in _DLHD_CATALOG.items():
+        _existing = ALL_CHANNELS_NOT_SORTED.setdefault(_cat, {})
+        for _name, _data in _chs.items():
+            if _name.upper() in _taken:
+                continue
+            _existing[_name] = _data
+            _taken.add(_name.upper())
+    ALL_CHANNELS = sort_channels_and_lowercase_keys(ALL_CHANNELS_NOT_SORTED)
+except Exception as _exc:  # pragma: no cover - DLHD is optional
+    print(f"[tv_channels] DLHD catalog unavailable: {_exc}")
 
 
 def extract_m3u8_from_text(html_content):

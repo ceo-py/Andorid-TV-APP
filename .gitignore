@@ -42,3 +42,8 @@ app/iLiveTV/
 
 __pycache__
 *.json
+
+# ...but these are source data, not runtime artefacts — the API can't work
+# without them committed.
+!api/dlhd-channels.json
+!api/dlhd_epg_mapping.json

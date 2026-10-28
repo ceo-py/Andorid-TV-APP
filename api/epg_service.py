@@ -121,6 +121,19 @@ def channels_with_epg():
     return sorted(name for name, progs in load_epg().items() if progs)
 
 
+def channels_with_epg_match():
+    # type: () -> list
+    """Channel names the matcher covered, sorted.
+
+    Broader than :func:`channels_with_epg` — a channel keeps its match
+    record even when the feed happens to carry no programme for the
+    current window (a channel can go quiet for a day between shows).
+    Use this to decide whether a channel belongs in the catalog; use
+    :func:`channels_with_epg` when you need programmes right now.
+    """
+    return sorted(load_match().keys())
+
+
 def _find_channel_entry(channel_name):
     """Look up a channel's full entry dict from ``tv_channels.ALL_CHANNELS``.
 

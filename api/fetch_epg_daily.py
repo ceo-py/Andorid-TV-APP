@@ -192,6 +192,11 @@ def _build_catalog(skip_upper_names: set[str] | None = None):
     ``skip_upper_names`` — channel names (uppercase) to exclude from the
     catalog. Used to filter out channels that have explicit ``epg_id``
     mappings (they get handled by the direct lookup path, not fuzzy match).
+
+    A channel carrying ``epg_excluded: True`` is also excluded. That marker
+    means "we know there is no trustworthy EPG for this one" — letting the
+    fuzzy matcher guess would publish a wrong schedule (the DLHD catalog has
+    many near-collisions like "TNT USA" vs "TNT Brasil").
     """
     import fetch_epg  # local import; fetch_epg may need sys.path setup first
 
@@ -201,6 +206,8 @@ def _build_catalog(skip_upper_names: set[str] | None = None):
         for ch_name, ch_data in chs.items():
             upper = ch_name.upper()
             if upper in skip:
+                continue
+            if ch_data.get("epg_excluded"):
                 continue
             urls = list(ch_data.get("url") or [])
             url_hd = ch_data.get("url_hd")
@@ -372,6 +379,28 @@ def _run_pipeline(args: argparse.Namespace) -> int:
     return rc
 
 
+def _collect_excluded_channels() -> dict[str, dict]:
+    """Channels flagged ``epg_excluded: True`` — we know they have no
+    trustworthy EPG, so they are kept out of the fuzzy matcher.
+
+    Returns ``{UPPER_NAME: {name, category, url, url_hd}}`` so they can be
+    reported in ``epg_unmatched.json`` (and therefore in ``/epg-status``)
+    instead of silently vanishing from the coverage report.
+    """
+    out: dict[str, dict] = {}
+    for cat, chs in ALL_CHANNELS_NOT_SORTED.items():
+        for ch_name, ch_data in chs.items():
+            if not ch_data.get("epg_excluded"):
+                continue
+            out[ch_name.upper()] = {
+                "name": ch_name.upper(),
+                "category": cat,
+                "url": list(ch_data.get("url") or []),
+                "url_hd": ch_data.get("url_hd") or "",
+            }
+    return out
+
+
 def _merge_explicit_matches(epg_source: Path, explicit_matches, explicit_sources,
                             days: int) -> None:
     """Add explicit-ID channels' programmes + match records to the run output.
@@ -461,6 +490,16 @@ def _merge_explicit_matches(epg_source: Path, explicit_matches, explicit_sources
     # Refresh n_programmes on every match record.
     for n in matches:
         matches[n]["n_programmes"] = len(epg.get(n, []))
+
+    # Channels flagged epg_excluded never entered the fuzzy catalog, so the
+    # pipeline can't know about them. Add them back to the unmatched list so
+    # the coverage report stays truthful.
+    excluded = _collect_excluded_channels()
+    if excluded:
+        have = {u.get("name", "").upper() for u in unmatched}
+        for upper, info in excluded.items():
+            if upper not in have:
+                unmatched.append(info)
 
     # Write back the merged files.
     with open(epg_path, "w", encoding="utf-8") as f:

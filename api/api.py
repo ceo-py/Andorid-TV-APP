@@ -7,9 +7,11 @@ import hashlib
 from epg_service import (
     EPG_DIR,
     channels_with_epg,
+    channels_with_epg_match,
     current_programmes,
     is_available,
     load_epg,
+    load_match,
     load_meta,
     load_unmatched,
     now_playing_all,
@@ -52,8 +54,45 @@ def get_channel():
 
 @app.route("/get-all-channels", methods=["GET"])
 def get_all_channels():
+    """The channel catalog.
 
-    return jsonify({"success": True, "channels": ALL_CHANNELS})
+    Only channels the EPG matcher actually covered are returned — a
+    channel with no EPG shows an empty "now playing" row, which is noise
+    for the user. The unmatched ones (383 of them: US local stations
+    addressed by market rather than by name, country-specific variants
+    with no matching feed, reality-show multicams, the 18+ adult
+    players) are left out.
+
+    ``?include_no_epg=1`` returns the full catalog instead — useful for
+    debugging coverage and for clients that want to show a channel even
+    without a schedule.
+
+    The underlying ``ALL_CHANNELS`` dict is *not* modified: the EPG
+    pipeline still sees every channel (so a channel can pick up a match
+    tomorrow), and ``/get-channel-video-url`` still resolves any channel
+    that was ever in the catalog.
+    """
+    if request.args.get("include_no_epg", "").lower() in ("1", "true", "yes"):
+        return jsonify({"success": True, "channels": ALL_CHANNELS})
+
+    covered = {name.upper() for name in channels_with_epg_match()}
+    if not covered:
+        # EPG not generated yet — fall back to the full catalog so the
+        # app still shows the channels instead of an empty screen.
+        return jsonify({"success": True, "channels": ALL_CHANNELS})
+
+    out = {}
+    for category, channels in ALL_CHANNELS.items():
+        kept = {name: data for name, data in channels.items()
+                if name.upper() in covered}
+        if kept:
+            out[category] = kept
+
+    return jsonify({
+        "success": True,
+        "channels": out,
+        "n_channels": sum(len(c) for c in out.values()),
+    })
 
 
 # -----------------------------------------------------------------------------
@@ -280,7 +319,8 @@ def get_channel_current():
 def get_all_epg():
     """Full EPG dict: ``{channel_name: [programmes]}``.
 
-    Response can be large (~2 MB). Each programme has ISO-8601 ``start`` /
+    Response can be large (~17 MB now that the DLHD catalog is in — 1,275
+    channels across 51 XMLTV sources). Each programme has ISO-8601 ``start`` /
     ``stop`` in UTC. The Android app fetches this once per session, caches
     it locally, and computes "what's on now" from the device clock.
 
@@ -290,6 +330,16 @@ def get_all_epg():
     clients cheaply revalidate without re-downloading: the server returns
     ``304 Not Modified`` when the daily fetch hasn't run since the client's
     cached copy.
+
+    Optional filters (combine with AND) so a client can pull a slice
+    instead of the whole payload:
+
+    ``?source=BG1,US2``       — only programmes from these XMLTV sources
+    ``?category=Sport,Movie`` — only these catalog categories
+    ``?channels=AMC USA,BNT 3`` — only these channel names (exact)
+
+    With no filter the response is byte-identical to the unfiltered one,
+    so existing clients are unaffected.
     """
     if not is_available():
         return _epg_not_ready()
@@ -297,6 +347,11 @@ def get_all_epg():
     meta = load_meta()
     last_refresh = meta.get("last_refresh_utc", "")
     epg_data = load_epg()
+
+    src_filter = _csv_param("source")
+    cat_filter = _csv_param("category")
+    chan_filter = _csv_param("channels")
+    filtered = bool(src_filter or cat_filter or chan_filter)
 
     # Last-Modified: when the daily fetch wrote the data (UTC).
     last_modified_dt = None
@@ -311,6 +366,13 @@ def get_all_epg():
 
     # ETag: stable hash of the refresh timestamp. Same data → same ETag.
     etag = hashlib.md5(last_refresh.encode("utf-8")).hexdigest()
+
+    # A filtered request has its own ETag — a client holding the
+    # full-payload ETag must not get a 304 for a different slice.
+    if filtered:
+        sig = repr(sorted(src_filter)) + repr(sorted(cat_filter)) + \
+              repr(sorted(chan_filter))
+        etag = hashlib.md5((last_refresh + sig).encode("utf-8")).hexdigest()
 
     # Conditional GET — short-circuit with 304 if the client's cached
     # copy is still current.
@@ -335,16 +397,49 @@ def get_all_epg():
             resp.last_modified = last_modified_dt
             return resp
 
-    resp = jsonify({
-        "success": True,
-        "channels": channels_with_epg(),
-        "epg": epg_data,
-    })
+    if filtered:
+        match_data = load_match() or {}
+        out_epg = {}
+        for name, progs in epg_data.items():
+            up = name.upper()
+            if chan_filter and up not in chan_filter:
+                continue
+            if src_filter:
+                progs = [p for p in progs
+                         if (p.get("source") or "").upper() in src_filter]
+                if not progs:
+                    continue
+            if cat_filter:
+                rec = match_data.get(name) or {}
+                if (rec.get("category") or "").upper() not in cat_filter:
+                    continue
+            out_epg[name] = progs
+        resp = jsonify({
+            "success": True,
+            "channels": sorted(out_epg.keys()),
+            "epg": out_epg,
+        })
+        resp.headers["Cache-Control"] = "public, max-age=900"
+    else:
+        resp = jsonify({
+            "success": True,
+            "channels": channels_with_epg(),
+            "epg": epg_data,
+        })
+        resp.headers["Cache-Control"] = "public, max-age=86400"
+
     resp.headers["ETag"] = f'"{etag}"'
-    resp.headers["Cache-Control"] = "public, max-age=86400"
     if last_modified_dt:
         resp.last_modified = last_modified_dt
     return resp
+
+
+def _csv_param(name: str) -> set[str]:
+    """Parse a comma-separated query parameter into an upper-cased set."""
+    raw = (request.args.get(name) or "").strip()
+    if not raw:
+        return set()
+    return {p.strip().upper() for p in raw.split(",") if p.strip()}
 
 
 @app.route("/server-time", methods=["GET"])

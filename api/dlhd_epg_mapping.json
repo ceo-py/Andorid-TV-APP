@@ -1,0 +1,5466 @@
+{
+ "ABC USA": {
+  "epg_id": "ABC.Australia.in",
+  "epg_source": "IN1",
+  "score": 0.95,
+  "programs": 110,
+  "display": "ABC Australia",
+  "country_match": false
+ },
+ "Antenna TV USA": {
+  "epg_id": "Antenna.TV.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 188,
+  "display": "Antenna TV",
+  "country_match": true
+ },
+ "A&E USA": {
+  "epg_id": "A.and.E.Canada.HD.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 148,
+  "display": "A and E Canada HD",
+  "country_match": false
+ },
+ "AMC USA": {
+  "epg_id": "AMC+.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 127,
+  "display": "AMC+",
+  "country_match": true
+ },
+ "Animal Planet": {
+  "epg_id": "ANIMAL.PLANET.at",
+  "epg_source": "AT1",
+  "score": 0.95,
+  "programs": 129,
+  "display": "ANIMAL PLANET",
+  "country_match": null
+ },
+ "Arena Sport 1 Premium": {
+  "epg_id": "Arena.Sport.1.HD.sk",
+  "epg_source": "SK1",
+  "score": 0.95,
+  "programs": 155,
+  "display": "Arena Sport 1 HD",
+  "country_match": null
+ },
+ "Arena Sport 2 Premium": {
+  "epg_id": "Arena.Sport.2.HD.sk",
+  "epg_source": "SK1",
+  "score": 0.95,
+  "programs": 114,
+  "display": "Arena Sport 2 HD",
+  "country_match": null
+ },
+ "Arena Sport 3 Premium": {
+  "epg_id": "Arena.Sport.3.HD.hr",
+  "epg_source": "HR1",
+  "score": 0.95,
+  "programs": 62,
+  "display": "Arena Sport 3 HD",
+  "country_match": null
+ },
+ "Arena Sport 1 Serbia": {
+  "epg_id": "Arena.Sport.1.HD.(RS).rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 50,
+  "display": "Arena Sport 1 HD (RS)",
+  "country_match": true
+ },
+ "Arena Sport 2 Serbia": {
+  "epg_id": "Arena.Sport.2.HD.(RS).rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 44,
+  "display": "Arena Sport 2 HD (RS)",
+  "country_match": true
+ },
+ "Arena Sport 3 Serbia": {
+  "epg_id": "Arena.Sport.3.HD.(RS).rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 53,
+  "display": "Arena Sport 3 HD (RS)",
+  "country_match": true
+ },
+ "Arena Sport 4 Serbia": {
+  "epg_id": "Arena.Sport.4.HD.(RS).rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 47,
+  "display": "Arena Sport 4 HD (RS)",
+  "country_match": true
+ },
+ "Arena Sport 1 Croatia": {
+  "epg_id": "Arena.Sport.1.HD.hr",
+  "epg_source": "HR1",
+  "score": 1.0,
+  "programs": 64,
+  "display": "Arena Sport 1 HD",
+  "country_match": true
+ },
+ "Arena Sport 2 Croatia": {
+  "epg_id": "Arena.Sport.2.HD.hr",
+  "epg_source": "HR1",
+  "score": 1.0,
+  "programs": 54,
+  "display": "Arena Sport 2 HD",
+  "country_match": true
+ },
+ "Arena Sport 3 Croatia": {
+  "epg_id": "Arena.Sport.3.HD.hr",
+  "epg_source": "HR1",
+  "score": 1.0,
+  "programs": 62,
+  "display": "Arena Sport 3 HD",
+  "country_match": true
+ },
+ "Arena Sport 4 Croatia": {
+  "epg_id": "Arena.Sport.4.HD.hr",
+  "epg_source": "HR1",
+  "score": 1.0,
+  "programs": 54,
+  "display": "Arena Sport 4 HD",
+  "country_match": true
+ },
+ "Alkass One": {
+  "epg_id": "Alkass.One.HD.ae",
+  "epg_source": "AE1",
+  "score": 0.95,
+  "programs": 85,
+  "display": "Alkass One HD",
+  "country_match": null
+ },
+ "Alkass Two": {
+  "epg_id": "Alkass.Two.HD.ae",
+  "epg_source": "AE1",
+  "score": 0.95,
+  "programs": 625,
+  "display": "Alkass Two HD",
+  "country_match": null
+ },
+ "Alkass Three": {
+  "epg_id": "Alkass.Three.ae",
+  "epg_source": "AE1",
+  "score": 0.95,
+  "programs": 625,
+  "display": "Alkass Three",
+  "country_match": null
+ },
+ "Alkass Four": {
+  "epg_id": "Alkass.Four.ae",
+  "epg_source": "AE1",
+  "score": 0.95,
+  "programs": 625,
+  "display": "Alkass Four",
+  "country_match": null
+ },
+ "Abu Dhabi Sports 1 UAE": {
+  "epg_id": "en:.Abu.Dhabi.Sports.1.ae",
+  "epg_source": "AE1",
+  "score": 0.93,
+  "programs": 28,
+  "display": "en: Abu Dhabi Sports 1",
+  "country_match": true
+ },
+ "Abu Dhabi Sports 2 UAE": {
+  "epg_id": "en:.Abu.Dhabi.Sports.2.ae",
+  "epg_source": "AE1",
+  "score": 0.93,
+  "programs": 20,
+  "display": "en: Abu Dhabi Sports 2",
+  "country_match": true
+ },
+ "Abu Dhabi Sports 1 Premium": {
+  "epg_id": "en:.Abu.Dhabi.Sports.1.ae",
+  "epg_source": "AE1",
+  "score": 0.88,
+  "programs": 28,
+  "display": "en: Abu Dhabi Sports 1",
+  "country_match": null
+ },
+ "Abu Dhabi Sports 2 Premium": {
+  "epg_id": "en:.Abu.Dhabi.Sports.2.ae",
+  "epg_source": "AE1",
+  "score": 0.88,
+  "programs": 20,
+  "display": "en: Abu Dhabi Sports 2",
+  "country_match": null
+ },
+ "Antena 3 Spain": {
+  "epg_id": "Antena.3.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 94,
+  "display": "Antena 3",
+  "country_match": true
+ },
+ "ACC Network USA": {
+  "epg_id": "ACC.Network.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 52,
+  "display": "ACC Network",
+  "country_match": true
+ },
+ "Adult Swim": {
+  "epg_id": "Adult.Swim.HD.br",
+  "epg_source": "BR1",
+  "score": 0.95,
+  "programs": 262,
+  "display": "Adult Swim HD",
+  "country_match": null
+ },
+ "AXN Movies Portugal": {
+  "epg_id": "AXN.Movies.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 49,
+  "display": "AXN Movies HD",
+  "country_match": true
+ },
+ "Arte DE": {
+  "epg_id": "ARTE.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 107,
+  "display": "ARTE",
+  "country_match": true
+ },
+ "AXS TV USA": {
+  "epg_id": "AXS.TV.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 139,
+  "display": "AXS TV",
+  "country_match": true
+ },
+ "Altitude Sports": {
+  "epg_id": "Altitude.Sports.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 111,
+  "display": "Altitude Sports",
+  "country_match": null
+ },
+ "Azteca Uno MX": {
+  "epg_id": "Canal.Azteca.Uno.mx",
+  "epg_source": "MX1",
+  "score": 0.87,
+  "programs": 96,
+  "display": "Canal Azteca Uno",
+  "country_match": true
+ },
+ "Arena Sport 5 Serbia": {
+  "epg_id": "Arena.Sport.5.HD.(RS).rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 50,
+  "display": "Arena Sport 5 HD (RS)",
+  "country_match": true
+ },
+ "Arena Sport 6 Serbia": {
+  "epg_id": "Arena.Sport.6.HD.(RS).rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 53,
+  "display": "Arena Sport 6 HD (RS)",
+  "country_match": true
+ },
+ "Arena Sport 7 Serbia": {
+  "epg_id": "Arena.Sport.7.HD.(RS).rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 58,
+  "display": "Arena Sport 7 HD (RS)",
+  "country_match": true
+ },
+ "Arena Sport 8 Serbia": {
+  "epg_id": "Arena.Sport.8.HD.(RS).rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 48,
+  "display": "Arena Sport 8 HD (RS)",
+  "country_match": true
+ },
+ "Arena Sport 9 Serbia": {
+  "epg_id": "Arena.Sport.9.HD.(RS).rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 69,
+  "display": "Arena Sport 9 HD (RS)",
+  "country_match": true
+ },
+ "Arena Sport 10 Serbia": {
+  "epg_id": "Arena.Sport.10.HD.(RS).rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 52,
+  "display": "Arena Sport 10 HD (RS)",
+  "country_match": true
+ },
+ "Arte France": {
+  "epg_id": "Arte..fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 115,
+  "display": "Arte ",
+  "country_match": true
+ },
+ "Automoto La chaîne": {
+  "epg_id": "Automoto.la.chaine.fr",
+  "epg_source": "FR1",
+  "score": 0.95,
+  "programs": 90,
+  "display": "Automoto la chaine",
+  "country_match": null
+ },
+ "ATV Turkey": {
+  "epg_id": "ATV.HD.tr",
+  "epg_source": "TR3",
+  "score": 1.0,
+  "programs": 42,
+  "display": "ATV HD",
+  "country_match": true
+ },
+ "A Spor Turkey": {
+  "epg_id": "A.SPOR.HD.tr",
+  "epg_source": "TR3",
+  "score": 1.0,
+  "programs": 59,
+  "display": "A SPOR HD",
+  "country_match": true
+ },
+ "beIN Sports 1 Arabic": {
+  "epg_id": "beIN.SPORTS.1.fr",
+  "epg_source": "FR1",
+  "score": 0.95,
+  "programs": 91,
+  "display": "beIN SPORTS 1",
+  "country_match": false
+ },
+ "beIN Sports 2 Arabic": {
+  "epg_id": "beIN.SPORTS.2.fr",
+  "epg_source": "FR1",
+  "score": 0.95,
+  "programs": 124,
+  "display": "beIN SPORTS 2",
+  "country_match": false
+ },
+ "beIN Sports 3 Arabic": {
+  "epg_id": "beIN.Sports.3.id",
+  "epg_source": "ID1",
+  "score": 0.95,
+  "programs": 77,
+  "display": "beIN Sports 3",
+  "country_match": false
+ },
+ "beIN Sports 4 Arabic": {
+  "epg_id": "beIN.SPORTS.4.id",
+  "epg_source": "ID1",
+  "score": 0.95,
+  "programs": 45,
+  "display": "beIN SPORTS 4",
+  "country_match": false
+ },
+ "beIN Sports 5 Arabic": {
+  "epg_id": "beIN.SPORTS.5.id",
+  "epg_source": "ID1",
+  "score": 0.95,
+  "programs": 45,
+  "display": "beIN SPORTS 5",
+  "country_match": false
+ },
+ "beIN Sports 6 Arabic": {
+  "epg_id": "beIN_SPORTS6_DIGITAL_Mono-d-1_AR.bein",
+  "epg_source": "BEIN1",
+  "score": 0.78,
+  "programs": 30,
+  "display": "beIN_SPORTS6_DIGITAL_Mono-d-1_AR",
+  "country_match": false
+ },
+ "beIN Sports 7 Arabic": {
+  "epg_id": "beIN_SPORTS7_DIGITAL_Mono_AR.bein",
+  "epg_source": "BEIN1",
+  "score": 0.82,
+  "programs": 51,
+  "display": "beIN_SPORTS7_DIGITAL_Mono_AR",
+  "country_match": false
+ },
+ "beIN SPORTS XTRA 1": {
+  "epg_id": "beIN_SPORTS_XTRA1_Digital_Mono_AR.bein",
+  "epg_source": "BEIN1",
+  "score": 0.82,
+  "programs": 55,
+  "display": "beIN_SPORTS_XTRA1_Digital_Mono_AR",
+  "country_match": null
+ },
+ "beIN Sports MAX 4 France": {
+  "epg_id": "beIN.SPORTS.MAX.4.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 54,
+  "display": "beIN SPORTS MAX 4",
+  "country_match": true
+ },
+ "beIN Sports MAX 5 France": {
+  "epg_id": "beIN.SPORTS.MAX.5.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 51,
+  "display": "beIN SPORTS MAX 5",
+  "country_match": true
+ },
+ "beIN Sports MAX 6 France": {
+  "epg_id": "beIN.SPORTS.MAX.6.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 25,
+  "display": "beIN SPORTS MAX 6",
+  "country_match": true
+ },
+ "beIN Sports MAX 7 France": {
+  "epg_id": "beIN.SPORTS.MAX.7.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 47,
+  "display": "beIN SPORTS MAX 7",
+  "country_match": true
+ },
+ "beIN Sports MAX 8 France": {
+  "epg_id": "beIN.SPORTS.MAX.8.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 47,
+  "display": "beIN SPORTS MAX 8",
+  "country_match": true
+ },
+ "beIN Sports MAX 9 France": {
+  "epg_id": "beIN.SPORTS.MAX.9.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 47,
+  "display": "beIN SPORTS MAX 9",
+  "country_match": true
+ },
+ "beIN Sports MAX 10 France": {
+  "epg_id": "beIN.SPORTS.MAX.10.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 24,
+  "display": "beIN SPORTS MAX 10",
+  "country_match": true
+ },
+ "beIN SPORTS 1 France": {
+  "epg_id": "beIN.SPORTS.1.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 91,
+  "display": "beIN SPORTS 1",
+  "country_match": true
+ },
+ "beIN SPORTS 2 France": {
+  "epg_id": "beIN.SPORTS.2.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 124,
+  "display": "beIN SPORTS 2",
+  "country_match": true
+ },
+ "beIN SPORTS 3 France": {
+  "epg_id": "beIN.SPORTS.3.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 56,
+  "display": "beIN SPORTS 3",
+  "country_match": true
+ },
+ "beIN SPORTS 1 Turkey": {
+  "epg_id": "beIN.SPORTS.1.fr",
+  "epg_source": "FR1",
+  "score": 0.95,
+  "programs": 91,
+  "display": "beIN SPORTS 1",
+  "country_match": false
+ },
+ "beIN SPORTS 2 Turkey": {
+  "epg_id": "beIN.SPORTS.2.fr",
+  "epg_source": "FR1",
+  "score": 0.95,
+  "programs": 124,
+  "display": "beIN SPORTS 2",
+  "country_match": false
+ },
+ "beIN SPORTS 3 Turkey": {
+  "epg_id": "beIN.Sports.3.id",
+  "epg_source": "ID1",
+  "score": 0.95,
+  "programs": 77,
+  "display": "beIN Sports 3",
+  "country_match": false
+ },
+ "beIN SPORTS 4 Turkey": {
+  "epg_id": "beIN.SPORTS.4.id",
+  "epg_source": "ID1",
+  "score": 0.95,
+  "programs": 45,
+  "display": "beIN SPORTS 4",
+  "country_match": false
+ },
+ "BeIN SPORTS USA": {
+  "epg_id": "beIN.Sports.USA.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 107,
+  "display": "beIN Sports USA HD",
+  "country_match": true
+ },
+ "beIN SPORTS en Espa単ol": {
+  "epg_id": "beIN.Sports.En.Español.HD.us2",
+  "epg_source": "US2",
+  "score": 0.82,
+  "programs": 107,
+  "display": "beIN Sports En Español HD",
+  "country_match": null
+ },
+ "beIN SPORTS Australia 1": {
+  "epg_id": "beIN.SPORTS.1.fr",
+  "epg_source": "FR1",
+  "score": 0.95,
+  "programs": 91,
+  "display": "beIN SPORTS 1",
+  "country_match": false
+ },
+ "beIN SPORTS Australia 2": {
+  "epg_id": "beIN.SPORTS.2.fr",
+  "epg_source": "FR1",
+  "score": 0.95,
+  "programs": 124,
+  "display": "beIN SPORTS 2",
+  "country_match": false
+ },
+ "beIN SPORTS Australia 3": {
+  "epg_id": "beIN.Sports.3.id",
+  "epg_source": "ID1",
+  "score": 0.95,
+  "programs": 77,
+  "display": "beIN Sports 3",
+  "country_match": false
+ },
+ "Benfica TV PT": {
+  "epg_id": "Benfica.TV.fr",
+  "epg_source": "FR1",
+  "score": 0.95,
+  "programs": 109,
+  "display": "Benfica TV",
+  "country_match": false
+ },
+ "Boomerang": {
+  "epg_id": "Boomerang.fr",
+  "epg_source": "FR1",
+  "score": 0.95,
+  "programs": 596,
+  "display": "Boomerang",
+  "country_match": null
+ },
+ "BNT 1 Bulgaria": {
+  "epg_id": "БНТ1.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 1.0,
+  "programs": 157,
+  "display": "BG - БНТ1",
+  "country_match": true
+ },
+ "BNT 2 Bulgaria": {
+  "epg_id": "БНТ2.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 1.0,
+  "programs": 172,
+  "display": "BG - БНТ2",
+  "country_match": true
+ },
+ "BNT 3 Bulgaria": {
+  "epg_id": "БНТ 3 HD.bg",
+  "epg_source": "GLOBETV2",
+  "score": 1.0,
+  "programs": 62,
+  "display": "БНТ 3 HD.bg",
+  "country_match": true
+ },
+ "BR Fernsehen DE": {
+  "epg_id": "HR.Fernsehen.lu",
+  "epg_source": "LU1",
+  "score": 0.95,
+  "programs": 159,
+  "display": "HR Fernsehen",
+  "country_match": false
+ },
+ "bTV Bulgaria": {
+  "epg_id": "bTV.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 1.0,
+  "programs": 102,
+  "display": "BG - bTV",
+  "country_match": true
+ },
+ "bTV Action Bulgaria": {
+  "epg_id": "bTVAction.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 1.0,
+  "programs": 105,
+  "display": "BG - bTV Action",
+  "country_match": true
+ },
+ "BBC America (BBCA)": {
+  "epg_id": "BBC.America.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 60,
+  "display": "BBC America HD",
+  "country_match": null
+ },
+ "BET USA": {
+  "epg_id": "BET.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 163,
+  "display": "BET HD",
+  "country_match": true
+ },
+ "Bravo USA": {
+  "epg_id": "Bravo.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 97,
+  "display": "Bravo HD",
+  "country_match": true
+ },
+ "BBC News Channel HD": {
+  "epg_id": "BBCNews.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 0.95,
+  "programs": 320,
+  "display": "BG - BBC News",
+  "country_match": null
+ },
+ "BBC One UK": {
+  "epg_id": "BBC.One.HD.be",
+  "epg_source": "BE2",
+  "score": 0.95,
+  "programs": 155,
+  "display": "BBC One HD",
+  "country_match": false
+ },
+ "BBC Two UK": {
+  "epg_id": "BBC.Two.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 91,
+  "display": "BBC Two HD",
+  "country_match": true
+ },
+ "BBC Three UK": {
+  "epg_id": "BBC.Three.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 69,
+  "display": "BBC Three HD",
+  "country_match": true
+ },
+ "BBC Four UK": {
+  "epg_id": "BBC.Four.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 60,
+  "display": "BBC Four HD",
+  "country_match": true
+ },
+ "BIG TEN Network (BTN USA)": {
+  "epg_id": "Big.Ten.Network.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 97,
+  "display": "Big Ten Network HD",
+  "country_match": null
+ },
+ "beIN Sports 1 Malaysia": {
+  "epg_id": "beIN.SPORTS.1.my",
+  "epg_source": "MY1",
+  "score": 1.0,
+  "programs": 70,
+  "display": "beIN SPORTS 1",
+  "country_match": true
+ },
+ "beIN Sports 2 Malaysia": {
+  "epg_id": "beIN.SPORTS.2.my",
+  "epg_source": "MY1",
+  "score": 1.0,
+  "programs": 67,
+  "display": "beIN SPORTS 2",
+  "country_match": true
+ },
+ "beIN Sports 3 Malaysia": {
+  "epg_id": "beIN.SPORTS.3.my",
+  "epg_source": "MY1",
+  "score": 1.0,
+  "programs": 57,
+  "display": "beIN SPORTS 3",
+  "country_match": true
+ },
+ "BFM TV France": {
+  "epg_id": "BFM.TV.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 86,
+  "display": "BFM TV",
+  "country_match": true
+ },
+ "bein Sports 5 Turkey": {
+  "epg_id": "beIN.SPORTS.5.id",
+  "epg_source": "ID1",
+  "score": 0.95,
+  "programs": 45,
+  "display": "beIN SPORTS 5",
+  "country_match": false
+ },
+ "CBS USA": {
+  "epg_id": "plex.tv.CBS.News.24/7.plex",
+  "epg_source": "PLEX1",
+  "score": 0.87,
+  "programs": 113,
+  "display": "CBS News 24/7",
+  "country_match": true
+ },
+ "Court TV USA": {
+  "epg_id": "Court.TV.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 106,
+  "display": "Court TV",
+  "country_match": true
+ },
+ "CW USA": {
+  "epg_id": "CW.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 114,
+  "display": "CW",
+  "country_match": true
+ },
+ "CNBC USA": {
+  "epg_id": "CNBC.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 87,
+  "display": "CNBC HD",
+  "country_match": true
+ },
+ "Comedy Central": {
+  "epg_id": "Comedy.Central.fr",
+  "epg_source": "FR1",
+  "score": 0.95,
+  "programs": 249,
+  "display": "Comedy Central",
+  "country_match": null
+ },
+ "Cartoon Network": {
+  "epg_id": "Cartoon.Network.fr",
+  "epg_source": "FR1",
+  "score": 0.95,
+  "programs": 961,
+  "display": "Cartoon Network",
+  "country_match": null
+ },
+ "CNN USA": {
+  "epg_id": "CNN.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 95,
+  "display": "CNN HD",
+  "country_match": true
+ },
+ "Cinemax USA": {
+  "epg_id": "Cinemax.HD.(Pacific).us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 54,
+  "display": "Cinemax HD (Pacific)",
+  "country_match": true
+ },
+ "Cuatro Spain": {
+  "epg_id": "Cuatro.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 75,
+  "display": "Cuatro",
+  "country_match": true
+ },
+ "Channel 4 UK": {
+  "epg_id": "Channel.4.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 124,
+  "display": "Channel 4 HD",
+  "country_match": true
+ },
+ "Channel 5 UK": {
+  "epg_id": "Channel.5.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 178,
+  "display": "Channel 5 HD",
+  "country_match": true
+ },
+ "CBS Sports Network (CBSSN)": {
+  "epg_id": "CBS.Sports.Network.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 61,
+  "display": "CBS Sports Network HD",
+  "country_match": null
+ },
+ "Canal+ France": {
+  "epg_id": "Canal+.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 100,
+  "display": "Canal+",
+  "country_match": true
+ },
+ "Canal+ Sport France": {
+  "epg_id": "Canal+.Sport.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 63,
+  "display": "Canal+ Sport",
+  "country_match": true
+ },
+ "Canal+ Foot France": {
+  "epg_id": "Canal+.Foot.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 75,
+  "display": "Canal+ Foot",
+  "country_match": true
+ },
+ "Canal+ Sport360": {
+  "epg_id": "CANAL+SPORT360.fr",
+  "epg_source": "FR1",
+  "score": 0.95,
+  "programs": 80,
+  "display": "CANAL+SPORT360",
+  "country_match": null
+ },
+ "Canal 11 Portugal": {
+  "epg_id": "Canal.11.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 85,
+  "display": "Canal 11 HD",
+  "country_match": true
+ },
+ "Canal+ Sport Poland": {
+  "epg_id": "CANAL+.Sport.HD.sk",
+  "epg_source": "SK1",
+  "score": 0.95,
+  "programs": 89,
+  "display": "CANAL+ Sport HD",
+  "country_match": false
+ },
+ "Canal+ Sport 2 Poland": {
+  "epg_id": "Canal+.Sport.2.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 1,
+  "display": "Canal+ Sport 2",
+  "country_match": false
+ },
+ "Canal+ Sport 3 Poland": {
+  "epg_id": "Canal.plus.Sport.3.cz",
+  "epg_source": "CZ1",
+  "score": 0.82,
+  "programs": 26,
+  "display": "Canal plus Sport 3",
+  "country_match": false
+ },
+ "Canal+ Sport 5 Poland": {
+  "epg_id": "CANAL+.Sport.5.HD.sk",
+  "epg_source": "SK1",
+  "score": 0.95,
+  "programs": 32,
+  "display": "CANAL+ Sport 5 HD",
+  "country_match": false
+ },
+ "Canal+ Premium Poland": {
+  "epg_id": "CANAL+.ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 103,
+  "display": "CANAL+",
+  "country_match": false
+ },
+ "Canal+ Family Poland": {
+  "epg_id": "Canal.HBO.Family.Latinoamérica.ar",
+  "epg_source": "AR1",
+  "score": 0.82,
+  "programs": 69,
+  "display": "Canal HBO Family Latinoamérica",
+  "country_match": false
+ },
+ "CANAL 9 Denmark": {
+  "epg_id": "Canal.9.dk",
+  "epg_source": "DK1",
+  "score": 1.0,
+  "programs": 95,
+  "display": "Canal 9",
+  "country_match": true
+ },
+ "Magenta Sport 1 HD": {
+  "epg_id": "Magenta.Sport.1.gr",
+  "epg_source": "GR1",
+  "score": 0.95,
+  "programs": 49,
+  "display": "Magenta Sport 1",
+  "country_match": null
+ },
+ "Magenta Sport 2 HD": {
+  "epg_id": "Magenta.Sport.2.gr",
+  "epg_source": "GR1",
+  "score": 0.95,
+  "programs": 50,
+  "display": "Magenta Sport 2",
+  "country_match": null
+ },
+ "Magenta Sport 3 HD": {
+  "epg_id": "Magenta.Sport.3.gr",
+  "epg_source": "GR1",
+  "score": 0.95,
+  "programs": 59,
+  "display": "Magenta Sport 3",
+  "country_match": null
+ },
+ "Magenta Sport 4 HD": {
+  "epg_id": "Magenta.Sport.4.gr",
+  "epg_source": "GR1",
+  "score": 0.95,
+  "programs": 61,
+  "display": "Magenta Sport 4",
+  "country_match": null
+ },
+ "Magenta Sport 5 HD": {
+  "epg_id": "Magenta.Sport.5.gr",
+  "epg_source": "GR1",
+  "score": 0.95,
+  "programs": 98,
+  "display": "Magenta Sport 5",
+  "country_match": null
+ },
+ "Magenta Sport 6 HD": {
+  "epg_id": "Magenta.Sport.6.gr",
+  "epg_source": "GR1",
+  "score": 0.95,
+  "programs": 53,
+  "display": "Magenta Sport 6",
+  "country_match": null
+ },
+ "Magenta Sport 7 HD": {
+  "epg_id": "Magenta.Sport.7.gr",
+  "epg_source": "GR1",
+  "score": 0.95,
+  "programs": 57,
+  "display": "Magenta Sport 7",
+  "country_match": null
+ },
+ "Magenta Sport 8 HD": {
+  "epg_id": "Magenta.Sport.8.gr",
+  "epg_source": "GR1",
+  "score": 0.95,
+  "programs": 49,
+  "display": "Magenta Sport 8",
+  "country_match": null
+ },
+ "Magenta Sport 9 HD": {
+  "epg_id": "Magenta.Sport.9.gr",
+  "epg_source": "GR1",
+  "score": 0.95,
+  "programs": 50,
+  "display": "Magenta Sport 9",
+  "country_match": null
+ },
+ "Channel 9 Israel": {
+  "epg_id": "ערוץ.9.il",
+  "epg_source": "IL1",
+  "score": 1.0,
+  "programs": 83,
+  "display": "ערוץ 9",
+  "country_match": true
+ },
+ "Channel 11 Israel": {
+  "epg_id": "כאן.11.il",
+  "epg_source": "IL1",
+  "score": 1.0,
+  "programs": 76,
+  "display": "כאן 11",
+  "country_match": true
+ },
+ "Channel 12 Israel": {
+  "epg_id": "ערוץ.12.שידור.חי.il",
+  "epg_source": "IL1",
+  "score": 1.0,
+  "programs": 42,
+  "display": "ערוץ 12 שידור חי",
+  "country_match": true
+ },
+ "Channel 13 Israel": {
+  "epg_id": "13.tv.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 166,
+  "display": "13.tv",
+  "country_match": false
+ },
+ "Channel 14 Israel": {
+  "epg_id": "ערוץ.14.שידור.חי.il",
+  "epg_source": "IL1",
+  "score": 1.0,
+  "programs": 66,
+  "display": "ערוץ 14 שידור חי",
+  "country_match": true
+ },
+ "TV 2 Sport Norway": {
+  "epg_id": "TV.2.Sport.Denmark.(DK,DA).no",
+  "epg_source": "NO1",
+  "score": 1.0,
+  "programs": 71,
+  "display": "TV 2 Sport Denmark (DK,DA)",
+  "country_match": true
+ },
+ "TV 2 Sport 2 Norway": {
+  "epg_id": "TV.2.Sport.2.Norway.(NO,nb-NO).no",
+  "epg_source": "NO1",
+  "score": 1.0,
+  "programs": 89,
+  "display": "TV 2 Sport 2 Norway (NO,nb-NO)",
+  "country_match": true
+ },
+ "COZI TV USA": {
+  "epg_id": "COZI.TV.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 186,
+  "display": "COZI TV",
+  "country_match": true
+ },
+ "CMT USA": {
+  "epg_id": "CMT.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 151,
+  "display": "CMT HD",
+  "country_match": true
+ },
+ "CTV Canada": {
+  "epg_id": "CTV.ae",
+  "epg_source": "AE1",
+  "score": 0.95,
+  "programs": 76,
+  "display": "CTV",
+  "country_match": false
+ },
+ "Crime+ Investigation USA": {
+  "epg_id": "Crime.+.Investigation.ro",
+  "epg_source": "RO1",
+  "score": 0.95,
+  "programs": 139,
+  "display": "Crime + Investigation",
+  "country_match": false
+ },
+ "Comet USA": {
+  "epg_id": "Comet.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 110,
+  "display": "Comet",
+  "country_match": true
+ },
+ "Cooking Channel USA": {
+  "epg_id": "Cooking.Channel.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 154,
+  "display": "Cooking Channel HD",
+  "country_match": true
+ },
+ "Cleo TV": {
+  "epg_id": "Cleo.TV.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 193,
+  "display": "Cleo TV HD",
+  "country_match": null
+ },
+ "Chicago Sports Network": {
+  "epg_id": "CHSN.Chicago.Sports.Network.us2",
+  "epg_source": "US2",
+  "score": 0.82,
+  "programs": 126,
+  "display": "CHSN Chicago Sports Network",
+  "country_match": null
+ },
+ "Citytv": {
+  "epg_id": "CityTv.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 114,
+  "display": "CityTv",
+  "country_match": null
+ },
+ "CBC CA": {
+  "epg_id": "CBC.ae",
+  "epg_source": "AE1",
+  "score": 0.95,
+  "programs": 68,
+  "display": "CBC",
+  "country_match": false
+ },
+ "Canal5 MX": {
+  "epg_id": "Canal.5.(XHPNH).mx",
+  "epg_source": "MX1",
+  "score": 1.0,
+  "programs": 111,
+  "display": "Canal 5 (XHPNH)",
+  "country_match": true
+ },
+ "CNews France": {
+  "epg_id": "CNews.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 430,
+  "display": "CNews",
+  "country_match": true
+ },
+ "Canal+ Sport CZ": {
+  "epg_id": "Canal+.Sport.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 3,
+  "display": "Canal+ Sport",
+  "country_match": true
+ },
+ "CT Sport CZ": {
+  "epg_id": "ČT.sport.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 78,
+  "display": "ČT sport",
+  "country_match": true
+ },
+ "Nova HD CZ": {
+  "epg_id": "Nova.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 96,
+  "display": "Nova",
+  "country_match": true
+ },
+ "CT1 HD CZ": {
+  "epg_id": "ČT1.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 121,
+  "display": "ČT1",
+  "country_match": true
+ },
+ "CT2 HD CZ": {
+  "epg_id": "ČT2.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 133,
+  "display": "ČT2",
+  "country_match": true
+ },
+ "TN Live CZ": {
+  "epg_id": "TN.HD.uy",
+  "epg_source": "UY1",
+  "score": 0.95,
+  "programs": 42,
+  "display": "TN HD",
+  "country_match": false
+ },
+ "OnePlay Sport 4 CZ": {
+  "epg_id": "Oneplay.Sport.4.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 32,
+  "display": "Oneplay Sport 4",
+  "country_match": true
+ },
+ "OnePlay MD2 CZ": {
+  "epg_id": "Oneplay.Sport.MD2.cz",
+  "epg_source": "CZ1",
+  "score": 0.87,
+  "programs": 1,
+  "display": "Oneplay Sport MD2",
+  "country_match": true
+ },
+ "OnePlay MD3 CZ": {
+  "epg_id": "Oneplay.Sport.MD3.cz",
+  "epg_source": "CZ1",
+  "score": 0.87,
+  "programs": 1,
+  "display": "Oneplay Sport MD3",
+  "country_match": true
+ },
+ "OnePlay MD4 CZ": {
+  "epg_id": "Oneplay.Sport.MD4.cz",
+  "epg_source": "CZ1",
+  "score": 0.87,
+  "programs": 1,
+  "display": "Oneplay Sport MD4",
+  "country_match": true
+ },
+ "Sport 1 CZ": {
+  "epg_id": "Sport1.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 59,
+  "display": "Sport1",
+  "country_match": true
+ },
+ "Canal+ Sport 2 CZ": {
+  "epg_id": "Canal+.Sport.2.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 1,
+  "display": "Canal+ Sport 2",
+  "country_match": true
+ },
+ "Canal+ Sport 3 CZ": {
+  "epg_id": "Canal.plus.Sport.3.cz",
+  "epg_source": "CZ1",
+  "score": 0.87,
+  "programs": 26,
+  "display": "Canal plus Sport 3",
+  "country_match": true
+ },
+ "Canal+ Sport 4 CZ": {
+  "epg_id": "CANAL+.Sport.4.HD.sk",
+  "epg_source": "SK1",
+  "score": 0.95,
+  "programs": 32,
+  "display": "CANAL+ Sport 4 HD",
+  "country_match": false
+ },
+ "Canal+ Sport 5 CZ": {
+  "epg_id": "CANAL+.Sport.5.HD.sk",
+  "epg_source": "SK1",
+  "score": 0.95,
+  "programs": 32,
+  "display": "CANAL+ Sport 5 HD",
+  "country_match": false
+ },
+ "Canal+ Sport 6 CZ": {
+  "epg_id": "CANAL+.Sport.6.HD.sk",
+  "epg_source": "SK1",
+  "score": 0.95,
+  "programs": 32,
+  "display": "CANAL+ Sport 6 HD",
+  "country_match": false
+ },
+ "Canal+ Sport 7 CZ": {
+  "epg_id": "CANAL+.Sport.7.HD.sk",
+  "epg_source": "SK1",
+  "score": 0.95,
+  "programs": 32,
+  "display": "CANAL+ Sport 7 HD",
+  "country_match": false
+ },
+ "Canal+ Sport 8 CZ": {
+  "epg_id": "CANAL+.Sport.8.HD.sk",
+  "epg_source": "SK1",
+  "score": 0.95,
+  "programs": 32,
+  "display": "CANAL+ Sport 8 HD",
+  "country_match": false
+ },
+ "JOJ SK": {
+  "epg_id": "JOJ.HD.sk",
+  "epg_source": "SK1",
+  "score": 1.0,
+  "programs": 107,
+  "display": "JOJ HD",
+  "country_match": true
+ },
+ "Dajto SK": {
+  "epg_id": "DAJTO.HD.sk",
+  "epg_source": "SK1",
+  "score": 1.0,
+  "programs": 127,
+  "display": "DAJTO HD",
+  "country_match": true
+ },
+ "JOJ Šport SK": {
+  "epg_id": "JOJ.ŠPORT.HD.sk",
+  "epg_source": "SK1",
+  "score": 1.0,
+  "programs": 46,
+  "display": "JOJ ŠPORT HD",
+  "country_match": true
+ },
+ "Nova Sport 3 SK": {
+  "epg_id": "Nova.Sport.3.HD.sk",
+  "epg_source": "SK1",
+  "score": 1.0,
+  "programs": 55,
+  "display": "Nova Sport 3 HD",
+  "country_match": true
+ },
+ "Nova Sport 4 SK": {
+  "epg_id": "Nova.Sport.4.HD.sk",
+  "epg_source": "SK1",
+  "score": 1.0,
+  "programs": 53,
+  "display": "Nova Sport 4 HD",
+  "country_match": true
+ },
+ "Nova Sport 5 SK": {
+  "epg_id": "Nova.Sport.5.HD.sk",
+  "epg_source": "SK1",
+  "score": 1.0,
+  "programs": 58,
+  "display": "Nova Sport 5 HD",
+  "country_match": true
+ },
+ "Canal+ Sport SK": {
+  "epg_id": "CANAL+.Sport.HD.sk",
+  "epg_source": "SK1",
+  "score": 1.0,
+  "programs": 89,
+  "display": "CANAL+ Sport HD",
+  "country_match": true
+ },
+ "Canal+ Sport 2 SK": {
+  "epg_id": "Canal+.Sport.2.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 1,
+  "display": "Canal+ Sport 2",
+  "country_match": false
+ },
+ "Canal+ Sport 3 SK": {
+  "epg_id": "Canal.plus.Sport.3.cz",
+  "epg_source": "CZ1",
+  "score": 0.82,
+  "programs": 26,
+  "display": "Canal plus Sport 3",
+  "country_match": false
+ },
+ "Canal+ Sport 4 SK": {
+  "epg_id": "CANAL+.Sport.4.HD.sk",
+  "epg_source": "SK1",
+  "score": 1.0,
+  "programs": 32,
+  "display": "CANAL+ Sport 4 HD",
+  "country_match": true
+ },
+ "CBS Sports Golazo": {
+  "epg_id": "CBS.Sports.Golazo.Network.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 84,
+  "display": "CBS Sports Golazo Network",
+  "country_match": null
+ },
+ "CMTV Portugal": {
+  "epg_id": "CMTV.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 94,
+  "display": "CMTV HD",
+  "country_match": true
+ },
+ "DAZN 1 UK": {
+  "epg_id": "DAZN.1.be",
+  "epg_source": "BE2",
+  "score": 0.95,
+  "programs": 102,
+  "display": "DAZN 1",
+  "country_match": false
+ },
+ "DAZN 1 Bar DE": {
+  "epg_id": "DAZN.1.Bar.es",
+  "epg_source": "ES1",
+  "score": 0.95,
+  "programs": 28,
+  "display": "DAZN 1 Bar",
+  "country_match": false
+ },
+ "DAZN 2 Bar DE": {
+  "epg_id": "DAZN.2.Bar.es",
+  "epg_source": "ES1",
+  "score": 0.95,
+  "programs": 24,
+  "display": "DAZN 2 Bar",
+  "country_match": false
+ },
+ "DAZN 1 Spain": {
+  "epg_id": "DAZN.1.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 60,
+  "display": "DAZN 1",
+  "country_match": true
+ },
+ "DAZN 2 Spain": {
+  "epg_id": "DAZN.2.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 29,
+  "display": "DAZN 2",
+  "country_match": true
+ },
+ "DAZN 3 Spain": {
+  "epg_id": "DAZN.3.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 29,
+  "display": "DAZN 3",
+  "country_match": true
+ },
+ "DAZN 4 Spain": {
+  "epg_id": "DAZN.4.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 27,
+  "display": "DAZN 4",
+  "country_match": true
+ },
+ "DAZN F1 ES": {
+  "epg_id": "DAZN.F1.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 68,
+  "display": "DAZN F1",
+  "country_match": true
+ },
+ "DAZN LaLiga": {
+  "epg_id": "DAZN.LaLiga.es",
+  "epg_source": "ES1",
+  "score": 0.95,
+  "programs": 89,
+  "display": "DAZN LaLiga",
+  "country_match": null
+ },
+ "DR1 Denmark": {
+  "epg_id": "DR1.dk",
+  "epg_source": "DK1",
+  "score": 1.0,
+  "programs": 139,
+  "display": "DR1",
+  "country_match": true
+ },
+ "DR2 Denmark": {
+  "epg_id": "DR2.dk",
+  "epg_source": "DK1",
+  "score": 1.0,
+  "programs": 96,
+  "display": "DR2",
+  "country_match": true
+ },
+ "Digi Sport 1 Romania": {
+  "epg_id": "Digi.Sport.1.HD.ro",
+  "epg_source": "RO1",
+  "score": 1.0,
+  "programs": 150,
+  "display": "Digi Sport 1 HD",
+  "country_match": true
+ },
+ "Digi Sport 2 Romania": {
+  "epg_id": "Digi.Sport.2.ro",
+  "epg_source": "RO1",
+  "score": 1.0,
+  "programs": 63,
+  "display": "Digi Sport 2",
+  "country_match": true
+ },
+ "Digi Sport 3 Romania": {
+  "epg_id": "Digi.Sport.3.ro",
+  "epg_source": "RO1",
+  "score": 1.0,
+  "programs": 181,
+  "display": "Digi Sport 3",
+  "country_match": true
+ },
+ "Digi Sport 4 Romania": {
+  "epg_id": "Digi.Sport.4.ro",
+  "epg_source": "RO1",
+  "score": 1.0,
+  "programs": 65,
+  "display": "Digi Sport 4",
+  "country_match": true
+ },
+ "Diema Sport Bulgaria": {
+  "epg_id": "Diema.Sport.HD.bg",
+  "epg_source": "BG1",
+  "score": 1.0,
+  "programs": 53,
+  "display": "Diema Sport HD",
+  "country_match": true
+ },
+ "Diema Sport 2 Bulgaria": {
+  "epg_id": "Diema.Sport.2.HD.bg",
+  "epg_source": "BG1",
+  "score": 1.0,
+  "programs": 52,
+  "display": "Diema Sport 2 HD",
+  "country_match": true
+ },
+ "Diema Sport 3 Bulgaria": {
+  "epg_id": "Diema.Sport.3.bg",
+  "epg_source": "BG1",
+  "score": 1.0,
+  "programs": 64,
+  "display": "Diema Sport 3",
+  "country_match": true
+ },
+ "Diema Bulgaria": {
+  "epg_id": "Diema.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 1.0,
+  "programs": 101,
+  "display": "BG - Diema",
+  "country_match": true
+ },
+ "Diema Family Bulgaria": {
+  "epg_id": "DiemaFamily.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 1.0,
+  "programs": 100,
+  "display": "BG - Diema Family",
+  "country_match": true
+ },
+ "Dubai Sports 1 UAE": {
+  "epg_id": "Dubai.Sports.1.ae",
+  "epg_source": "AE1",
+  "score": 1.0,
+  "programs": 41,
+  "display": "Dubai Sports 1",
+  "country_match": true
+ },
+ "Dubai Sports 2 UAE": {
+  "epg_id": "Dubai.Sports.2.ae",
+  "epg_source": "AE1",
+  "score": 1.0,
+  "programs": 35,
+  "display": "Dubai Sports 2",
+  "country_match": true
+ },
+ "Dubai Racing 2 UAE": {
+  "epg_id": "Dubai.Racing.2.ae",
+  "epg_source": "AE1",
+  "score": 1.0,
+  "programs": 38,
+  "display": "Dubai Racing 2",
+  "country_match": true
+ },
+ "DSTV kykNET & kie": {
+  "epg_id": "KykNET.&.Kie.HD.za",
+  "epg_source": "ZA1",
+  "score": 0.82,
+  "programs": 148,
+  "display": "KykNET & Kie HD",
+  "country_match": null
+ },
+ "Discovery Life Channel": {
+  "epg_id": "Discovery.Life.Channel.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 83,
+  "display": "Discovery Life Channel",
+  "country_match": null
+ },
+ "Disney Channel": {
+  "epg_id": "Disney.Channel.dk",
+  "epg_source": "DK1",
+  "score": 0.95,
+  "programs": 301,
+  "display": "Disney Channel",
+  "country_match": null
+ },
+ "Discovery Channel": {
+  "epg_id": "Discovery.Channel.fr",
+  "epg_source": "FR1",
+  "score": 0.95,
+  "programs": 251,
+  "display": "Discovery Channel",
+  "country_match": null
+ },
+ "Discovery Family": {
+  "epg_id": "Discovery.Family.Channel.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 175,
+  "display": "Discovery Family Channel HD",
+  "country_match": null
+ },
+ "Disney XD": {
+  "epg_id": "Disney.XD.HD.be",
+  "epg_source": "BE2",
+  "score": 0.95,
+  "programs": 256,
+  "display": "Disney XD HD",
+  "country_match": null
+ },
+ "Destination America": {
+  "epg_id": "Destination.America.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 187,
+  "display": "Destination America HD",
+  "country_match": null
+ },
+ "Disney JR": {
+  "epg_id": "Disney.Jr.HD.uk",
+  "epg_source": "UK1",
+  "score": 0.95,
+  "programs": 338,
+  "display": "Disney Jr HD",
+  "country_match": null
+ },
+ "ESPN USA": {
+  "epg_id": "ESPN.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 76,
+  "display": "ESPN HD",
+  "country_match": true
+ },
+ "ESPN2 USA": {
+  "epg_id": "ESPN2.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 86,
+  "display": "ESPN2 HD",
+  "country_match": true
+ },
+ "ESPNU USA": {
+  "epg_id": "ESPNU.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 68,
+  "display": "ESPNU HD",
+  "country_match": true
+ },
+ "ESPN 2 NL": {
+  "epg_id": "ESPN.2.nl",
+  "epg_source": "NL1",
+  "score": 1.0,
+  "programs": 140,
+  "display": "ESPN 2",
+  "country_match": true
+ },
+ "Eleven Sports 1 Poland": {
+  "epg_id": "Eleven.Sports.1.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 76,
+  "display": "Eleven Sports 1",
+  "country_match": false
+ },
+ "Eleven Sports 2 Poland": {
+  "epg_id": "Eleven.Sports.2.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 69,
+  "display": "Eleven Sports 2",
+  "country_match": false
+ },
+ "Eleven Sports 3 Poland": {
+  "epg_id": "Eleven.Sports.3.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 80,
+  "display": "Eleven Sports 3",
+  "country_match": false
+ },
+ "Eleven Sports 1 Portugal": {
+  "epg_id": "Eleven.Sports.1.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 76,
+  "display": "Eleven Sports 1",
+  "country_match": false
+ },
+ "Eleven Sports 2 Portugal": {
+  "epg_id": "Eleven.Sports.2.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 69,
+  "display": "Eleven Sports 2",
+  "country_match": false
+ },
+ "Eleven Sports 3 Portugal": {
+  "epg_id": "Eleven.Sports.3.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 80,
+  "display": "Eleven Sports 3",
+  "country_match": false
+ },
+ "Eleven Sports 4 Portugal": {
+  "epg_id": "Eleven.Sports.4.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 81,
+  "display": "Eleven Sports 4",
+  "country_match": false
+ },
+ "EuroSport 1 Greece": {
+  "epg_id": "Eurosport.1.HD.gr",
+  "epg_source": "GR1",
+  "score": 1.0,
+  "programs": 50,
+  "display": "Eurosport 1 HD",
+  "country_match": true
+ },
+ "EuroSport 2 Greece": {
+  "epg_id": "Eurosport.2.HD.gr",
+  "epg_source": "GR1",
+  "score": 1.0,
+  "programs": 56,
+  "display": "Eurosport 2 HD",
+  "country_match": true
+ },
+ "EuroSport 1 Poland": {
+  "epg_id": "Eurosport.1.fi",
+  "epg_source": "FI1",
+  "score": 0.95,
+  "programs": 81,
+  "display": "Eurosport 1",
+  "country_match": false
+ },
+ "EuroSport 2 Poland": {
+  "epg_id": "Eurosport.2.hr",
+  "epg_source": "HR1",
+  "score": 0.95,
+  "programs": 78,
+  "display": "Eurosport 2",
+  "country_match": false
+ },
+ "Eurosport 1 NL": {
+  "epg_id": "Eurosport.1.nl",
+  "epg_source": "NL1",
+  "score": 1.0,
+  "programs": 61,
+  "display": "Eurosport 1",
+  "country_match": true
+ },
+ "Eurosport 2 NL": {
+  "epg_id": "Eurosport.2.nl",
+  "epg_source": "NL1",
+  "score": 1.0,
+  "programs": 74,
+  "display": "Eurosport 2",
+  "country_match": true
+ },
+ "EuroSport 1 Spain": {
+  "epg_id": "Eurosport.1.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 51,
+  "display": "Eurosport 1",
+  "country_match": true
+ },
+ "EuroSport 2 Spain": {
+  "epg_id": "Eurosport.2.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 55,
+  "display": "Eurosport 2",
+  "country_match": true
+ },
+ "EuroSport 1 Italy": {
+  "epg_id": "Eurosport.1.fi",
+  "epg_source": "FI1",
+  "score": 0.95,
+  "programs": 81,
+  "display": "Eurosport 1",
+  "country_match": false
+ },
+ "EuroSport 2 Italy": {
+  "epg_id": "Eurosport.2.hr",
+  "epg_source": "HR1",
+  "score": 0.95,
+  "programs": 78,
+  "display": "Eurosport 2",
+  "country_match": false
+ },
+ "ESPN Premium Argentina": {
+  "epg_id": "ESPN.nl",
+  "epg_source": "NL1",
+  "score": 0.95,
+  "programs": 155,
+  "display": "ESPN",
+  "country_match": false
+ },
+ "ESPN Argentina": {
+  "epg_id": "ESPN.nl",
+  "epg_source": "NL1",
+  "score": 0.95,
+  "programs": 155,
+  "display": "ESPN",
+  "country_match": false
+ },
+ "ESPN2 Argentina": {
+  "epg_id": "ESPN.2.nl",
+  "epg_source": "NL1",
+  "score": 0.95,
+  "programs": 140,
+  "display": "ESPN 2",
+  "country_match": false
+ },
+ "ESPN Deportes": {
+  "epg_id": "ESPN.Deportes.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 88,
+  "display": "ESPN Deportes HD",
+  "country_match": null
+ },
+ "ESPNews": {
+  "epg_id": "ESPNEWS.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 118,
+  "display": "ESPNEWS HD",
+  "country_match": null
+ },
+ "E! Entertainment Television": {
+  "epg_id": "E!.Entertainment.Television.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 160,
+  "display": "E! Entertainment Television HD",
+  "country_match": null
+ },
+ "E4 Channel": {
+  "epg_id": "E4.ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 149,
+  "display": "E4",
+  "country_match": null
+ },
+ "ESPN 3 NL": {
+  "epg_id": "ESPN.3.nl",
+  "epg_source": "NL1",
+  "score": 1.0,
+  "programs": 126,
+  "display": "ESPN 3",
+  "country_match": true
+ },
+ "Eurosport 1 France": {
+  "epg_id": "Eurosport.1.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 69,
+  "display": "Eurosport 1",
+  "country_match": true
+ },
+ "Eurosport 2 France": {
+  "epg_id": "Eurosport.2.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 70,
+  "display": "Eurosport 2",
+  "country_match": true
+ },
+ "ESPN3 Argentina": {
+  "epg_id": "ESPN.3.nl",
+  "epg_source": "NL1",
+  "score": 0.95,
+  "programs": 126,
+  "display": "ESPN 3",
+  "country_match": false
+ },
+ "ESPN 2 MX": {
+  "epg_id": "ESPN.2.mx",
+  "epg_source": "MX1",
+  "score": 1.0,
+  "programs": 71,
+  "display": "ESPN 2",
+  "country_match": true
+ },
+ "ESPN 3 MX": {
+  "epg_id": "ESPN.3.mx",
+  "epg_source": "MX1",
+  "score": 1.0,
+  "programs": 60,
+  "display": "ESPN 3",
+  "country_match": true
+ },
+ "ESPN 4 MX": {
+  "epg_id": "ESPN.4.nl",
+  "epg_source": "NL1",
+  "score": 0.95,
+  "programs": 98,
+  "display": "ESPN 4",
+  "country_match": false
+ },
+ "FUSE TV USA": {
+  "epg_id": "Fuse.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 124,
+  "display": "Fuse HD",
+  "country_match": true
+ },
+ "Fox Sports 1 USA": {
+  "epg_id": "FS1.Fox.Sports.1.HD.us2",
+  "epg_source": "US2",
+  "score": 0.87,
+  "programs": 55,
+  "display": "FS1 Fox Sports 1 HD",
+  "country_match": true
+ },
+ "Fox Sports 2 USA": {
+  "epg_id": "FOX.SPORTS.2.mx",
+  "epg_source": "MX1",
+  "score": 0.95,
+  "programs": 94,
+  "display": "FOX SPORTS 2",
+  "country_match": false
+ },
+ "FOX Soccer Plus": {
+  "epg_id": "Fox.Soccer.Plus.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 65,
+  "display": "Fox Soccer Plus HD",
+  "country_match": null
+ },
+ "FOX Deportes USA": {
+  "epg_id": "Fox.Deportes.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 94,
+  "display": "Fox Deportes HD",
+  "country_match": true
+ },
+ "Fox Sports 1 MX": {
+  "epg_id": "FS1.Fox.Sports.1.HD.us2",
+  "epg_source": "US2",
+  "score": 0.82,
+  "programs": 55,
+  "display": "FS1 Fox Sports 1 HD",
+  "country_match": false
+ },
+ "Fox Sports 2 MX": {
+  "epg_id": "FOX.SPORTS.2.mx",
+  "epg_source": "MX1",
+  "score": 1.0,
+  "programs": 94,
+  "display": "FOX SPORTS 2",
+  "country_match": true
+ },
+ "Fox Sports 3 MX": {
+  "epg_id": "FOX.SPORTS.3.mx",
+  "epg_source": "MX1",
+  "score": 1.0,
+  "programs": 106,
+  "display": "FOX SPORTS 3",
+  "country_match": true
+ },
+ "Fox Sports Argentina": {
+  "epg_id": "plex.tv.FOX.Sports.plex",
+  "epg_source": "PLEX1",
+  "score": 0.95,
+  "programs": 159,
+  "display": "FOX Sports",
+  "country_match": false
+ },
+ "Fox Sports 2 Argentina": {
+  "epg_id": "FOX.SPORTS.2.mx",
+  "epg_source": "MX1",
+  "score": 0.95,
+  "programs": 94,
+  "display": "FOX SPORTS 2",
+  "country_match": false
+ },
+ "Fox Sports 3 Argentina": {
+  "epg_id": "FOX.SPORTS.3.mx",
+  "epg_source": "MX1",
+  "score": 0.95,
+  "programs": 106,
+  "display": "FOX SPORTS 3",
+  "country_match": false
+ },
+ "Fox Sports Premium MX": {
+  "epg_id": "FOX.SPORTS.mx",
+  "epg_source": "MX1",
+  "score": 1.0,
+  "programs": 130,
+  "display": "FOX SPORTS",
+  "country_match": true
+ },
+ "FilmBox Premium Poland": {
+  "epg_id": "FilmBox.Premium.hr",
+  "epg_source": "HR1",
+  "score": 0.95,
+  "programs": 63,
+  "display": "FilmBox Premium",
+  "country_match": false
+ },
+ "Fight Network": {
+  "epg_id": "Fight.Network.HD.pt",
+  "epg_source": "PT1",
+  "score": 0.95,
+  "programs": 98,
+  "display": "Fight Network HD",
+  "country_match": null
+ },
+ "Fox Business": {
+  "epg_id": "Fox.Business.it",
+  "epg_source": "IT1",
+  "score": 0.95,
+  "programs": 103,
+  "display": "Fox Business",
+  "country_match": null
+ },
+ "FOX HD Bulgaria": {
+  "epg_id": "FOX.HD.mt",
+  "epg_source": "MT1",
+  "score": 0.95,
+  "programs": 178,
+  "display": "FOX HD",
+  "country_match": false
+ },
+ "FOX USA": {
+  "epg_id": "FOX.HD.mt",
+  "epg_source": "MT1",
+  "score": 0.95,
+  "programs": 178,
+  "display": "FOX HD",
+  "country_match": false
+ },
+ "FX USA": {
+  "epg_id": "FX.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 64,
+  "display": "FX HD",
+  "country_match": true
+ },
+ "FXX USA": {
+  "epg_id": "FXX.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 157,
+  "display": "FXX HD",
+  "country_match": true
+ },
+ "Freeform": {
+  "epg_id": "Freeform.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 95,
+  "display": "Freeform HD",
+  "country_match": null
+ },
+ "Fox News": {
+  "epg_id": "FOX.News.id",
+  "epg_source": "ID1",
+  "score": 0.95,
+  "programs": 96,
+  "display": "FOX News",
+  "country_match": null
+ },
+ "FX Movie Channel": {
+  "epg_id": "FX.Movie.Channel.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 51,
+  "display": "FX Movie Channel HD",
+  "country_match": null
+ },
+ "FYI": {
+  "epg_id": "FYI.Channel.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 153,
+  "display": "FYI Channel HD",
+  "country_match": null
+ },
+ "Film4 UK": {
+  "epg_id": "Film4.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 41,
+  "display": "Film4 HD",
+  "country_match": true
+ },
+ "Fashion TV": {
+  "epg_id": "Fashion.TV.UHD.lu",
+  "epg_source": "LU1",
+  "score": 0.95,
+  "programs": 271,
+  "display": "Fashion TV UHD",
+  "country_match": null
+ },
+ "FETV - Family Entertainment Television": {
+  "epg_id": "Family.Entertainment.Television.us2",
+  "epg_source": "US2",
+  "score": 0.82,
+  "programs": 138,
+  "display": "Family Entertainment Television",
+  "country_match": null
+ },
+ "Fox Weather Channel": {
+  "epg_id": "plex.tv.FOX.Weather.plex",
+  "epg_source": "PLEX1",
+  "score": 0.95,
+  "programs": 28,
+  "display": "FOX Weather",
+  "country_match": null
+ },
+ "FanDuel Sports Network Midwest": {
+  "epg_id": "FanDuel.Sports.Midwest.-.Kansas.City.us",
+  "epg_source": "FANDUEL1",
+  "score": 0.82,
+  "programs": 92,
+  "display": "FanDuel Sports Midwest - Kansas City",
+  "country_match": null
+ },
+ "FanDuel Sports Network New Orleans": {
+  "epg_id": "FanDuel.Sports.New.Orleans.us",
+  "epg_source": "FANDUEL1",
+  "score": 0.95,
+  "programs": 86,
+  "display": "FanDuel Sports New Orleans",
+  "country_match": null
+ },
+ "FanDuel Sports Network North": {
+  "epg_id": "FanDuel.Sports.Network.North.us",
+  "epg_source": "FANDUEL1",
+  "score": 0.95,
+  "programs": 104,
+  "display": "FanDuel Sports Network North",
+  "country_match": null
+ },
+ "FanDuel Sports Network Ohio": {
+  "epg_id": "FanDuel.Sports.Network.Ohio.-.Cincinnati.us",
+  "epg_source": "FANDUEL1",
+  "score": 0.88,
+  "programs": 86,
+  "display": "FanDuel Sports Network Ohio - Cincinnati",
+  "country_match": null
+ },
+ "FanDuel Sports Network Oklahoma": {
+  "epg_id": "FanDuel.Sports.Network.Oklahoma.us",
+  "epg_source": "FANDUEL1",
+  "score": 0.95,
+  "programs": 86,
+  "display": "FanDuel Sports Network Oklahoma",
+  "country_match": null
+ },
+ "FanDuel Sports Network SoCal": {
+  "epg_id": "FanDuel.Sports.Network.SoCal.us",
+  "epg_source": "FANDUEL1",
+  "score": 0.95,
+  "programs": 99,
+  "display": "FanDuel Sports Network SoCal",
+  "country_match": null
+ },
+ "FanDuel Sports Network South": {
+  "epg_id": "FanDuel.Sports.Network.South.us",
+  "epg_source": "FANDUEL1",
+  "score": 0.95,
+  "programs": 82,
+  "display": "FanDuel Sports Network South",
+  "country_match": null
+ },
+ "FanDuel Sports Network Southeast": {
+  "epg_id": "FanDuel.Sports.Network.Southeast.us",
+  "epg_source": "FANDUEL1",
+  "score": 0.95,
+  "programs": 86,
+  "display": "FanDuel Sports Network Southeast",
+  "country_match": null
+ },
+ "FanDuel Sports Network Sun": {
+  "epg_id": "Fanduel.Sports.Sun.HD.us",
+  "epg_source": "FANDUEL1",
+  "score": 0.95,
+  "programs": 106,
+  "display": "Fanduel Sports Sun HD",
+  "country_match": null
+ },
+ "FanDuel Sports Network West": {
+  "epg_id": "FanDuel.Sports.Network.West.us",
+  "epg_source": "FANDUEL1",
+  "score": 0.95,
+  "programs": 113,
+  "display": "FanDuel Sports Network West",
+  "country_match": null
+ },
+ "FanDuel Sports Network Wisconsin": {
+  "epg_id": "FanDuel.Sports.Network.Wisconsin.us",
+  "epg_source": "FANDUEL1",
+  "score": 0.95,
+  "programs": 103,
+  "display": "FanDuel Sports Network Wisconsin",
+  "country_match": null
+ },
+ "France 2": {
+  "epg_id": "France.2..fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 148,
+  "display": "France 2 ",
+  "country_match": true
+ },
+ "France 3": {
+  "epg_id": "France.3.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 316,
+  "display": "France 3",
+  "country_match": true
+ },
+ "France 4": {
+  "epg_id": "France.4..fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 362,
+  "display": "France 4 ",
+  "country_match": true
+ },
+ "France 5": {
+  "epg_id": "France.5..fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 255,
+  "display": "France 5 ",
+  "country_match": true
+ },
+ "GOL PLAY Spain": {
+  "epg_id": "GOL.PLAY.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 96,
+  "display": "GOL PLAY",
+  "country_match": true
+ },
+ "GOLF Channel USA": {
+  "epg_id": "Golf.Channel.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 59,
+  "display": "Golf Channel HD",
+  "country_match": true
+ },
+ "Game Show Network": {
+  "epg_id": "Game.Show.Network.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 170,
+  "display": "Game Show Network HD",
+  "country_match": null
+ },
+ "Gold UK": {
+  "epg_id": "U.and.Gold.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 28,
+  "display": "Gold",
+  "country_match": true
+ },
+ "Great American Family Channel (GAC)": {
+  "epg_id": "Great.American.Family.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 58,
+  "display": "Great American Family HD",
+  "country_match": null
+ },
+ "Grit Channel": {
+  "epg_id": "Grit.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 106,
+  "display": "Grit",
+  "country_match": null
+ },
+ "Globo SP": {
+  "epg_id": "São.Paulo/SP..Globo.br",
+  "epg_source": "BR1",
+  "score": 0.82,
+  "programs": 97,
+  "display": "São Paulo/SP  Globo",
+  "country_match": null
+ },
+ "The Hallmark Channel": {
+  "epg_id": "Hallmark.Channel.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 119,
+  "display": "Hallmark Channel HD",
+  "country_match": null
+ },
+ "Hallmark Movies & Mysterie": {
+  "epg_id": "plex.tv.Hallmark.Movies.&.More.plex",
+  "epg_source": "PLEX1",
+  "score": 0.82,
+  "programs": 90,
+  "display": "Hallmark Movies & More",
+  "country_match": null
+ },
+ "Heroes & Icons (H&I) USA": {
+  "epg_id": "Heroes.and.Icons.Network.SD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 108,
+  "display": "Heroes and Icons Network SD",
+  "country_match": true
+ },
+ "HBO USA": {
+  "epg_id": "HBO.Latino.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 99,
+  "display": "HBO Latino HD",
+  "country_match": true
+ },
+ "HBO2 USA": {
+  "epg_id": "HBO2.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 73,
+  "display": "HBO2 HD",
+  "country_match": true
+ },
+ "HBO Comedy USA": {
+  "epg_id": "HBO.Comedy.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 68,
+  "display": "HBO Comedy HD",
+  "country_match": true
+ },
+ "HBO Family USA": {
+  "epg_id": "HBO.Family.(HD).sg",
+  "epg_source": "SG1",
+  "score": 0.95,
+  "programs": 184,
+  "display": "HBO Family (HD)",
+  "country_match": false
+ },
+ "HBO Latino USA": {
+  "epg_id": "HBO.Latino.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 99,
+  "display": "HBO Latino HD",
+  "country_match": false
+ },
+ "HBO Signature USA": {
+  "epg_id": "HBO.Signature.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 79,
+  "display": "HBO Signature HD",
+  "country_match": true
+ },
+ "HBO Zone USA": {
+  "epg_id": "HBO.Zone.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 54,
+  "display": "HBO Zone HD",
+  "country_match": true
+ },
+ "HBO Poland": {
+  "epg_id": "HBO.Latino.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 99,
+  "display": "HBO Latino HD",
+  "country_match": false
+ },
+ "History USA": {
+  "epg_id": "History.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 100,
+  "display": "History HD",
+  "country_match": true
+ },
+ "HGTV": {
+  "epg_id": "HGTV.za",
+  "epg_source": "ZA1",
+  "score": 0.95,
+  "programs": 182,
+  "display": "HGTV",
+  "country_match": null
+ },
+ "Happy TV Serbia": {
+  "epg_id": "Happy.(RS).rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 113,
+  "display": "Happy (RS)",
+  "country_match": true
+ },
+ "ITV 1 UK": {
+  "epg_id": "ITV1.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 93,
+  "display": "ITV1 HD",
+  "country_match": true
+ },
+ "ITV 2 UK": {
+  "epg_id": "ITV2.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 106,
+  "display": "ITV2 HD",
+  "country_match": true
+ },
+ "ITV 3 UK": {
+  "epg_id": "ITV3.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 83,
+  "display": "ITV3 HD",
+  "country_match": true
+ },
+ "ITV 4 UK": {
+  "epg_id": "ITV4.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 83,
+  "display": "ITV4 HD",
+  "country_match": true
+ },
+ "ITV Quiz": {
+  "epg_id": "ITV.Quiz.HD.be",
+  "epg_source": "BE2",
+  "score": 0.95,
+  "programs": 84,
+  "display": "ITV Quiz HD",
+  "country_match": null
+ },
+ "Italia 1 Italy": {
+  "epg_id": "Italia.1.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 126,
+  "display": "Italia 1",
+  "country_match": true
+ },
+ "Investigation Discovery (ID USA)": {
+  "epg_id": "Investigation.Discovery.(ID).ng",
+  "epg_source": "NG1",
+  "score": 0.95,
+  "programs": 126,
+  "display": "Investigation Discovery (ID)",
+  "country_match": null
+ },
+ "ION USA": {
+  "epg_id": "plex.tv.ION.plex",
+  "epg_source": "PLEX1",
+  "score": 1.0,
+  "programs": 101,
+  "display": "ION",
+  "country_match": true
+ },
+ "IFC TV USA": {
+  "epg_id": "IFC.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 154,
+  "display": "IFC HD",
+  "country_match": true
+ },
+ "Kanal 4 Denmark": {
+  "epg_id": "Kanal.4.dk",
+  "epg_source": "DK1",
+  "score": 1.0,
+  "programs": 84,
+  "display": "Kanal 4",
+  "country_match": true
+ },
+ "Kanal 5 Denmark": {
+  "epg_id": "Kanal.5.dk",
+  "epg_source": "DK1",
+  "score": 1.0,
+  "programs": 97,
+  "display": "Kanal 5",
+  "country_match": true
+ },
+ "Kabel Eins (Kabel 1) DE": {
+  "epg_id": "kabel.eins.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 91,
+  "display": "kabel eins",
+  "country_match": true
+ },
+ "Kanal D Turkey": {
+  "epg_id": "KANAL.D.HD.tr",
+  "epg_source": "TR3",
+  "score": 1.0,
+  "programs": 34,
+  "display": "KANAL D HD",
+  "country_match": true
+ },
+ "Law & Crime Network": {
+  "epg_id": "Law.and.Crime.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 142,
+  "display": "Law and Crime",
+  "country_match": null
+ },
+ "L'Equipe France": {
+  "epg_id": "L'Equipe.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 42,
+  "display": "L'Equipe",
+  "country_match": true
+ },
+ "Logo TV USA": {
+  "epg_id": "Logo.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 98,
+  "display": "Logo",
+  "country_match": true
+ },
+ "Las Estrellas": {
+  "epg_id": "Las.Estrellas.ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 104,
+  "display": "Las Estrellas",
+  "country_match": null
+ },
+ "LCI France": {
+  "epg_id": "LCI.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 50,
+  "display": "LCI",
+  "country_match": true
+ },
+ "Lifetime Network": {
+  "epg_id": "Lifetime.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 103,
+  "display": "Lifetime HD",
+  "country_match": null
+ },
+ "Lifetime Movies Network": {
+  "epg_id": "plex.tv.Lifetime.Movies.Love.&.Drama.plex",
+  "epg_source": "PLEX1",
+  "score": 0.78,
+  "programs": 60,
+  "display": "Lifetime Movies Love & Drama",
+  "country_match": null
+ },
+ "La7 Italy": {
+  "epg_id": "LA7.HD.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 130,
+  "display": "LA7 HD",
+  "country_match": true
+ },
+ "LA7d HD+ Italy": {
+  "epg_id": "LA7D.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 74,
+  "display": "LA7D",
+  "country_match": true
+ },
+ "Movistar Liga de Campeones": {
+  "epg_id": "Movistar.Liga.de.Campeones.es",
+  "epg_source": "ES1",
+  "score": 0.95,
+  "programs": 78,
+  "display": "Movistar Liga de Campeones",
+  "country_match": false
+ },
+ "Movistar Deportes 2 Spain": {
+  "epg_id": "Movistar.Deportes.2.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 29,
+  "display": "Movistar Deportes 2",
+  "country_match": true
+ },
+ "Movistar Deportes 3 Spain": {
+  "epg_id": "Movistar.Deportes.3.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 26,
+  "display": "Movistar Deportes 3",
+  "country_match": true
+ },
+ "Movistar Golf Spain": {
+  "epg_id": "Movistar.Golf.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 60,
+  "display": "Movistar Golf",
+  "country_match": true
+ },
+ "Motowizja Poland": {
+  "epg_id": "Motowizja.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 138,
+  "display": "Motowizja",
+  "country_match": false
+ },
+ "MSG USA": {
+  "epg_id": "plex.tv.MSG.SportsZone.plex",
+  "epg_source": "PLEX1",
+  "score": 0.87,
+  "programs": 135,
+  "display": "MSG SportsZone",
+  "country_match": true
+ },
+ "MSNBC": {
+  "epg_id": "MSNBC.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 72,
+  "display": "MSNBC HD",
+  "country_match": null
+ },
+ "Magnolia Network": {
+  "epg_id": "Magnolia.Network.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 131,
+  "display": "Magnolia Network",
+  "country_match": null
+ },
+ "MTV UK": {
+  "epg_id": "MTV.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 113,
+  "display": "MTV HD",
+  "country_match": true
+ },
+ "MTV USA": {
+  "epg_id": "MTVEurope.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 0.95,
+  "programs": 232,
+  "display": "BG - MTV Europe",
+  "country_match": false
+ },
+ "MUTV UK": {
+  "epg_id": "MUTV.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 138,
+  "display": "MUTV HD",
+  "country_match": true
+ },
+ "M6 France": {
+  "epg_id": "M6.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 88,
+  "display": "M6",
+  "country_match": true
+ },
+ "Racer TV USA": {
+  "epg_id": "RACER.Network.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 152,
+  "display": "RACER Network HD",
+  "country_match": true
+ },
+ "Max Sport 1 Croatia": {
+  "epg_id": "MAX.Sport.1.bg",
+  "epg_source": "BG1",
+  "score": 0.95,
+  "programs": 54,
+  "display": "MAX Sport 1",
+  "country_match": false
+ },
+ "Max Sport 2 Croatia": {
+  "epg_id": "MAX.Sport.2.bg",
+  "epg_source": "BG1",
+  "score": 0.95,
+  "programs": 60,
+  "display": "MAX Sport 2",
+  "country_match": false
+ },
+ "Marquee Sports Network": {
+  "epg_id": "Marquee.Sports.Network.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 92,
+  "display": "Marquee Sports Network HD",
+  "country_match": null
+ },
+ "Max Sport 1 Bulgaria": {
+  "epg_id": "MAX.Sport.1.bg",
+  "epg_source": "BG1",
+  "score": 1.0,
+  "programs": 54,
+  "display": "MAX Sport 1",
+  "country_match": true
+ },
+ "Max Sport 2 Bulgaria": {
+  "epg_id": "MAX.Sport.2.bg",
+  "epg_source": "BG1",
+  "score": 1.0,
+  "programs": 60,
+  "display": "MAX Sport 2",
+  "country_match": true
+ },
+ "Max Sport 3 Bulgaria": {
+  "epg_id": "MAX.Sport.3.bg",
+  "epg_source": "BG1",
+  "score": 1.0,
+  "programs": 55,
+  "display": "MAX Sport 3",
+  "country_match": true
+ },
+ "Max Sport 4 Bulgaria": {
+  "epg_id": "MAX.Sport.4.bg",
+  "epg_source": "BG1",
+  "score": 1.0,
+  "programs": 53,
+  "display": "MAX Sport 4",
+  "country_match": true
+ },
+ "MLB Network USA": {
+  "epg_id": "MLB.Network.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 85,
+  "display": "MLB Network HD",
+  "country_match": true
+ },
+ "Discovery Turbo": {
+  "epg_id": "plex.tv.Discovery.Turbo.TV.plex",
+  "epg_source": "PLEX1",
+  "score": 0.95,
+  "programs": 188,
+  "display": "Discovery Turbo TV",
+  "country_match": null
+ },
+ "METV USA": {
+  "epg_id": "MeTV.Toons.us2",
+  "epg_source": "US2",
+  "score": 0.87,
+  "programs": 138,
+  "display": "MeTV Toons",
+  "country_match": true
+ },
+ "MDR DE": {
+  "epg_id": "MDR.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 121,
+  "display": "MDR",
+  "country_match": true
+ },
+ "Monumental Sports Network": {
+  "epg_id": "Monumental.Sports.Network.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 104,
+  "display": "Monumental Sports Network HD",
+  "country_match": null
+ },
+ "MTV Denmark": {
+  "epg_id": "MTV.dk",
+  "epg_source": "DK1",
+  "score": 1.0,
+  "programs": 168,
+  "display": "MTV",
+  "country_match": true
+ },
+ "NHL Network USA": {
+  "epg_id": "NHL.Network.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 91,
+  "display": "NHL Network HD",
+  "country_match": true
+ },
+ "NFL RedZone": {
+  "epg_id": "NFL.RedZone.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 15,
+  "display": "NFL RedZone HD",
+  "country_match": null
+ },
+ "Nova Sport Bulgaria": {
+  "epg_id": "NOVASport.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 1.0,
+  "programs": 67,
+  "display": "BG - NOVA Sport",
+  "country_match": true
+ },
+ "Nova Sport Serbia": {
+  "epg_id": "NOVASport.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 0.95,
+  "programs": 67,
+  "display": "BG - NOVA Sport",
+  "country_match": false
+ },
+ "Nova Sports Premier League Greece": {
+  "epg_id": "Cytavision.Sports.Premier.League.cy",
+  "epg_source": "CY1",
+  "score": 0.82,
+  "programs": 125,
+  "display": "Cytavision Sports Premier League",
+  "country_match": false
+ },
+ "Nick Music": {
+  "epg_id": "Nick.Music.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 96,
+  "display": "Nick Music",
+  "country_match": null
+ },
+ "NESN USA": {
+  "epg_id": "plex.tv.NESN.NATION.plex",
+  "epg_source": "PLEX1",
+  "score": 0.87,
+  "programs": 73,
+  "display": "NESN NATION",
+  "country_match": true
+ },
+ "NBC USA": {
+  "epg_id": "NBC.Sports.HD.1.us2",
+  "epg_source": "US2",
+  "score": 0.87,
+  "programs": 25,
+  "display": "NBC Sports HD 1",
+  "country_match": true
+ },
+ "NBA TV USA": {
+  "epg_id": "NBA.TV.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 61,
+  "display": "NBA TV HD",
+  "country_match": true
+ },
+ "NBC Sports Philadelphia": {
+  "epg_id": "NBC.Sports.Philadelphia.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 74,
+  "display": "NBC Sports Philadelphia HD",
+  "country_match": null
+ },
+ "NFL Network": {
+  "epg_id": "plex.tv.NFL.Channel.plex",
+  "epg_source": "PLEX1",
+  "score": 0.95,
+  "programs": 83,
+  "display": "NFL Channel",
+  "country_match": null
+ },
+ "NBC Sports Bay Area": {
+  "epg_id": "NBC.Sports.Bay.Area.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 141,
+  "display": "NBC Sports Bay Area HD",
+  "country_match": null
+ },
+ "NBC Sports Boston": {
+  "epg_id": "NBC.Sports.Boston.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 117,
+  "display": "NBC Sports Boston HD",
+  "country_match": null
+ },
+ "NBC Sports California": {
+  "epg_id": "NBC.Sports.California.SAT.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 119,
+  "display": "NBC Sports California HD",
+  "country_match": null
+ },
+ "Nova TV Bulgaria": {
+  "epg_id": "NOVATV.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 1.0,
+  "programs": 108,
+  "display": "BG - NOVA TV",
+  "country_match": true
+ },
+ "Nova S Serbia": {
+  "epg_id": "NOVA.S.HD.(RS).rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 72,
+  "display": "NOVA S HD (RS)",
+  "country_match": true
+ },
+ "NewsNation USA": {
+  "epg_id": "NewsNation.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 96,
+  "display": "NewsNation",
+  "country_match": true
+ },
+ "National Geographic (NGC)": {
+  "epg_id": "NationalGeographicChannel.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 0.95,
+  "programs": 142,
+  "display": "BG - National Geographic Channel",
+  "country_match": null
+ },
+ "NICK JR": {
+  "epg_id": "Nick.Jr..ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 486,
+  "display": "Nick Jr.",
+  "country_match": null
+ },
+ "NICK": {
+  "epg_id": "Nick.co",
+  "epg_source": "CO1",
+  "score": 0.95,
+  "programs": 223,
+  "display": "Nick",
+  "country_match": null
+ },
+ "Nicktoons": {
+  "epg_id": "Nicktoons.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 0.95,
+  "programs": 406,
+  "display": "BG - Nicktoons",
+  "country_match": null
+ },
+ "NDR DE": {
+  "epg_id": "NDR.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 135,
+  "display": "NDR",
+  "country_match": true
+ },
+ "Newsmax USA": {
+  "epg_id": "Newsmax.TV.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 81,
+  "display": "Newsmax TV HD",
+  "country_match": true
+ },
+ "Nat Geo Wild USA": {
+  "epg_id": "NatGeoWild.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 0.95,
+  "programs": 153,
+  "display": "BG - Nat Geo Wild",
+  "country_match": false
+ },
+ "Noovo CA": {
+  "epg_id": "Noovo.ca2",
+  "epg_source": "CA2",
+  "score": 1.0,
+  "programs": 125,
+  "display": "Noovo",
+  "country_match": true
+ },
+ "NOW TV Turkey": {
+  "epg_id": "NOW.tr",
+  "epg_source": "TR3",
+  "score": 1.0,
+  "programs": 49,
+  "display": "NOW",
+  "country_match": true
+ },
+ "Nova Sport 1 CZ": {
+  "epg_id": "Nova.Sport.1.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 72,
+  "display": "Nova Sport 1",
+  "country_match": true
+ },
+ "Nova Sport 2 CZ": {
+  "epg_id": "Nova.Sport.2.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 48,
+  "display": "Nova Sport 2",
+  "country_match": true
+ },
+ "Nova Sport 3 CZ": {
+  "epg_id": "Nova.Sport.3.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 4,
+  "display": "Nova Sport 3",
+  "country_match": true
+ },
+ "Nova Sport 4 CZ": {
+  "epg_id": "Nova.Sport.4.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 16,
+  "display": "Nova Sport 4",
+  "country_match": true
+ },
+ "Nova Sport 5 CZ": {
+  "epg_id": "Nova.Sport.5.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 4,
+  "display": "Nova Sport 5",
+  "country_match": true
+ },
+ "Nova Sport 6 CZ": {
+  "epg_id": "Nova.Sport.6.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 15,
+  "display": "Nova Sport 6",
+  "country_match": true
+ },
+ "ONE 2 HD Israel": {
+  "epg_id": "ONE2.HD.il",
+  "epg_source": "IL1",
+  "score": 1.0,
+  "programs": 64,
+  "display": "ONE2 HD",
+  "country_match": true
+ },
+ "Oprah Winfrey Network (OWN)": {
+  "epg_id": "Oprah.Winfrey.Network.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 123,
+  "display": "Oprah Winfrey Network HD",
+  "country_match": null
+ },
+ "Oxygen True Crime": {
+  "epg_id": "Oxygen.True.Crime.HD.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 92,
+  "display": "Oxygen True Crime HD",
+  "country_match": null
+ },
+ "Outdoor Channel USA": {
+  "epg_id": "Outdoor.Channel.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 185,
+  "display": "Outdoor Channel HD",
+  "country_match": true
+ },
+ "Oneplay Sport 1 CZ": {
+  "epg_id": "Oneplay.Sport.1.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 35,
+  "display": "Oneplay Sport 1",
+  "country_match": true
+ },
+ "Oneplay Sport 2 CZ": {
+  "epg_id": "Oneplay.Sport.2.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 26,
+  "display": "Oneplay Sport 2",
+  "country_match": true
+ },
+ "Oneplay Sport 3 CZ": {
+  "epg_id": "Oneplay.Sport.3.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 33,
+  "display": "Oneplay Sport 3",
+  "country_match": true
+ },
+ "Polsat Poland": {
+  "epg_id": "Polsat.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 86,
+  "display": "Polsat",
+  "country_match": false
+ },
+ "Polsat News Poland": {
+  "epg_id": "Polsat.News.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 24,
+  "display": "Polsat News",
+  "country_match": false
+ },
+ "Porto Canal Portugal": {
+  "epg_id": "Porto.Canal.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 68,
+  "display": "Porto Canal HD",
+  "country_match": true
+ },
+ "ProSieben (PRO7) DE": {
+  "epg_id": "ProSieben.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 137,
+  "display": "ProSieben",
+  "country_match": true
+ },
+ "Premier Sports Ireland 1": {
+  "epg_id": "Premier.Sports.1.HD.uk",
+  "epg_source": "UK1",
+  "score": 0.95,
+  "programs": 76,
+  "display": "Premier Sports 1 HD",
+  "country_match": false
+ },
+ "Prima Sport 1": {
+  "epg_id": "Prima.Sport.1.(HD).ro",
+  "epg_source": "RO2",
+  "score": 0.95,
+  "programs": 137,
+  "display": "Prima Sport 1 (HD)",
+  "country_match": null
+ },
+ "Prima Sport 2": {
+  "epg_id": "Prima.Sport.2.(HD).ro",
+  "epg_source": "RO2",
+  "score": 0.95,
+  "programs": 127,
+  "display": "Prima Sport 2 (HD)",
+  "country_match": null
+ },
+ "Prima Sport 3": {
+  "epg_id": "Prima.Sport.3.ro",
+  "epg_source": "RO1",
+  "score": 0.95,
+  "programs": 91,
+  "display": "Prima Sport 3",
+  "country_match": null
+ },
+ "Prima Sport 4": {
+  "epg_id": "Prima.Sport.4.HD.ro",
+  "epg_source": "RO1",
+  "score": 0.95,
+  "programs": 54,
+  "display": "Prima Sport 4 HD",
+  "country_match": null
+ },
+ "Paramount Network": {
+  "epg_id": "Paramount.Network.nl",
+  "epg_source": "NL1",
+  "score": 0.95,
+  "programs": 104,
+  "display": "Paramount Network",
+  "country_match": null
+ },
+ "POP TV USA": {
+  "epg_id": "POP.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 96,
+  "display": "POP HD",
+  "country_match": true
+ },
+ "Premier Sports Ireland 2": {
+  "epg_id": "Premier.Sports.2.HD.uk",
+  "epg_source": "UK1",
+  "score": 0.95,
+  "programs": 55,
+  "display": "Premier Sports 2 HD",
+  "country_match": false
+ },
+ "Prima TV RO": {
+  "epg_id": "Prima.TV.HD.ro",
+  "epg_source": "RO1",
+  "score": 1.0,
+  "programs": 72,
+  "display": "Prima TV HD",
+  "country_match": true
+ },
+ "Premier Sport 1 CZ": {
+  "epg_id": "Premier.Sport.1.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 31,
+  "display": "Premier Sport 1",
+  "country_match": true
+ },
+ "Premier Sport 2 CZ": {
+  "epg_id": "Premier.Sport.2.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 34,
+  "display": "Premier Sport 2",
+  "country_match": true
+ },
+ "Premier Sport 3 CZ": {
+  "epg_id": "Premier.Sport.3.cz",
+  "epg_source": "CZ1",
+  "score": 1.0,
+  "programs": 57,
+  "display": "Premier Sport 3",
+  "country_match": true
+ },
+ "Pac-12 Network USA": {
+  "epg_id": "plex.tv.Pac-12.Insider.plex",
+  "epg_source": "PLEX1",
+  "score": 0.87,
+  "programs": 119,
+  "display": "Pac-12 Insider",
+  "country_match": true
+ },
+ "PBS USA": {
+  "epg_id": "PBS.KIDS.HD.us2",
+  "epg_source": "US2",
+  "score": 0.87,
+  "programs": 192,
+  "display": "PBS KIDS HD",
+  "country_match": true
+ },
+ "RMC Sport 1 France": {
+  "epg_id": "RMC.Sport.1.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 54,
+  "display": "RMC Sport 1",
+  "country_match": true
+ },
+ "RMC Sport 2 France": {
+  "epg_id": "RMC.Sport.Live.2.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 32,
+  "display": "RMC Sport Live 2",
+  "country_match": true
+ },
+ "RMC Story France": {
+  "epg_id": "RMC.STORY.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 92,
+  "display": "RMC STORY",
+  "country_match": true
+ },
+ "RTP 1 Portugal": {
+  "epg_id": "RTP.1.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 75,
+  "display": "RTP 1 HD",
+  "country_match": true
+ },
+ "RTP 2 Portugal": {
+  "epg_id": "RTP.2.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 215,
+  "display": "RTP 2 HD",
+  "country_match": true
+ },
+ "RTP 3 Portugal": {
+  "epg_id": "RTP.3.ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 182,
+  "display": "RTP 3",
+  "country_match": false
+ },
+ "Rai 1 Italy": {
+  "epg_id": "Rai1.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 115,
+  "display": "Rai1",
+  "country_match": true
+ },
+ "Rai 2 Italy": {
+  "epg_id": "Rai2.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 128,
+  "display": "Rai2",
+  "country_match": true
+ },
+ "Rai 3 Italy": {
+  "epg_id": "Rai3.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 141,
+  "display": "Rai3",
+  "country_match": true
+ },
+ "Rai 4 Italy": {
+  "epg_id": "Rai4.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 114,
+  "display": "Rai4",
+  "country_match": true
+ },
+ "Rai Sport Italy": {
+  "epg_id": "Rai.Sport.HD.be",
+  "epg_source": "BE2",
+  "score": 0.95,
+  "programs": 59,
+  "display": "Rai Sport HD",
+  "country_match": false
+ },
+ "Rai Premium Italy": {
+  "epg_id": "Al.Rai.TV.ae",
+  "epg_source": "AE1",
+  "score": 0.95,
+  "programs": 167,
+  "display": "Al Rai TV",
+  "country_match": false
+ },
+ "Real Madrid TV Spain": {
+  "epg_id": "Real.Madrid.TV.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 38,
+  "display": "Real Madrid TV",
+  "country_match": true
+ },
+ "RTL DE": {
+  "epg_id": "RTL.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 84,
+  "display": "RTL",
+  "country_match": true
+ },
+ "RDS 2 CA": {
+  "epg_id": "RDS2.HD.ca2",
+  "epg_source": "CA2",
+  "score": 1.0,
+  "programs": 87,
+  "display": "RDS2 HD",
+  "country_match": true
+ },
+ "Ring Bulgaria": {
+  "epg_id": "RING.BG.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 1.0,
+  "programs": 38,
+  "display": "BG - RING.BG",
+  "country_match": true
+ },
+ "RTL7 Netherland": {
+  "epg_id": "RTL.7.nl",
+  "epg_source": "NL1",
+  "score": 1.0,
+  "programs": 96,
+  "display": "RTL 7",
+  "country_match": true
+ },
+ "Racing Tv UK": {
+  "epg_id": "Racing.TV.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 115,
+  "display": "Racing TV HD",
+  "country_match": true
+ },
+ "Rally Tv": {
+  "epg_id": "Rally.TV.de",
+  "epg_source": "RALLY_TV1",
+  "score": 0.95,
+  "programs": 121,
+  "display": "Rally TV",
+  "country_match": null
+ },
+ "Root Sports Northwest": {
+  "epg_id": "ROOT.Sports.Northwest.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 24,
+  "display": "ROOT Sports Northwest HD",
+  "country_match": null
+ },
+ "Sky Sports Football UK": {
+  "epg_id": "Sky.Sports.Football.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 188,
+  "display": "Sky Sports Football HD",
+  "country_match": true
+ },
+ "Sky sports Premier League": {
+  "epg_id": "SKY.SPORT.PREMIER.LEAGUE.at",
+  "epg_source": "AT1",
+  "score": 0.82,
+  "programs": 158,
+  "display": "SKY SPORT PREMIER LEAGUE",
+  "country_match": null
+ },
+ "Sky Sports 1 DE": {
+  "epg_id": "Sky.Sports.1.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 53,
+  "display": "Sky Sports 1",
+  "country_match": false
+ },
+ "Sky Sports 2 DE": {
+  "epg_id": "Sky.Sports.2.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 61,
+  "display": "Sky Sports 2",
+  "country_match": false
+ },
+ "Sky Sport MotoGP Italy": {
+  "epg_id": "Sky.Sport.MotoGP.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 147,
+  "display": "Sky Sport MotoGP",
+  "country_match": true
+ },
+ "Sky Sport Tennis Italy": {
+  "epg_id": "Sky.Sport.Tennis.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 52,
+  "display": "Sky Sport Tennis",
+  "country_match": true
+ },
+ "Sky Sport F1 Italy": {
+  "epg_id": "Sky.Sport.F1.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 131,
+  "display": "Sky Sport F1",
+  "country_match": true
+ },
+ "Sky Sports News UK": {
+  "epg_id": "Sky.Sports.News.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 75,
+  "display": "Sky Sports News",
+  "country_match": false
+ },
+ "Sky Sport Top Event DE": {
+  "epg_id": "Sky.Sport.Top.Event.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 60,
+  "display": "Sky Sport Top Event",
+  "country_match": true
+ },
+ "Sky Sport Mix DE": {
+  "epg_id": "Sky.Sport.Mix.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 61,
+  "display": "Sky Sport Mix",
+  "country_match": true
+ },
+ "Sky Sport Bundesliga 1 HD": {
+  "epg_id": "Sky.Sport.Bundesliga.1.de",
+  "epg_source": "DE1",
+  "score": 0.95,
+  "programs": 13,
+  "display": "Sky Sport Bundesliga 1",
+  "country_match": null
+ },
+ "Sky Sport Austria 1 HD": {
+  "epg_id": "Sky.Sport.Austria.1.HD.de",
+  "epg_source": "DE1",
+  "score": 0.95,
+  "programs": 101,
+  "display": "Sky Sport Austria 1 HD",
+  "country_match": false
+ },
+ "SportsNet New York (SNY)": {
+  "epg_id": "SNY.SportsNet.New.York.HD.us2",
+  "epg_source": "US2",
+  "score": 0.88,
+  "programs": 138,
+  "display": "SNY SportsNet New York HD",
+  "country_match": null
+ },
+ "Sky Sport MAX Italy": {
+  "epg_id": "Sky.Sport.Max.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 69,
+  "display": "Sky Sport Max",
+  "country_match": true
+ },
+ "Sky Sport UNO Italy": {
+  "epg_id": "Sky.Sport.Uno.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 80,
+  "display": "Sky Sport Uno",
+  "country_match": true
+ },
+ "Sky Sport Arena Italy": {
+  "epg_id": "Sky.Sport.Arena.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 78,
+  "display": "Sky Sport Arena",
+  "country_match": true
+ },
+ "Sky UNO Italy": {
+  "epg_id": "Sky.Uno.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 81,
+  "display": "Sky Uno",
+  "country_match": true
+ },
+ "SONY TEN 1": {
+  "epg_id": "Sony.Ten.1.HD.in",
+  "epg_source": "IN1",
+  "score": 0.95,
+  "programs": 133,
+  "display": "Sony Ten 1 HD",
+  "country_match": null
+ },
+ "SONY TEN 2": {
+  "epg_id": "Sony.Ten.2.HD.in",
+  "epg_source": "IN1",
+  "score": 0.95,
+  "programs": 96,
+  "display": "Sony Ten 2 HD",
+  "country_match": null
+ },
+ "SONY TEN 3": {
+  "epg_id": "Sony.Ten.3.Hindi.in",
+  "epg_source": "IN1",
+  "score": 0.82,
+  "programs": 135,
+  "display": "Sony Ten 3 Hindi",
+  "country_match": null
+ },
+ "Sky Sport Bundesliga 2": {
+  "epg_id": "Sky.Sport.Bundesliga.2.de",
+  "epg_source": "DE1",
+  "score": 0.95,
+  "programs": 17,
+  "display": "Sky Sport Bundesliga 2",
+  "country_match": null
+ },
+ "Sky Sport Bundesliga 3": {
+  "epg_id": "Sky.Sport.Bundesliga.3.de",
+  "epg_source": "DE1",
+  "score": 0.95,
+  "programs": 25,
+  "display": "Sky Sport Bundesliga 3",
+  "country_match": null
+ },
+ "Sky Sport Bundesliga 4": {
+  "epg_id": "Sky.Sport.Bundesliga.4.de",
+  "epg_source": "DE1",
+  "score": 0.95,
+  "programs": 25,
+  "display": "Sky Sport Bundesliga 4",
+  "country_match": null
+ },
+ "Sky Sport Bundesliga 5": {
+  "epg_id": "Sky.Sport.Bundesliga.5.de",
+  "epg_source": "DE1",
+  "score": 0.95,
+  "programs": 29,
+  "display": "Sky Sport Bundesliga 5",
+  "country_match": null
+ },
+ "Sport en France": {
+  "epg_id": "Sport.en.France.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 63,
+  "display": "Sport en France",
+  "country_match": true
+ },
+ "Starz Cinema": {
+  "epg_id": "Starz.Cinema.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 54,
+  "display": "Starz Cinema HD",
+  "country_match": null
+ },
+ "Starz Comedy": {
+  "epg_id": "Starz.Comedy.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 60,
+  "display": "Starz Comedy HD",
+  "country_match": null
+ },
+ "Starz Edge": {
+  "epg_id": "Starz.Edge.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 60,
+  "display": "Starz Edge HD",
+  "country_match": null
+ },
+ "Starz In Black": {
+  "epg_id": "Starz.in.Black.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 58,
+  "display": "Starz in Black HD",
+  "country_match": false
+ },
+ "Starz Encore": {
+  "epg_id": "Starz.Encore.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 51,
+  "display": "Starz Encore HD",
+  "country_match": null
+ },
+ "Starz Encore Action": {
+  "epg_id": "Starz.Encore.Action.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 54,
+  "display": "Starz Encore Action HD",
+  "country_match": null
+ },
+ "Starz Encore Black": {
+  "epg_id": "Starz.Encore.Black.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 56,
+  "display": "Starz Encore Black",
+  "country_match": null
+ },
+ "Starz Encore Classic": {
+  "epg_id": "Starz.Encore.Classic.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 56,
+  "display": "Starz Encore Classic",
+  "country_match": null
+ },
+ "Starz Encore Family": {
+  "epg_id": "Starz.Encore.Family.SD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 62,
+  "display": "Starz Encore Family SD",
+  "country_match": null
+ },
+ "Starz Encore Suspense": {
+  "epg_id": "Starz.Encore.Suspense.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 55,
+  "display": "Starz Encore Suspense",
+  "country_match": null
+ },
+ "Starz Encore Westerns": {
+  "epg_id": "Starz.Encore.Westerns.SD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 85,
+  "display": "Starz Encore Westerns SD",
+  "country_match": null
+ },
+ "Spectrum SportsNet USA": {
+  "epg_id": "Spectrum.SportsNet.LA.Dodgers.HD.us2",
+  "epg_source": "US2",
+  "score": 0.87,
+  "programs": 110,
+  "display": "Spectrum SportsNet LA Dodgers HD",
+  "country_match": true
+ },
+ "MTV Poland": {
+  "epg_id": "MTVEurope.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 0.95,
+  "programs": 232,
+  "display": "BG - MTV Europe",
+  "country_match": false
+ },
+ "Eleven Sports 4 Poland": {
+  "epg_id": "Eleven.Sports.4.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 81,
+  "display": "Eleven Sports 4",
+  "country_match": false
+ },
+ "Sport TV1 Portugal": {
+  "epg_id": "SPORT.TV1.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 72,
+  "display": "SPORT TV1 HD",
+  "country_match": true
+ },
+ "Sport TV2 Portugal": {
+  "epg_id": "SPORT.TV2.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 64,
+  "display": "SPORT TV2 HD",
+  "country_match": true
+ },
+ "Sport TV4 Portugal": {
+  "epg_id": "SPORT.TV4.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 52,
+  "display": "SPORT TV4 HD",
+  "country_match": true
+ },
+ "Sport TV3 Portugal": {
+  "epg_id": "SPORT.TV3.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 46,
+  "display": "SPORT TV3 HD",
+  "country_match": true
+ },
+ "Sport TV5 Portugal": {
+  "epg_id": "SPORT.TV5.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 20,
+  "display": "SPORT TV5 HD",
+  "country_match": true
+ },
+ "SIC Portugal": {
+  "epg_id": "SIC.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 75,
+  "display": "SIC HD",
+  "country_match": true
+ },
+ "SEC Network USA": {
+  "epg_id": "SEC.Network.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 53,
+  "display": "SEC Network HD",
+  "country_match": true
+ },
+ "Sportsnet Ontario": {
+  "epg_id": "Sportsnet.Ontario.HD.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 104,
+  "display": "Sportsnet Ontario HD",
+  "country_match": null
+ },
+ "Sportsnet One": {
+  "epg_id": "Sportsnet.One.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 135,
+  "display": "Sportsnet One",
+  "country_match": null
+ },
+ "Sportsnet West": {
+  "epg_id": "Sportsnet.West.HD.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 99,
+  "display": "Sportsnet West HD",
+  "country_match": null
+ },
+ "Sportsnet East": {
+  "epg_id": "Sportsnet.East.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 102,
+  "display": "Sportsnet East",
+  "country_match": null
+ },
+ "Sportsnet 360": {
+  "epg_id": "Sportsnet.360.HD.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 92,
+  "display": "Sportsnet 360 HD",
+  "country_match": null
+ },
+ "Sportsnet World": {
+  "epg_id": "Sportsnet.World.HD.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 76,
+  "display": "Sportsnet World HD",
+  "country_match": null
+ },
+ "Sporting TV Portugal": {
+  "epg_id": "Sporting.TV.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 24,
+  "display": "Sporting TV HD",
+  "country_match": true
+ },
+ "SportDigital Fussball": {
+  "epg_id": "sportdigital.Fussball.de",
+  "epg_source": "DE1",
+  "score": 0.95,
+  "programs": 93,
+  "display": "sportdigital Fussball",
+  "country_match": null
+ },
+ "Spectrum Sportsnet LA": {
+  "epg_id": "Spectrum.SportsNet.LA.Dodgers.HD.us2",
+  "epg_source": "US2",
+  "score": 0.88,
+  "programs": 110,
+  "display": "Spectrum SportsNet LA Dodgers HD",
+  "country_match": null
+ },
+ "Sportdigital1+ Germany": {
+  "epg_id": "SportDigital1+.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 39,
+  "display": "SportDigital1+",
+  "country_match": true
+ },
+ "Sport1 Germany": {
+  "epg_id": "SPORT1.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 56,
+  "display": "SPORT1",
+  "country_match": true
+ },
+ "S4C UK": {
+  "epg_id": "S4C.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 216,
+  "display": "S4C HD",
+  "country_match": true
+ },
+ "SAT.1 DE": {
+  "epg_id": "SAT.1.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 86,
+  "display": "SAT.1",
+  "country_match": true
+ },
+ "Sky Cinema Premiere UK": {
+  "epg_id": "Sky.Cinema.Premiere.lu",
+  "epg_source": "LU1",
+  "score": 0.95,
+  "programs": 55,
+  "display": "Sky Cinema Premiere",
+  "country_match": false
+ },
+ "Sky Cinema Select UK": {
+  "epg_id": "Sky.Cinema.Select.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 51,
+  "display": "Sky Cinema Select",
+  "country_match": true
+ },
+ "Sky Cinema Hits UK": {
+  "epg_id": "Sky.Cinema.Hits.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 42,
+  "display": "Sky Cinema Hits HD",
+  "country_match": true
+ },
+ "Sky Cinema Family UK": {
+  "epg_id": "Sky.Cinema.Family.it",
+  "epg_source": "IT1",
+  "score": 0.95,
+  "programs": 58,
+  "display": "Sky Cinema Family",
+  "country_match": false
+ },
+ "Sky Cinema Action UK": {
+  "epg_id": "SKY.CINEMA.ACTION.at",
+  "epg_source": "AT1",
+  "score": 0.95,
+  "programs": 51,
+  "display": "SKY CINEMA ACTION",
+  "country_match": false
+ },
+ "Sky Cinema Comedy UK": {
+  "epg_id": "Sky.Cinema.Comedy.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 54,
+  "display": "Sky Cinema Comedy",
+  "country_match": true
+ },
+ "Sky Cinema Drama UK": {
+  "epg_id": "Sky.Cinema.Drama.it",
+  "epg_source": "IT1",
+  "score": 0.95,
+  "programs": 48,
+  "display": "Sky Cinema Drama",
+  "country_match": false
+ },
+ "Sky NEWS UK": {
+  "epg_id": "Sky.News.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 155,
+  "display": "Sky News HD",
+  "country_match": true
+ },
+ "SEE Denmark": {
+  "epg_id": "See.dk",
+  "epg_source": "DK1",
+  "score": 1.0,
+  "programs": 146,
+  "display": "See",
+  "country_match": true
+ },
+ "Sky Cinema Collection Italy": {
+  "epg_id": "Sky.Cinema.Collection.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 46,
+  "display": "Sky Cinema Collection",
+  "country_match": true
+ },
+ "Sky Cinema Uno Italy": {
+  "epg_id": "Sky.Cinema.Uno.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 50,
+  "display": "Sky Cinema Uno",
+  "country_match": true
+ },
+ "Sky Cinema Action Italy": {
+  "epg_id": "Sky.Cinema.Action.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 49,
+  "display": "Sky Cinema Action",
+  "country_match": true
+ },
+ "Sky Cinema Comedy Italy": {
+  "epg_id": "Sky.Cinema.Comedy.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 55,
+  "display": "Sky Cinema Comedy",
+  "country_match": true
+ },
+ "Sky Cinema Uno +24 Italy": {
+  "epg_id": "Sky.Cinema.Uno.+24.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 52,
+  "display": "Sky Cinema Uno +24",
+  "country_match": true
+ },
+ "Sky Cinema Romance Italy": {
+  "epg_id": "Sky.Cinema.Romance.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 49,
+  "display": "Sky Cinema Romance",
+  "country_match": true
+ },
+ "Sky Cinema Family Italy": {
+  "epg_id": "Sky.Cinema.Family.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 58,
+  "display": "Sky Cinema Family",
+  "country_match": true
+ },
+ "Sky Cinema Drama Italy": {
+  "epg_id": "Sky.Cinema.Drama.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 48,
+  "display": "Sky Cinema Drama",
+  "country_match": true
+ },
+ "Sky Sport 24 Italy": {
+  "epg_id": "Sky.Sport.24.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 138,
+  "display": "Sky Sport 24",
+  "country_match": true
+ },
+ "Sky Sport Calcio Italy": {
+  "epg_id": "Sky.Sport.Calcio.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 78,
+  "display": "Sky Sport Calcio",
+  "country_match": true
+ },
+ "Sky Serie Italy": {
+  "epg_id": "Sky.Serie.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 122,
+  "display": "Sky Serie",
+  "country_match": true
+ },
+ "Sky Showcase UK": {
+  "epg_id": "Sky.Showcase.HD.de",
+  "epg_source": "DE1",
+  "score": 0.95,
+  "programs": 121,
+  "display": "Sky Showcase HD",
+  "country_match": false
+ },
+ "Sky Arts UK": {
+  "epg_id": "Sky.Arts.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 96,
+  "display": "Sky Arts HD",
+  "country_match": true
+ },
+ "Sky Comedy UK": {
+  "epg_id": "Sky.Comedy.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 153,
+  "display": "Sky Comedy HD",
+  "country_match": true
+ },
+ "Sky Crime": {
+  "epg_id": "Sky.Crime.IT.ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 113,
+  "display": "Sky Crime IT",
+  "country_match": null
+ },
+ "Sky MAX UK": {
+  "epg_id": "Sky.Sport.Max.it",
+  "epg_source": "IT1",
+  "score": 0.82,
+  "programs": 69,
+  "display": "Sky Sport Max",
+  "country_match": false
+ },
+ "Sport 1 Israel": {
+  "epg_id": "Sport1.ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 91,
+  "display": "Sport1",
+  "country_match": false
+ },
+ "Sport 2 Israel": {
+  "epg_id": "Sport2.HD.sk",
+  "epg_source": "SK1",
+  "score": 0.95,
+  "programs": 57,
+  "display": "Sport2 HD",
+  "country_match": false
+ },
+ "Sport 3 Israel": {
+  "epg_id": "Sport.3.al",
+  "epg_source": "AL1",
+  "score": 0.95,
+  "programs": 34,
+  "display": "Sport 3",
+  "country_match": false
+ },
+ "Sport 4 Israel": {
+  "epg_id": "Sport.4.al",
+  "epg_source": "AL1",
+  "score": 0.95,
+  "programs": 34,
+  "display": "Sport 4",
+  "country_match": false
+ },
+ "Sport 5 Israel": {
+  "epg_id": "Sport.5.al",
+  "epg_source": "AL1",
+  "score": 0.95,
+  "programs": 34,
+  "display": "Sport 5",
+  "country_match": false
+ },
+ "Sport 5 PLUS Israel": {
+  "epg_id": "Canal.plus.Sport.5.cz",
+  "epg_source": "CZ1",
+  "score": 0.82,
+  "programs": 26,
+  "display": "Canal plus Sport 5",
+  "country_match": false
+ },
+ "Sport 5 Live Israel": {
+  "epg_id": "Sport.5.al",
+  "epg_source": "AL1",
+  "score": 0.95,
+  "programs": 34,
+  "display": "Sport 5",
+  "country_match": false
+ },
+ "Science Channel": {
+  "epg_id": "Science.Channel.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 100,
+  "display": "Science Channel HD",
+  "country_match": null
+ },
+ "Showtime USA": {
+  "epg_id": "Showtime.Women.HD.us2",
+  "epg_source": "US2",
+  "score": 0.87,
+  "programs": 56,
+  "display": "Showtime Women HD",
+  "country_match": true
+ },
+ "Starz": {
+  "epg_id": "Starz.HD.(Pacific).us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 67,
+  "display": "Starz HD (Pacific)",
+  "country_match": null
+ },
+ "Sky Witness HD": {
+  "epg_id": "Sky.Witness.HD.uk",
+  "epg_source": "UK1",
+  "score": 0.95,
+  "programs": 124,
+  "display": "Sky Witness HD",
+  "country_match": null
+ },
+ "Sixx DE": {
+  "epg_id": "sixx.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 114,
+  "display": "sixx",
+  "country_match": true
+ },
+ "Sky Atlantic": {
+  "epg_id": "Sky.Atlantic.it",
+  "epg_source": "IT1",
+  "score": 0.95,
+  "programs": 118,
+  "display": "Sky Atlantic",
+  "country_match": null
+ },
+ "SYFY USA": {
+  "epg_id": "Syfy.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 51,
+  "display": "Syfy HD",
+  "country_match": true
+ },
+ "Sundance TV": {
+  "epg_id": "Sundance.TV.es",
+  "epg_source": "ES1",
+  "score": 0.95,
+  "programs": 75,
+  "display": "Sundance TV",
+  "country_match": null
+ },
+ "SWR DE": {
+  "epg_id": "SWR.at",
+  "epg_source": "AT1",
+  "score": 0.95,
+  "programs": 139,
+  "display": "SWR",
+  "country_match": false
+ },
+ "SUPER RTL DE": {
+  "epg_id": "SUPER.RTL.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 195,
+  "display": "SUPER RTL",
+  "country_match": true
+ },
+ "SR Fernsehen DE": {
+  "epg_id": "SR.Fernsehen.lu",
+  "epg_source": "LU1",
+  "score": 0.95,
+  "programs": 159,
+  "display": "SR Fernsehen",
+  "country_match": false
+ },
+ "Smithsonian Channel": {
+  "epg_id": "Smithsonian.Channel.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 96,
+  "display": "Smithsonian Channel",
+  "country_match": null
+ },
+ "SBS6 NL": {
+  "epg_id": "SBS6.nl",
+  "epg_source": "NL1",
+  "score": 1.0,
+  "programs": 145,
+  "display": "SBS6",
+  "country_match": true
+ },
+ "Star Sports 1 IN": {
+  "epg_id": "STAR.SPORTS.1.HD.in",
+  "epg_source": "IN4",
+  "score": 1.0,
+  "programs": 64,
+  "display": "STAR SPORTS 1 HD",
+  "country_match": true
+ },
+ "Showtime 2 USA (SHO2) USA": {
+  "epg_id": "Showtime.2.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 51,
+  "display": "Showtime 2 HD",
+  "country_match": true
+ },
+ "Showtime Showcase USA": {
+  "epg_id": "Showtime.Showcase.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 51,
+  "display": "Showtime Showcase HD",
+  "country_match": true
+ },
+ "Showtime Extreme USA": {
+  "epg_id": "Showtime.Extreme.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 52,
+  "display": "Showtime Extreme HD",
+  "country_match": true
+ },
+ "Showtime Next (SHO Next) USA": {
+  "epg_id": "Showtime.Next.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 56,
+  "display": "Showtime Next HD",
+  "country_match": true
+ },
+ "Showtime Women USA": {
+  "epg_id": "Showtime.Women.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 56,
+  "display": "Showtime Women HD",
+  "country_match": true
+ },
+ "Space City Home Network": {
+  "epg_id": "Space.City.Home.Network.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 113,
+  "display": "Space City Home Network HD",
+  "country_match": null
+ },
+ "SportsNet Pittsburgh": {
+  "epg_id": "SportsNet.Pittsburgh.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 76,
+  "display": "SportsNet Pittsburgh HD",
+  "country_match": null
+ },
+ "Show TV Turkey": {
+  "epg_id": "SHOW.TV.HD.tr",
+  "epg_source": "TR3",
+  "score": 1.0,
+  "programs": 39,
+  "display": "SHOW TV HD",
+  "country_match": true
+ },
+ "Star TV Turkey": {
+  "epg_id": "STAR.TV.HD.tr",
+  "epg_source": "TR3",
+  "score": 1.0,
+  "programs": 39,
+  "display": "STAR TV HD",
+  "country_match": true
+ },
+ "TNT Sports 1 UK": {
+  "epg_id": "TNT.Sports.1.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 74,
+  "display": "TNT Sports 1 HD",
+  "country_match": true
+ },
+ "TNT Sports 2 UK": {
+  "epg_id": "TNT.Sports.2.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 92,
+  "display": "TNT Sports 2 HD",
+  "country_match": true
+ },
+ "TNT Sports 3 UK": {
+  "epg_id": "TNT.Sports.3.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 89,
+  "display": "TNT Sports 3 HD",
+  "country_match": true
+ },
+ "TNT Sports 4 UK": {
+  "epg_id": "TNT.Sports.4.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 111,
+  "display": "TNT Sports 4 HD",
+  "country_match": true
+ },
+ "TSN1": {
+  "epg_id": "TSN.1.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 97,
+  "display": "TSN 1",
+  "country_match": null
+ },
+ "TSN2": {
+  "epg_id": "TSN.2.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 126,
+  "display": "TSN 2",
+  "country_match": null
+ },
+ "TSN3": {
+  "epg_id": "TSN.3.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 101,
+  "display": "TSN 3",
+  "country_match": null
+ },
+ "TSN4": {
+  "epg_id": "TSN.4.HD.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 78,
+  "display": "TSN 4 HD",
+  "country_match": null
+ },
+ "TSN5": {
+  "epg_id": "TSN5.mt",
+  "epg_source": "MT1",
+  "score": 0.95,
+  "programs": 76,
+  "display": "TSN5",
+  "country_match": null
+ },
+ "TVN HD Poland": {
+  "epg_id": "TVN.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 97,
+  "display": "TVN",
+  "country_match": false
+ },
+ "TVN24 Poland": {
+  "epg_id": "TVN24.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 160,
+  "display": "TVN24",
+  "country_match": false
+ },
+ "TVP1 Poland": {
+  "epg_id": "TVP1.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 146,
+  "display": "TVP1",
+  "country_match": false
+ },
+ "TVP2 Poland": {
+  "epg_id": "TVP2.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 100,
+  "display": "TVP2",
+  "country_match": false
+ },
+ "Telecinco Spain": {
+  "epg_id": "Telecinco.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 90,
+  "display": "Telecinco",
+  "country_match": true
+ },
+ "TVI Portugal": {
+  "epg_id": "TVI.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 80,
+  "display": "TVI HD",
+  "country_match": true
+ },
+ "TVI Reality Portugal": {
+  "epg_id": "TVI.Reality.HD.pt",
+  "epg_source": "PT1",
+  "score": 1.0,
+  "programs": 48,
+  "display": "TVI Reality HD",
+  "country_match": true
+ },
+ "Teledeporte Spain (TDP)": {
+  "epg_id": "Teledeporte.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 75,
+  "display": "Teledeporte",
+  "country_match": true
+ },
+ "TYC Sports Argentina": {
+  "epg_id": "[TYC].TyC.Sports.uy",
+  "epg_source": "UY1",
+  "score": 0.95,
+  "programs": 68,
+  "display": "[TYC] TyC Sports",
+  "country_match": false
+ },
+ "TVP Sport Poland": {
+  "epg_id": "TVP.Sport.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 60,
+  "display": "TVP Sport",
+  "country_match": false
+ },
+ "TNT Sports Argentina": {
+  "epg_id": "TNT.Sports.Box.Office.uk",
+  "epg_source": "UK1",
+  "score": 0.82,
+  "programs": 15,
+  "display": "TNT Sports Box Office",
+  "country_match": false
+ },
+ "TNT Sports HD Chile": {
+  "epg_id": "TNT.Sports.Box.Office.uk",
+  "epg_source": "UK1",
+  "score": 0.82,
+  "programs": 15,
+  "display": "TNT Sports Box Office",
+  "country_match": false
+ },
+ "Tennis Channel": {
+  "epg_id": "TENNIS.za",
+  "epg_source": "ZA1",
+  "score": 0.95,
+  "programs": 76,
+  "display": "TENNIS",
+  "country_match": null
+ },
+ "TUDN USA": {
+  "epg_id": "TUDN.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 94,
+  "display": "TUDN",
+  "country_match": true
+ },
+ "Telemundo": {
+  "epg_id": "TeleMundo.ng",
+  "epg_source": "NG1",
+  "score": 0.95,
+  "programs": 109,
+  "display": "TeleMundo",
+  "country_match": null
+ },
+ "TBS USA": {
+  "epg_id": "TBS.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 166,
+  "display": "TBS HD",
+  "country_match": true
+ },
+ "TLC": {
+  "epg_id": "TLC.HD.uk",
+  "epg_source": "UK1",
+  "score": 0.95,
+  "programs": 155,
+  "display": "TLC HD",
+  "country_match": null
+ },
+ "TNT USA": {
+  "epg_id": "TNT.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 67,
+  "display": "TNT HD",
+  "country_match": true
+ },
+ "TF1 France": {
+  "epg_id": "TF1.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 107,
+  "display": "TF1",
+  "country_match": true
+ },
+ "TVA Sports": {
+  "epg_id": "TVA.Sports.HD.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 76,
+  "display": "TVA Sports HD",
+  "country_match": null
+ },
+ "TVA Sports 2": {
+  "epg_id": "TVA.Sports.2.HD.ca2",
+  "epg_source": "CA2",
+  "score": 0.95,
+  "programs": 69,
+  "display": "TVA Sports 2 HD",
+  "country_match": null
+ },
+ "TVC Deportes MX": {
+  "epg_id": "Canal.TVC.Deportes.mx",
+  "epg_source": "MX1",
+  "score": 0.87,
+  "programs": 69,
+  "display": "Canal TVC Deportes",
+  "country_match": true
+ },
+ "TUDN MX": {
+  "epg_id": "TUDN.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 94,
+  "display": "TUDN",
+  "country_match": false
+ },
+ "TMC France": {
+  "epg_id": "TMC.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 84,
+  "display": "TMC",
+  "country_match": true
+ },
+ "Travel Channel": {
+  "epg_id": "Travel.Channel.za",
+  "epg_source": "ZA1",
+  "score": 0.95,
+  "programs": 152,
+  "display": "Travel Channel",
+  "country_match": null
+ },
+ "TruTV USA": {
+  "epg_id": "truTV.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 128,
+  "display": "truTV HD",
+  "country_match": true
+ },
+ "TCM USA": {
+  "epg_id": "TCM.cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 58,
+  "display": "TCM",
+  "country_match": false
+ },
+ "TMC Channel USA": {
+  "epg_id": "TMC.HD.be",
+  "epg_source": "BE2",
+  "score": 0.95,
+  "programs": 84,
+  "display": "TMC HD",
+  "country_match": false
+ },
+ "The Food Network": {
+  "epg_id": "Food.Network.it",
+  "epg_source": "IT1",
+  "score": 0.95,
+  "programs": 162,
+  "display": "Food Network",
+  "country_match": null
+ },
+ "The Weather Channel": {
+  "epg_id": "The.Weather.Channel.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 98,
+  "display": "The Weather Channel HD",
+  "country_match": null
+ },
+ "TVP INFO": {
+  "epg_id": "TVP.Info.ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 315,
+  "display": "TVP Info",
+  "country_match": null
+ },
+ "TeenNick": {
+  "epg_id": "TeenNick.(pl).cz",
+  "epg_source": "CZ1",
+  "score": 0.95,
+  "programs": 199,
+  "display": "TeenNick (pl)",
+  "country_match": null
+ },
+ "TV ONE USA": {
+  "epg_id": "TV.ONE.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 162,
+  "display": "TV ONE HD",
+  "country_match": true
+ },
+ "TV3 Sport Denmark": {
+  "epg_id": "TV3.SPORT.dk",
+  "epg_source": "DK1",
+  "score": 1.0,
+  "programs": 66,
+  "display": "TV3 SPORT",
+  "country_match": true
+ },
+ "TV2 Sport Denmark": {
+  "epg_id": "SPORT.TV2.HD.pt",
+  "epg_source": "PT1",
+  "score": 0.95,
+  "programs": 64,
+  "display": "SPORT TV2 HD",
+  "country_match": false
+ },
+ "TV2 Denmark": {
+  "epg_id": "TV2.HD.my",
+  "epg_source": "MY1",
+  "score": 0.95,
+  "programs": 93,
+  "display": "TV2 HD",
+  "country_match": false
+ },
+ "TV3+ Denmark": {
+  "epg_id": "TV3+.dk",
+  "epg_source": "DK1",
+  "score": 1.0,
+  "programs": 92,
+  "display": "TV3+",
+  "country_match": true
+ },
+ "TVO CA": {
+  "epg_id": "TVO.ca2",
+  "epg_source": "CA2",
+  "score": 1.0,
+  "programs": 409,
+  "display": "TVO",
+  "country_match": true
+ },
+ "TV8 Turkey": {
+  "epg_id": "TV8.HD.tr",
+  "epg_source": "TR3",
+  "score": 1.0,
+  "programs": 40,
+  "display": "TV8 HD",
+  "country_match": true
+ },
+ "TV4 Hockey": {
+  "epg_id": "[TV4HOSV].TV4.Hockey.se",
+  "epg_source": "SE1",
+  "score": 0.82,
+  "programs": 44,
+  "display": "[TV4HOSV] TV4 Hockey",
+  "country_match": null
+ },
+ "TV3 Max Denmark": {
+  "epg_id": "TV3.MAX.dk",
+  "epg_source": "DK1",
+  "score": 1.0,
+  "programs": 85,
+  "display": "TV3 MAX",
+  "country_match": true
+ },
+ "TV4 Tennis": {
+  "epg_id": "[TV4TESV].TV4.Tennis.se",
+  "epg_source": "SE1",
+  "score": 0.82,
+  "programs": 18,
+  "display": "[TV4TESV] TV4 Tennis",
+  "country_match": null
+ },
+ "TV4 Motor": {
+  "epg_id": "[TV4MOSV].TV4.Motor.se",
+  "epg_source": "SE1",
+  "score": 0.82,
+  "programs": 11,
+  "display": "[TV4MOSV] TV4 Motor",
+  "country_match": null
+ },
+ "TV4 Sport Live 1": {
+  "epg_id": "[TV4SPL1].TV4.Sport.Live.1.se",
+  "epg_source": "SE1",
+  "score": 0.82,
+  "programs": 25,
+  "display": "[TV4SPL1] TV4 Sport Live 1",
+  "country_match": null
+ },
+ "TV4 Sport Live 2": {
+  "epg_id": "[TV4SPL2].TV4.Sport.Live.2.se",
+  "epg_source": "SE1",
+  "score": 0.82,
+  "programs": 25,
+  "display": "[TV4SPL2] TV4 Sport Live 2",
+  "country_match": null
+ },
+ "TV4 Sport Live 3": {
+  "epg_id": "[TV4SPL3].TV4.Sport.Live.3.se",
+  "epg_source": "SE1",
+  "score": 0.82,
+  "programs": 28,
+  "display": "[TV4SPL3] TV4 Sport Live 3",
+  "country_match": null
+ },
+ "TV4 Sport Live 4": {
+  "epg_id": "[TV4SPL4].TV4.Sport.Live.4.se",
+  "epg_source": "SE1",
+  "score": 0.82,
+  "programs": 25,
+  "display": "[TV4SPL4] TV4 Sport Live 4",
+  "country_match": null
+ },
+ "TV4 Sportkanalen": {
+  "epg_id": "[SPORTK].TV4.Sportkanalen.se",
+  "epg_source": "SE1",
+  "score": 0.82,
+  "programs": 78,
+  "display": "[SPORTK] TV4 Sportkanalen",
+  "country_match": null
+ },
+ "TRT Spor TR": {
+  "epg_id": "TRT.SPOR.HD.tr",
+  "epg_source": "TR3",
+  "score": 1.0,
+  "programs": 74,
+  "display": "TRT SPOR HD",
+  "country_match": true
+ },
+ "Univision": {
+  "epg_id": "Univision.Network.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 107,
+  "display": "Univision Network HD",
+  "country_match": null
+ },
+ "Unimas": {
+  "epg_id": "UniMas.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 113,
+  "display": "UniMas",
+  "country_match": null
+ },
+ "#Vamos Spain": {
+  "epg_id": "#Vamos.es",
+  "epg_source": "ES1",
+  "score": 1.0,
+  "programs": 78,
+  "display": "#Vamos",
+  "country_match": true
+ },
+ "V Film Premiere": {
+  "epg_id": "V.film.premiere.dk",
+  "epg_source": "DK1",
+  "score": 0.95,
+  "programs": 49,
+  "display": "V film premiere",
+  "country_match": null
+ },
+ "V Film Family": {
+  "epg_id": "V.film.family.dk",
+  "epg_source": "DK1",
+  "score": 0.95,
+  "programs": 49,
+  "display": "V film family",
+  "country_match": null
+ },
+ "V Sport Motor Sweden": {
+  "epg_id": "[VIASMHD].V.Sport.Motor.HD.se",
+  "epg_source": "SE1",
+  "score": 0.93,
+  "programs": 63,
+  "display": "[VIASMHD] V Sport Motor HD",
+  "country_match": true
+ },
+ "VH1 USA": {
+  "epg_id": "VH1.HD.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 142,
+  "display": "VH1 HD",
+  "country_match": true
+ },
+ "VICE TV": {
+  "epg_id": "Vice.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 104,
+  "display": "Vice HD",
+  "country_match": null
+ },
+ "Willow Cricket": {
+  "epg_id": "Willow.Cricket.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 96,
+  "display": "Willow Cricket HD",
+  "country_match": null
+ },
+ "WWE Network": {
+  "epg_id": "WWE.Network.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 156,
+  "display": "WWE Network",
+  "country_match": null
+ },
+ "WDR DE": {
+  "epg_id": "WDR.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 119,
+  "display": "WDR",
+  "country_match": true
+ },
+ "W9 France": {
+  "epg_id": "W9.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 94,
+  "display": "W9",
+  "country_match": true
+ },
+ "YTV CA": {
+  "epg_id": "YTV.ca2",
+  "epg_source": "CA2",
+  "score": 1.0,
+  "programs": 228,
+  "display": "YTV",
+  "country_match": true
+ },
+ "YES Network USA": {
+  "epg_id": "Yes.Network.us2",
+  "epg_source": "US2",
+  "score": 1.0,
+  "programs": 97,
+  "display": "Yes Network",
+  "country_match": true
+ },
+ "Yes TV CA": {
+  "epg_id": "Yes.Network.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 97,
+  "display": "Yes Network",
+  "country_match": false
+ },
+ "Ziggo Sport NL": {
+  "epg_id": "Ziggo.Sport.Extra.nl",
+  "epg_source": "NL1",
+  "score": 0.87,
+  "programs": 24,
+  "display": "Ziggo Sport Extra",
+  "country_match": true
+ },
+ "Ziggo Sport 2 NL": {
+  "epg_id": "Ziggo.Sport.2.nl",
+  "epg_source": "NL1",
+  "score": 1.0,
+  "programs": 111,
+  "display": "Ziggo Sport 2",
+  "country_match": true
+ },
+ "Ziggo Sport 3 NL": {
+  "epg_id": "Ziggo.Sport.3.nl",
+  "epg_source": "NL1",
+  "score": 1.0,
+  "programs": 98,
+  "display": "Ziggo Sport 3",
+  "country_match": true
+ },
+ "Ziggo Sport 4 NL": {
+  "epg_id": "Ziggo.Sport.4.nl",
+  "epg_source": "NL1",
+  "score": 1.0,
+  "programs": 59,
+  "display": "Ziggo Sport 4",
+  "country_match": true
+ },
+ "Ziggo Sport 5 NL": {
+  "epg_id": "Ziggo.Sport.5.nl",
+  "epg_source": "NL1",
+  "score": 1.0,
+  "programs": 191,
+  "display": "Ziggo Sport 5",
+  "country_match": true
+ },
+ "Ziggo Sport 6 NL": {
+  "epg_id": "Ziggo.Sport.6.nl",
+  "epg_source": "NL1",
+  "score": 1.0,
+  "programs": 62,
+  "display": "Ziggo Sport 6",
+  "country_match": true
+ },
+ "ZDF DE": {
+  "epg_id": "ZDF.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 127,
+  "display": "ZDF",
+  "country_match": true
+ },
+ "ZDF Info DE": {
+  "epg_id": "ZDF.info.ro",
+  "epg_source": "RO1",
+  "score": 0.95,
+  "programs": 134,
+  "display": "ZDF info",
+  "country_match": false
+ },
+ "6ter France": {
+  "epg_id": "6ter.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 191,
+  "display": "6ter",
+  "country_match": true
+ },
+ "20 Mediaset Italy": {
+  "epg_id": "20.Mediaset.ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 114,
+  "display": "20 Mediaset",
+  "country_match": false
+ },
+ "6'eren Denmark": {
+  "epg_id": "6'eren.dk",
+  "epg_source": "DK1",
+  "score": 1.0,
+  "programs": 96,
+  "display": "6'eren",
+  "country_match": true
+ },
+ "5 USA": {
+  "epg_id": "France.5.ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 257,
+  "display": "France 5",
+  "country_match": false
+ },
+ "3sat DE": {
+  "epg_id": "3sat.de",
+  "epg_source": "DE1",
+  "score": 1.0,
+  "programs": 145,
+  "display": "3sat",
+  "country_match": true
+ },
+ "Netflix": {
+  "epg_id": "Netflix.ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 26,
+  "display": "Netflix",
+  "country_match": null
+ },
+ "Indosiar": {
+  "epg_id": "Indosiar.id",
+  "epg_source": "ID1",
+  "score": 0.95,
+  "programs": 60,
+  "display": "Indosiar",
+  "country_match": null
+ },
+ "Paramount+": {
+  "epg_id": "Paramount.Network.nl",
+  "epg_source": "NL1",
+  "score": 0.95,
+  "programs": 104,
+  "display": "Paramount Network",
+  "country_match": null
+ },
+ "Movistar Liga de Campeones 2": {
+  "epg_id": "Movistar.Liga.de.Campeones.2.es",
+  "epg_source": "ES1",
+  "score": 0.95,
+  "programs": 26,
+  "display": "Movistar Liga de Campeones 2",
+  "country_match": false
+ },
+ "Sky Sport 252 IT": {
+  "epg_id": "Sky.Sport..252.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 2,
+  "display": "Sky Sport  252",
+  "country_match": true
+ },
+ "Sport 2 Hungary": {
+  "epg_id": "Sport2.hu",
+  "epg_source": "HU1",
+  "score": 1.0,
+  "programs": 52,
+  "display": "Sport2",
+  "country_match": true
+ },
+ "M+ Liga de Campeones 2 ES": {
+  "epg_id": "M+.Liga.de.Campeones.2.es",
+  "epg_source": "ES1",
+  "score": 0.95,
+  "programs": 7,
+  "display": "M+ Liga de Campeones 2",
+  "country_match": false
+ },
+ "Jordan TV Sport": {
+  "epg_id": "Jordan.Sport.HD.ae",
+  "epg_source": "AE1",
+  "score": 0.95,
+  "programs": 63,
+  "display": "Jordan Sport HD",
+  "country_match": null
+ },
+ "Movistar Liga de Campeones 3": {
+  "epg_id": "Movistar.Liga.de.Campeones.3.es",
+  "epg_source": "ES1",
+  "score": 0.95,
+  "programs": 26,
+  "display": "Movistar Liga de Campeones 3",
+  "country_match": false
+ },
+ "Sky Sport 251 IT": {
+  "epg_id": "Sky.Sport..251.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 3,
+  "display": "Sky Sport  251",
+  "country_match": true
+ },
+ "Canal+ Live 5 France": {
+  "epg_id": "CANAL+LIVE.5.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "CANAL+LIVE 5",
+  "country_match": true
+ },
+ "Blue Sport 7 Live": {
+  "epg_id": "blue.Sport.7.Live.ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 25,
+  "display": "blue Sport 7 Live",
+  "country_match": null
+ },
+ "Canal+ Live 8 France": {
+  "epg_id": "CANAL+LIVE.8.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "CANAL+LIVE 8",
+  "country_match": true
+ },
+ "Canal+ Live 14 France": {
+  "epg_id": "CANAL+LIVE.14.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "CANAL+LIVE 14",
+  "country_match": true
+ },
+ "ESPN4 Argentina": {
+  "epg_id": "ESPN.4.nl",
+  "epg_source": "NL1",
+  "score": 0.95,
+  "programs": 98,
+  "display": "ESPN 4",
+  "country_match": false
+ },
+ "Sky Sport 253 IT": {
+  "epg_id": "Sky.Sport..253.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 2,
+  "display": "Sky Sport  253",
+  "country_match": true
+ },
+ "TV8 IT": {
+  "epg_id": "TV8.HD.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 104,
+  "display": "TV8 HD",
+  "country_match": true
+ },
+ "Canal+ Live 2 France": {
+  "epg_id": "Canal2.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 93,
+  "display": "Canal2",
+  "country_match": true
+ },
+ "Movistar Liga de Campeones 4": {
+  "epg_id": "Movistar.Liga.de.Campeones.4.es",
+  "epg_source": "ES1",
+  "score": 0.95,
+  "programs": 26,
+  "display": "Movistar Liga de Campeones 4",
+  "country_match": false
+ },
+ "CBS Sports Network": {
+  "epg_id": "CBS.Sports.Network.HD.us2",
+  "epg_source": "US2",
+  "score": 0.95,
+  "programs": 61,
+  "display": "CBS Sports Network HD",
+  "country_match": null
+ },
+ "Sky Sport Calcio IT": {
+  "epg_id": "Sky.Sport.Calcio.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 78,
+  "display": "Sky Sport Calcio",
+  "country_match": true
+ },
+ "Sky Sport 255 IT": {
+  "epg_id": "Sky.Sport..255.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 2,
+  "display": "Sky Sport  255",
+  "country_match": true
+ },
+ "Canal+ Live 6 France": {
+  "epg_id": "CANAL+LIVE.6.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "CANAL+LIVE 6",
+  "country_match": true
+ },
+ "Sky Sport 254 IT": {
+  "epg_id": "Sky.Sport..254.it",
+  "epg_source": "IT1",
+  "score": 1.0,
+  "programs": 2,
+  "display": "Sky Sport  254",
+  "country_match": true
+ },
+ "Canal+ Live 4 France": {
+  "epg_id": "CANAL+LIVE.4.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "CANAL+LIVE 4",
+  "country_match": true
+ },
+ "Arena 5 Premium Serbia": {
+  "epg_id": "Arena.PREMIUM.5.rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 35,
+  "display": "Arena PREMIUM 5",
+  "country_match": true
+ },
+ "TNT Sports 6 UK": {
+  "epg_id": "TNT.Sports.6.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "TNT Sports 6 HD",
+  "country_match": true
+ },
+ "Canal+ Live 7 France": {
+  "epg_id": "CANAL+LIVE.7.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "CANAL+LIVE 7",
+  "country_match": true
+ },
+ "TNT Sports 8 UK": {
+  "epg_id": "TNT.Sports.8.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 10,
+  "display": "TNT Sports 8 HD",
+  "country_match": true
+ },
+ "Canal+ Live 3 France": {
+  "epg_id": "CANAL+LIVE.3.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 17,
+  "display": "CANAL+LIVE 3",
+  "country_match": true
+ },
+ "Canal+ Live 13 France": {
+  "epg_id": "CANAL+LIVE.13.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "CANAL+LIVE 13",
+  "country_match": true
+ },
+ "bTV Action BG": {
+  "epg_id": "bTVAction.bg",
+  "epg_source": "IPTVEPG_BG",
+  "score": 1.0,
+  "programs": 105,
+  "display": "BG - bTV Action",
+  "country_match": true
+ },
+ "Canal+ Live 18 France": {
+  "epg_id": "CANAL+LIVE.18.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "CANAL+LIVE 18",
+  "country_match": true
+ },
+ "Canal+ Live 17 France": {
+  "epg_id": "CANAL+LIVE.17.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "CANAL+LIVE 17",
+  "country_match": true
+ },
+ "V Sport 1 Norway": {
+  "epg_id": "V.Sport.1.Norway.(NO,nb-NO).no",
+  "epg_source": "NO1",
+  "score": 1.0,
+  "programs": 43,
+  "display": "V Sport 1 Norway (NO,nb-NO)",
+  "country_match": true
+ },
+ "Canal+ Live 11 France": {
+  "epg_id": "Canal.11.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 21,
+  "display": "Canal 11",
+  "country_match": true
+ },
+ "Canal+ Live 16 France": {
+  "epg_id": "CANAL+LIVE.16.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "CANAL+LIVE 16",
+  "country_match": true
+ },
+ "Canal+ Live 15 France": {
+  "epg_id": "CANAL+LIVE.15.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "CANAL+LIVE 15",
+  "country_match": true
+ },
+ "Canal+ Live 9 France": {
+  "epg_id": "CANAL+LIVE.9.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "CANAL+LIVE 9",
+  "country_match": true
+ },
+ "RTS 2 Serbia": {
+  "epg_id": "RTS.2.HD.rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 170,
+  "display": "RTS 2 HD",
+  "country_match": true
+ },
+ "TNT Sports 10 UK": {
+  "epg_id": "TNT.Sports.10.HD.uk",
+  "epg_source": "UK1",
+  "score": 1.0,
+  "programs": 8,
+  "display": "TNT Sports 10 HD",
+  "country_match": true
+ },
+ "Canal+ Live 10 France": {
+  "epg_id": "CANAL+LIVE.10.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "CANAL+LIVE 10",
+  "country_match": true
+ },
+ "TRT 1 Turkey": {
+  "epg_id": "TRT1.HD.tr",
+  "epg_source": "TR3",
+  "score": 1.0,
+  "programs": 53,
+  "display": "TRT1 HD",
+  "country_match": true
+ },
+ "Canal+ Live 12 France": {
+  "epg_id": "CANAL+LIVE.12.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 11,
+  "display": "CANAL+LIVE 12",
+  "country_match": true
+ },
+ "Arena 4 Premium Serbia": {
+  "epg_id": "Arena.PREMIUM.4.rs",
+  "epg_source": "RS1",
+  "score": 1.0,
+  "programs": 35,
+  "display": "Arena PREMIUM 4",
+  "country_match": true
+ },
+ "Blue Sport 1 Live": {
+  "epg_id": "blue.Sport.1.Live.ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 32,
+  "display": "blue Sport 1 Live",
+  "country_match": null
+ },
+ "Servus TV Austria": {
+  "epg_id": "SERVUS.TV.at",
+  "epg_source": "AT1",
+  "score": 1.0,
+  "programs": 129,
+  "display": "SERVUS TV",
+  "country_match": true
+ },
+ "Canal+ Live 1 France": {
+  "epg_id": "CANAL+LIVE.1.fr",
+  "epg_source": "FR1",
+  "score": 1.0,
+  "programs": 17,
+  "display": "CANAL+LIVE 1",
+  "country_match": true
+ },
+ "Blue Sport D 1": {
+  "epg_id": "blue.Sport.D.1.ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 87,
+  "display": "blue Sport D 1",
+  "country_match": null
+ },
+ "VRT Canvas": {
+  "epg_id": "VRT.Canvas.HD.be",
+  "epg_source": "BE2",
+  "score": 0.95,
+  "programs": 63,
+  "display": "VRT Canvas HD",
+  "country_match": null
+ },
+ "Blue Sport 4 Live": {
+  "epg_id": "blue.Sport.4.Live.ch",
+  "epg_source": "CH1",
+  "score": 0.95,
+  "programs": 26,
+  "display": "blue Sport 4 Live",
+  "country_match": null
+ },
+ "V Sport Golf": {
+  "epg_id": "V.sport.golf.dk",
+  "epg_source": "DK1",
+  "score": 0.95,
+  "programs": 34,
+  "display": "V sport golf",
+  "country_match": null
+ },
+ "Sport 1 Hungary HD": {
+  "epg_id": "Sport1.hu",
+  "epg_source": "HU1",
+  "score": 1.0,
+  "programs": 50,
+  "display": "Sport1",
+  "country_match": true
+ },
+ "svt2 Sweden": {
+  "epg_id": "SVT2.dk",
+  "epg_source": "DK1",
+  "score": 0.95,
+  "programs": 88,
+  "display": "SVT2",
+  "country_match": false
+ },
+ "TV12 Sweden": {
+  "epg_id": "[TV12HD].TV12.HD.se",
+  "epg_source": "SE1",
+  "score": 0.87,
+  "programs": 87,
+  "display": "[TV12HD] TV12 HD",
+  "country_match": true
+ },
+ "KHL Tv": {
+  "epg_id": "KHL.bg",
+  "epg_source": "GLOBETV2",
+  "score": 0.95,
+  "programs": 51,
+  "display": "KHL.bg",
+  "country_match": null
+ }
+}
