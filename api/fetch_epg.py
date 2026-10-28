@@ -363,13 +363,19 @@ def run(args: argparse.Namespace) -> int:
         LOG.info("using %d cached source files (no_fetch)", len(sources))
 
     # Mirror the cache into the run dir so a single run is self-contained.
-    for sid, p in sources.items():
-        dst = run_dir / p.name
-        if not dst.exists():
-            try:
-                dst.write_bytes(p.read_bytes())
-            except Exception as e:
-                LOG.warning("mirror %s: %s", dst, e)
+    # Off by default: it copies every source feed (~174 MB) into a
+    # directory that is pruned to the last run anyway, and nothing reads
+    # the copies back — the run outputs are the four JSON files written
+    # below. Enable with --mirror-sources when you want a self-contained
+    # run dir.
+    if getattr(args, "mirror_sources", False):
+        for sid, p in sources.items():
+            dst = run_dir / p.name
+            if not dst.exists():
+                try:
+                    dst.write_bytes(p.read_bytes())
+                except Exception as e:
+                    LOG.warning("mirror %s: %s", dst, e)
 
     # Match across sources (first match wins; we keep alternatives for context).
     all_matches: dict[str, ChannelMatch] = {}
@@ -470,6 +476,10 @@ def main(argv: list[str] | None = None) -> int:
                         help="Do not hit the network; reuse any cached XMLTV files.")
     parser.add_argument("--list-sources", action="store_true",
                         help="Print the curated + full source ID lists and exit.")
+    parser.add_argument("--mirror-sources", action="store_true",
+                        help="Copy every source feed into the run dir so it is "
+                             "self-contained. Off by default: it copies "
+                             "~174 MB that nothing reads back.")
     args = parser.parse_args(argv)
     return run(args)
 

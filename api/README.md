@@ -352,22 +352,33 @@ Exit codes:
 
 ### Runtime
 
-The DLHD catalog pushed the run from ~8 minutes to ~13 seconds. Where the
+The DLHD catalog pushed the run from ~8 minutes to ~26 seconds. Where the
 time went, and what changed:
 
 | Phase | Before | After | Fix |
 |---|---|---|---|
-| Channel pass (parse 1.7 GB of XML) | 52 s | ~0 s | Parsed channel index cached per feed in `cache/.chindex/`, keyed on the feed's `(size, mtime)` so a re-download invalidates it |
+| Channel pass (parse 1.7 GB of XML) | 74 s | 3 s | XMLTV puts every `<channel>` before the first `<programme>`, so the scan stops there — the channel section is 10 MB, not 1.7 GB |
 | Fuzzy matching | 71 s | 2 s | `matchers.prepare_candidates()` normalises each source channel once instead of once per comparison; token sets are pre-built too |
-| Explicit-match merge | 414 s | 8 s | `list_programmes()` re-parsed the whole feed per channel. Now grouped by source and parsed **once** per feed |
-| Programme pass (repeat runs) | 8 s | ~0 s | Wanted programmes cached per feed, same `(size, mtime)` key |
+| Explicit-match merge | 414 s | 15 s | `list_programmes()` re-parsed the whole feed per channel. Now grouped by source and parsed **once** per feed, using a byte-level scan (`xmltv.list_programmes_fast`) that skips the XML object graph entirely — it reads only the `channel` attribute of each tag and locates the body just for the channels we want |
+| Run-dir mirror | 174 MB copy | none | The copied feeds were never read back; `--mirror-sources` brings it back if you want a self-contained run dir |
 | Downloads | 4 threads | 8 threads | `config.PARALLEL_DOWNLOADS` — the fetch is network-bound |
 
-A cold run (fresh downloads, empty cache) is ~1 min 50 s; a warm run
-(reusing the cache) is ~13 s. The output is byte-identical either way.
+A daily run (fresh downloads, cold cache) is **~26 s**; a `--no-fetch` run
+with warm caches is **~9 s**. The output is byte-identical either way —
+the published `epg.json` has the same SHA-256 whether the merge used the
+byte-level scanner or the ElementTree parser.
 
-The caches live in `api/cache/.chindex/` and are git-ignored with the rest
-of `api/cache/`. Delete that directory to force a full re-parse.
+Both caches live in `api/cache/.chindex/`, keyed on the feed's
+`(size, mtime)`, so a re-download invalidates them automatically. They're
+git-ignored with the rest of `api/cache/`; delete that directory to force a
+full re-parse.
+
+The byte-level scanner is not trusted blindly: `xmltv._scan_programmes()`
+returns `None` — and the caller falls back to `xml.etree` — whenever it
+can't account for a file's structure exactly (unbalanced tags, a `>`
+inside a quoted attribute value, an unexpected `<programme` form).
+Verified against ElementTree over 51 sources and 70,505 programmes with
+zero mismatches and zero fallbacks.
 
 ## Directory layout
 

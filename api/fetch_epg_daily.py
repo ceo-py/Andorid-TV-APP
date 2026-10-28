@@ -413,7 +413,7 @@ def _merge_explicit_matches(epg_source: Path, explicit_matches, explicit_sources
     stripped from epg_unmatched.json.
     """
     import fetch_epg
-    from xmltv import list_programmes  # vendored in this directory
+    from xmltv import list_programmes, list_programmes_fast  # vendored here
 
     run_dir = _latest_run_dir(epg_source)
     if run_dir is None:
@@ -476,9 +476,10 @@ def _merge_explicit_matches(epg_source: Path, explicit_matches, explicit_sources
         else:
             LOG.info("merge: parsing %s for %d channel(s)", source_id, len(wanted))
             try:
-                progs_iter = list(list_programmes(src_path, channel_ids=wanted,
-                                                  window_start=window_start,
-                                                  window_end=window_end))
+                progs_iter = list(list_programmes_fast(src_path,
+                                                      channel_ids=wanted,
+                                                      window_start=window_start,
+                                                      window_end=window_end))
             except Exception as e:
                 LOG.warning("merge: list_programmes failed for %s: %s", source_id, e)
                 progs_iter = []
