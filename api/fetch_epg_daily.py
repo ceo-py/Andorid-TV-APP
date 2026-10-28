@@ -85,7 +85,7 @@ from pathlib import Path
 # for the channel catalog. We import it before fetch_epg so its catalog can be
 # built without touching disk.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from tv_channels import ALL_CHANNELS_NOT_SORTED  # noqa: E402
+from tv_channels import ALL_CHANNELS_NOT_SORTED, DLHD_LOAD_ERROR  # noqa: E402
 
 # -----------------------------------------------------------------------------
 # Paths.
@@ -644,6 +644,19 @@ def main(argv: list[str] | None = None) -> int:
                         help="Verbose logging.")
     args = parser.parse_args(argv)
     _setup_logging(args.verbose)
+
+    # A broken DLHD catalog silently truncates the channel list, and the
+    # run would publish a snapshot missing ~1,100 channels. Fail loudly
+    # instead — the previous snapshot stays published and the API keeps
+    # serving it.
+    if DLHD_LOAD_ERROR is not None:
+        LOG.error("DLHD catalog failed to load — refusing to publish a "
+                  "truncated catalog.")
+        LOG.error("%s", DLHD_LOAD_ERROR)
+        LOG.error("Restore the catalog files and re-run:")
+        LOG.error("    git checkout -- api/dlhd-channels.json "
+                  "api/dlhd_epg_mapping.json")
+        return 4
 
     EPG_DATA_DIR.mkdir(parents=True, exist_ok=True)
     EPG_LATEST_DIR.mkdir(parents=True, exist_ok=True)

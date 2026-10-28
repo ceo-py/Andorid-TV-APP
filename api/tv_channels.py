@@ -1636,6 +1636,12 @@ ALL_CHANNELS = sort_channels_and_lowercase_keys(ALL_CHANNELS_NOT_SORTED)
 # of the fuzzy matcher entirely — a near-miss ("TNT USA" vs "TNT Brasil")
 # would otherwise publish a wrong schedule.
 # ---------------------------------------------------------------------------
+
+# Set when the DLHD catalog could not be loaded. The API keeps working
+# (it serves whatever the curated catalog has), but the EPG pipeline must
+# NOT publish a run from a truncated catalog — see fetch_epg_daily.py.
+DLHD_LOAD_ERROR = None
+
 try:
     from dlhd_channels import build_dlhd_catalog as _build_dlhd_catalog
 
@@ -1655,7 +1661,16 @@ try:
             _taken.add(_name.upper())
     ALL_CHANNELS = sort_channels_and_lowercase_keys(ALL_CHANNELS_NOT_SORTED)
 except Exception as _exc:  # pragma: no cover - DLHD is optional
-    print(f"[tv_channels] DLHD catalog unavailable: {_exc}")
+    DLHD_LOAD_ERROR = _exc
+    import sys as _sys
+    print(
+        f"[tv_channels] WARNING: DLHD catalog unavailable — the catalog is "
+        f"missing ~1,100 channels.\n"
+        f"[tv_channels] {_exc}\n"
+        f"[tv_channels] The EPG daily job will refuse to run until this is "
+        f"fixed.",
+        file=_sys.stderr,
+    )
 
 
 def extract_m3u8_from_text(html_content):

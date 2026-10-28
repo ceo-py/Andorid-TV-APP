@@ -344,6 +344,11 @@ Exit codes:
 - `1` — pipeline returned an error
 - `2` — pipeline module not found / not importable
 - `3` — publish step failed
+- `4` — the DLHD catalog failed to load (corrupt or missing JSON). The run
+  is abandoned rather than publishing a snapshot missing ~1,100 channels;
+  the previous snapshot stays published and the API keeps serving it.
+  Fix with `git checkout -- api/dlhd-channels.json api/dlhd_epg_mapping.json`
+  and re-run.
 
 ## Directory layout
 

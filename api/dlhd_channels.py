@@ -262,16 +262,82 @@ def _infer_category(name: str) -> str:
     return "Worldwide"
 
 
+def _load_json(path: Path, what: str) -> object:
+    """Read a JSON file, raising a diagnostic error if it is malformed.
+
+    A plain ``json.load`` failure says "Extra data: line 1 column 4" which
+    doesn't tell you *which* file or what is wrong with it. The most common
+    cause of a broken copy is a partial checkout or a merge that appended to
+    the file, so we report the size and the first bytes.
+    """
+    try:
+        raw = path.read_bytes()
+    except FileNotFoundError:
+        raise FileNotFoundError(
+            f"{what} file is missing: {path}\n"
+            f"  It is tracked in git — restore it with:\n"
+            f"    git checkout -- {path.name}"
+        ) from None
+
+    if not raw.strip():
+        raise ValueError(f"{what} file is empty: {path}")
+
+    # Strip a UTF-8 BOM if present — json.loads rejects it.
+    if raw.startswith(b"\xef\xbb\xbf"):
+        raw = raw[3:]
+
+    try:
+        return json.loads(raw.decode("utf-8"))
+    except json.JSONDecodeError as e:
+        head = raw[:80].decode("utf-8", errors="replace")
+        raise ValueError(
+            f"{what} file is not valid JSON: {path}\n"
+            f"  {e}\n"
+            f"  size: {len(raw)} bytes\n"
+            f"  first bytes: {head!r}\n"
+            f"  If it was partially written or merged, restore it with:\n"
+            f"    git checkout -- {path.name}"
+        ) from None
+
+
 def _load_channels() -> list[dict]:
-    with open(CHANNELS_JSON, "r", encoding="utf-8") as f:
-        return json.load(f)
+    data = _load_json(CHANNELS_JSON, "DLHD channel list")
+    if not isinstance(data, list):
+        raise ValueError(
+            f"DLHD channel list must be a JSON array, got "
+            f"{type(data).__name__}: {CHANNELS_JSON}"
+        )
+    # A truncated-but-valid file (e.g. "[]") parses fine and would
+    # silently drop every DLHD channel. Refuse it.
+    if len(data) < 100:
+        raise ValueError(
+            f"DLHD channel list has only {len(data)} entries — it is "
+            f"truncated or truncated-and-emptied.\n"
+            f"  expected ~1,100. File: {CHANNELS_JSON}\n"
+            f"  Restore it with:\n"
+            f"    git checkout -- {CHANNELS_JSON.name}"
+        )
+    return data
 
 
 def _load_mapping() -> Dict[str, dict]:
     if not MAPPING_JSON.exists():
         return {}
-    with open(MAPPING_JSON, "r", encoding="utf-8") as f:
-        return json.load(f)
+    data = _load_json(MAPPING_JSON, "DLHD EPG mapping")
+    if not isinstance(data, dict):
+        raise ValueError(
+            f"DLHD EPG mapping must be a JSON object, got "
+            f"{type(data).__name__}: {MAPPING_JSON}"
+        )
+    if len(data) < 100:
+        raise ValueError(
+            f"DLHD EPG mapping has only {len(data)} entries — it is "
+            f"truncated or truncated-and-emptied.\n"
+            f"  expected ~683. File: {MAPPING_JSON}\n"
+            f"  Restore it with:\n"
+            f"    git checkout -- {MAPPING_JSON.name}"
+        )
+    return data
 
 
 def build_dlhd_catalog() -> Dict[str, Dict[str, dict]]:
